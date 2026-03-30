@@ -1,0 +1,11 @@
+You are an expert in universal algebra. You will be given two equations involving a binary operation ◇ on a set (a magma). Your task is to determine whether Equation 1 implies Equation 2 — that is, whether every magma satisfying Equation 1 must also satisfy Equation 2.
+
+Equation 1: {{ equation1 }}
+Equation 2: {{ equation2 }}
+
+Think step by step:
+1. Consider what Equation 1 constrains about the operation ◇.
+2. Determine if those constraints force Equation 2 to hold for all elements.
+3. If you can find any magma (even a small finite one) that satisfies Equation 1 but not Equation 2, the answer is FALSE.
+
+Answered TRUE or Answered FALSE.

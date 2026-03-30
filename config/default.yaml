@@ -1,0 +1,11 @@
+model: openrouter/openai/gpt-oss-120b
+temperature: 0.0
+max_tokens: 4096
+concurrency: 5
+output_dir: results
+
+# Available competition models (use with --model flag):
+# openrouter/openai/gpt-oss-120b
+# openrouter/meta-llama/llama-3.3-70b-instruct
+# openrouter/google/gemini-3.1-flash-lite-preview
+# openrouter/x-ai/grok-4.1-fast

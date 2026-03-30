@@ -1,0 +1,15 @@
+.env
+__pycache__/
+*.pyc
+*.egg-info/
+dist/
+build/
+results/*.json
+results/*.csv
+data/equations.txt
+data/outcomes.json
+data/*.zip
+data/*.gz
+data/validation/answers.json
+data/training/
+.venv/
