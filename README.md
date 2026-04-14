@@ -1,77 +1,104 @@
 # eq-playground
 
-Local playground for the [SAIR Mathematics Distillation Challenge - Equational Theories](https://competition.sair.foundation/competitions/mathematics-distillation-challenge-equational-theories-stage1/overview).
+Programmatic baselines for the [SAIR Mathematics Distillation Challenge — Equational Theories](https://competition.sair.foundation/competitions/mathematics-distillation-challenge-equational-theories-stage1/overview).
 
-Test cheatsheets against equational implication problems using the competition's allowed models.
+The challenge asks, for pairs of universally-quantified equations `(E1, E2)`
+over a single binary operation: does `E1 ⇒ E2` hold in every magma? Ground
+truth is the full 4694 × 4694 implication matrix from the [Equational
+Theories Project](https://leanprover-community.github.io/equational_theories/).
 
-## Quick Start
+This repo contains two baselines:
+
+| Baseline | Kind | Where it lives |
+| --- | --- | --- |
+| **`cascade_v14`** | Pure Python decision cascade — 18 sound syntactic rules plus a precomputed counterexample bank over small magmas. No LLM calls. | `analysis/cascade_v14.py` |
+| **`bank_lookup_v5`** | The same decision logic compressed into a ≤12 KB cheatsheet prompt intended for the competition's weak-judge models. | `cheatsheets/bank_lookup_v5.txt` (generator: `analysis/build_bank_lookup.py`) |
+
+Reference accuracy for `cascade_v14` on the full ETP implication matrix is
+~93.6% (and ~66.8% on the hard3 validation slice). The `bank_lookup_v5`
+cheatsheet is the same pipeline rendered as an LLM prompt, which trades
+some headroom for portability to models that cannot execute code.
+
+## Repo layout
+
+```
+analysis/
+  parse_equation.py          # term parser, shared
+  procedural_v2_checker.py   # feature extraction + 18-rule cascade (v13 rules)
+  magma_counterexamples.py   # counterexample-bank lookup helpers
+  cascade_v14.py             # ★ best programmatic baseline
+  magma_mining.py            # regenerates the counterexample bank
+  build_bank_lookup.py       # ★ regenerates the bank_lookup cheatsheet from training data
+  eval_checker_full.py       # evaluate cascade vs ETP / validation / community bench
+  eval_with_counterex.py     # evaluate cascade overlayed with the counterexample bank
+cheatsheets/
+  bank_lookup_v5.txt         # ★ final LLM cheatsheet
+data/                        # populate locally, see data/README.md
+```
+
+## Running the baselines
+
+### 1. Install
 
 ```bash
-# Install
 pip install -e .
-
-# Download the ETP dataset (equations + outcomes matrix)
-eq-playground download
-
-# Validate your cheatsheet (no API calls)
-eq-playground validate --cheatsheet cheatsheets/example.txt --equations data/equations.txt --outcomes data/outcomes.json
-
-# Run evaluation
-export OPENROUTER_API_KEY=sk-or-...
-eq-playground run \
-  --cheatsheet cheatsheets/example.txt \
-  --equations data/equations.txt \
-  --outcomes data/outcomes.json \
-  --model gpt-oss-120b \
-  --sample 20 \
-  --seed 42 \
-  --verbose
 ```
 
-## Competition Models
+The only runtime dependency is `numpy`.
 
-| Alias | Full Model |
-|-------|-----------|
-| `gpt-oss-120b` | `openrouter/openai/gpt-oss-120b` |
-| `llama-70b` | `openrouter/meta-llama/llama-3.3-70b-instruct` |
-| `gemini-flash-lite` | `openrouter/google/gemini-3.1-flash-lite-preview` |
-| `grok-fast` | `openrouter/x-ai/grok-4.1-fast` |
+### 2. Populate `data/`
 
-## Cheatsheet Format
+See [`data/README.md`](data/README.md) for which files are required and
+where to get them. At minimum you need:
 
-Cheatsheets are plain text files (max 10KB) with `{{ equation1 }}` and `{{ equation2 }}` placeholders:
+- `data/equations.txt` — the 4694 base equations
+- `data/outcomes_bool.npy` — the 4694 × 4694 implication matrix (convert
+  from the ETP project's `outcomes.json`)
+- `data/training/problems.json` — training-set pairs (for
+  `build_bank_lookup.py`)
+- `data/validation/problems.json` + `data/validation/answers.json` — for
+  evaluation
 
-```
-You are an expert in universal algebra...
+### 3. Build the counterexample bank
 
-Equation 1: {{ equation1 }}
-Equation 2: {{ equation2 }}
-
-Answered TRUE or Answered FALSE.
-```
-
-The LLM response is parsed for TRUE/FALSE using these patterns (in order):
-1. `Answered TRUE/FALSE`
-2. `\boxed{TRUE/FALSE}`
-3. Standalone `TRUE`/`FALSE` on a line
-4. Last occurrence of `TRUE`/`FALSE` (fallback)
-
-## Commands
-
-- `eq-playground run` — Run evaluation
-- `eq-playground validate` — Dry run, print rendered prompt
-- `eq-playground download` — Fetch ETP dataset
-- `eq-playground report [files...]` — Display past results
-
-## Problem Sources
-
-**From ETP data** (recommended): Use `--equations` and `--outcomes` flags after running `download`.
-
-**From JSON/CSV**: Use `--problems` flag with a file containing:
-```json
-[{"id": "1_2", "equation1": "x = x", "equation2": "x = y", "answer": false}]
+```bash
+python analysis/magma_mining.py
 ```
 
-## Metrics
+Produces `data/magma_mining/{sat_merged_v2,refuted_merged_v2}.npy` plus the
+`bank_*.json` metadata files. This step is needed by `cascade_v14.py` and
+`eval_with_counterex.py`.
 
-Raw Accuracy, Effective Accuracy, F1, Bias, Parse Rate, Cost per Correct, Avg Time, and full confusion matrix (TP/FP/FN/TN/Unparsed).
+### 4. Run the pure-code baseline
+
+```bash
+python analysis/cascade_v14.py
+```
+
+Writes `data/magma_mining/cascade_v14_report.json` with per-rule firing
+counts and precision, and prints the aggregate accuracy table.
+
+### 5. Regenerate the cheatsheet
+
+```bash
+python analysis/build_bank_lookup.py
+```
+
+Writes an initial bank-lookup cheatsheet under `cheatsheets/`. The shipped
+`bank_lookup_v5.txt` is the polished final version of this family; the
+script regenerates the programmatic core from training-set FALSE pairs.
+
+### 6. Evaluate
+
+```bash
+python analysis/eval_checker_full.py       # cascade vs ETP / validation / community bench
+python analysis/eval_with_counterex.py     # same, plus counterexample bank overlay
+```
+
+## Notes
+
+- All scripts expect to be invoked from the repo root; they self-bootstrap
+  `sys.path` to find sibling modules.
+- Large derived binaries (`outcomes_bool.npy`, `sat_merged_v2.npy`,
+  `refuted_merged_v2.npy`) are not committed — regenerate them as
+  described above.

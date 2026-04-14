@@ -1,15 +1,42 @@
-.env
+# Python
 __pycache__/
 *.pyc
 *.egg-info/
 dist/
 build/
-results/*.json
-results/*.csv
-data/equations.txt
-data/outcomes.json
-data/*.zip
-data/*.gz
-data/validation/answers.json
-data/training/
 .venv/
+.env
+.env.example
+
+# Local-only playground infrastructure
+src/
+config/
+results/
+other_cheatsheets/
+
+# Local-only writeups and notes
+FINDINGS.md
+EXPERIMENT_GUIDE.md
+PROMPTING_TECHNIQUES_WRITEUP.md
+spine.md
+collapse_cheatsheet.md
+
+# analysis/ — public set is an explicit allow-list
+analysis/*
+!analysis/__init__.py
+!analysis/parse_equation.py
+!analysis/procedural_v2_checker.py
+!analysis/magma_counterexamples.py
+!analysis/cascade_v14.py
+!analysis/magma_mining.py
+!analysis/build_bank_lookup.py
+!analysis/eval_checker_full.py
+!analysis/eval_with_counterex.py
+
+# cheatsheets/ — only the final baseline is public
+cheatsheets/*
+!cheatsheets/bank_lookup_v5.txt
+
+# data/ — only the README is public; everything else is downloaded or regenerated
+data/*
+!data/README.md

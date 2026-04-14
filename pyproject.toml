@@ -1,22 +1,15 @@
 [project]
 name = "eq-playground"
 version = "0.1.0"
-description = "Local playground for the SAIR Mathematics Distillation Challenge - Equational Theories"
+description = "Programmatic baselines for the SAIR Mathematics Distillation Challenge - Equational Theories"
 requires-python = ">=3.11"
 dependencies = [
-    "litellm>=1.40",
-    "click>=8.0",
-    "pyyaml>=6.0",
-    "python-dotenv>=1.0",
-    "tqdm>=4.60",
+    "numpy>=1.20",
 ]
-
-[project.scripts]
-eq-playground = "eq_playground.cli:main"
 
 [build-system]
 requires = ["setuptools>=68.0"]
 build-backend = "setuptools.build_meta"
 
-[tool.setuptools.packages.find]
-where = ["src"]
+[tool.setuptools]
+packages = ["analysis"]

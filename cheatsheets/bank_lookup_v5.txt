@@ -1,0 +1,277 @@
+Decide whether Eq1 implies Eq2 over all magmas (set + binary op ◇).
+Do NOT assume associativity, commutativity, or any algebraic law.
+
+Eq1: {{ equation1 }}
+Eq2: {{ equation2 }}
+
+Apply rules in order. First match wins.
+
+Definitions:
+  leftmost(s)  = first variable letter in s, reading left to right
+  rightmost(s) = last variable letter in s
+  bare(s)      = TRUE iff s is a single variable letter (no ops)
+  parity(s,v)  = number of times variable v appears in s, mod 2
+  left-depth(s)  = number of ◇ nodes on the path root → left-child → left-child …
+  right-depth(s) = same on the right
+
+═══ TRUE rules (cheap, sound) ═══
+
+T1. Eq2's two sides are identical (e.g. 'x = x') → TRUE.
+
+T2. Eq1 and Eq2 are the same equation up to renaming variables → TRUE.
+    Check: rename the first variable seen to 'x', the next new one to
+    'y', then 'z','w'. If both renormalize to the same string, fire.
+
+T3. Eq1's LHS is a single variable letter L AND L does NOT occur
+    anywhere in Eq1's RHS → TRUE.
+    DO NOT fire T3 if L appears ANYWHERE in RHS, even deeply nested.
+    Unsafe patterns (L = x appears in RHS — do NOT fire):
+        x = x ◇ y           x = (x ◇ y) ◇ z
+        x = y ◇ (z ◇ x)     x = (y ◇ z) ◇ (w ◇ x)
+        x = x ◇ (y ◇ z)     x = (y ◇ (x ◇ z)) ◇ y
+
+    Worked example (fires):
+      Eq1 = x = (y ◇ z) ◇ (w ◇ u)
+      LHS = x (single letter). Scan RHS for 'x': y,z,w,u — no x. ✓
+      → T3 fires → TRUE.
+
+    Worked example (does NOT fire — x is hiding in the RHS):
+      Eq1 = x = ((y ◇ z) ◇ (w ◇ x)) ◇ u
+      LHS = x. Scan RHS: ...w ◇ x... — x found!
+      → T3 does NOT fire. Do not answer TRUE from this rule.
+
+═══ FALSE via 2-element witness magmas (sound, string-level) ═══
+
+L1. LEFT PROJECTION (magma a ◇ b = a). Every term evaluates to its
+    leftmost variable. An equation holds iff leftmost(L) = leftmost(R).
+    leftmost(Eq1.L) = leftmost(Eq1.R) AND
+    leftmost(Eq2.L) ≠ leftmost(Eq2.R) → FALSE.
+
+L2. RIGHT PROJECTION (magma a ◇ b = b). Symmetric.
+    rightmost(Eq1.L) = rightmost(Eq1.R) AND
+    rightmost(Eq2.L) ≠ rightmost(Eq2.R) → FALSE.
+
+L3. CONSTANT ZERO (magma a ◇ b = 0). Every product evaluates to 0;
+    bare variables evaluate to themselves. An equation holds iff
+    (both sides are non-bare products) OR (both sides are the SAME
+    single variable letter). Let cf(eq) be that predicate.
+    cf(Eq1) AND NOT cf(Eq2) → FALSE.
+
+═══ FALSE via semantic evaluation in small concrete magmas ═══
+
+For each magma M below: first check that Eq1 HOLDS in M under every
+variable assignment (so M is a valid witness). Then check whether Eq2
+FAILS in M under some assignment. If both, answer FALSE.
+
+If you cannot be confident a magma works, move on to the next one.
+Do NOT force a FALSE verdict without a concrete counterexample.
+
+M1. XOR on {0,1}:  a ◇ b = (a + b) mod 2.
+    CLOSED FORM: a term's value equals the parity-sum of the variables
+    in it (each variable counted with multiplicity, mod 2).
+    → An equation holds in XOR iff, for EVERY variable v appearing in
+    the equation, parity(L, v) = parity(R, v).
+
+    Worked example:
+      Eq1 = x ◇ x = y
+      parity of x: L has 2 (mod 2 = 0); R has 0. Equal.
+      parity of y: L has 0; R has 1. NOT equal.
+      → Eq1 does NOT hold in XOR.  (So XOR is not a valid witness
+      for this Eq1; move on.)
+
+      Eq1 = (x ◇ y) ◇ (x ◇ y) = z ◇ z
+      parity of x: L=2→0, R=0. Equal. Same for y and z.
+      → Eq1 holds in XOR. Now check Eq2 under the same parity rule.
+
+M2. LEFT-CYCLE on {0,1,2}:  a ◇ b = (a + 1) mod 3.
+    To check whether an equation holds in left-cycle, perform these
+    steps mechanically on each side:
+      Step 1: Find the leftmost variable letter reading the side L→R.
+      Step 2: Count the left-depth: starting from the root, walk into
+              the left child repeatedly until you reach a leaf; count
+              how many ◇ nodes you traversed.
+      Step 3: Reduce left-depth modulo 3 (0, 1, or 2).
+    The equation holds iff BOTH sides have the same leftmost variable
+    AND their left-depths mod 3 are equal.
+
+    Worked example:
+      Eq1 = x = ((x ◇ y) ◇ z) ◇ w
+      Step 1: leftmost of x = x. leftmost of ((x◇y)◇z)◇w = x. Same ✓
+      Step 2: left-depth of x = 0. left-depth of ((x◇y)◇z)◇w = 3
+              (root → left child (x◇y)◇z; then → left child x◇y;
+              then → left child x; 3 ◇ nodes walked).
+      Step 3: 0 mod 3 = 0; 3 mod 3 = 0. Equal ✓
+      → Eq1 holds in left-cycle.
+
+M3. RIGHT-CYCLE on {0,1,2}:  a ◇ b = (b + 1) mod 3.
+    To check whether an equation holds in right-cycle, perform these
+    steps mechanically on each side:
+      Step 1: Find the rightmost variable letter reading the side L→R.
+      Step 2: Count the right-depth: starting from the root, walk into
+              the right child repeatedly until you reach a leaf; count
+              how many ◇ nodes you traversed.
+      Step 3: Reduce right-depth modulo 3 (0, 1, or 2).
+    The equation holds iff BOTH sides have the same rightmost variable
+    AND their right-depths mod 3 are equal.
+
+    Worked example:
+      Eq1 = x = y ◇ (z ◇ (w ◇ x))
+      Step 1: rightmost of x = x. rightmost of y◇(z◇(w◇x)) = x. Same ✓
+      Step 2: right-depth of x = 0. right-depth of y◇(z◇(w◇x)) = 3
+              (root → right child z◇(w◇x); then → right child w◇x;
+              then → right child x; 3 ◇ nodes walked).
+      Step 3: 0 mod 3 = 0; 3 mod 3 = 0. Equal ✓
+      → Eq1 holds in right-cycle.
+
+M4. SPIKE-ZERO on {0,1,2}: 0◇1 = 2, and EVERY other product = 0.
+    Almost every term evaluates to 0. A term is nonzero only if it
+    contains a subterm of the exact shape (x ◇ y) where x and y are
+    bare variables and, under the assignment, x=0 and y=1.
+    → An equation holds if BOTH sides reduce to 0 under every
+    assignment (e.g. both sides are non-bare products whose outer
+    subterm is NOT a bare-variable product).
+    → The equation FAILS if one side is a bare variable letter and
+    the other is a product (the bare side varies with the assignment,
+    the product side is 0).
+
+    Worked example:
+      Eq1 = x ◇ y = y ◇ x. Both sides are products of bare variables.
+      Under x=0, y=1: LHS = 0◇1 = 2; RHS = 1◇0 = 0. Differ.
+      → Eq1 does NOT hold in spike-zero. (Not a witness; move on.)
+
+      Eq1 = (x ◇ y) ◇ z = (a ◇ b) ◇ c. Both outer products have a
+      non-bare left operand (x◇y and a◇b), so the spike never triggers
+      from those outer cells. Both sides are 0 under every assignment.
+      → Eq1 holds. Check Eq2 for a spike-trigger on one side only.
+
+M5. AND / MIN on {0,1}:  a ◇ b = min(a, b).
+    CLOSED FORM: a term evaluates to 1 only if ALL its variables are 1;
+    otherwise it evaluates to 0. So an equation holds in AND iff both
+    sides contain exactly the SAME SET of variable letters (ignoring
+    how many times each appears).
+    → Compare the set of variable letters on LHS vs RHS of Eq1.
+    If different sets → Eq1 fails in AND (not a witness; move on).
+    If same sets → Eq1 holds. Now compare sets for Eq2.
+    If Eq2 has different sets on its two sides → FALSE.
+
+    Worked example:
+      Eq1 = x ◇ (x ◇ y) = (y ◇ x) ◇ y
+      LHS vars = {x, y}. RHS vars = {y, x} = {x, y}. Same. ✓
+      → Eq1 holds in AND.
+      Eq2 = x ◇ y = y ◇ z
+      LHS vars = {x, y}. RHS vars = {y, z}. Different (x vs z).
+      → Eq2 fails in AND → FALSE.
+
+      Eq1 = x ◇ y = z
+      LHS vars = {x, y}. RHS vars = {z}. Different.
+      → Eq1 does NOT hold in AND. (Not a witness; move on.)
+
+M6. LEFT NEGATION on {0,1}:  a ◇ b = 1 − a.
+    Evaluation rule: ignore the right input. Each ◇ flips the left
+    child's value. A term's value is:
+      (value of leftmost variable) XOR (left-depth mod 2).
+    → An equation holds iff BOTH sides have the same leftmost variable
+    AND left-depth(L) ≡ left-depth(R) (mod 2) — i.e. both depths are
+    even or both are odd.
+
+    Worked example:
+      Eq1 = x = (x ◇ y) ◇ z
+      leftmost(L) = x; leftmost(R) = x. ✓
+      left-depth(L) = 0 (even); left-depth(R) = 2 (even). Same parity. ✓
+      → Eq1 holds in left-negation.
+      Eq2 = x = x ◇ y
+      leftmost(L) = x; leftmost(R) = x. ✓
+      left-depth(L) = 0 (even); left-depth(R) = 1 (odd). Different parity.
+      → Eq2 fails → FALSE.
+
+      Eq1 = x = x ◇ y
+      left-depth(L) = 0; left-depth(R) = 1. Different parity.
+      → Eq1 does NOT hold in left-negation. (Not a witness; move on.)
+
+M7. RIGHT NEGATION on {0,1}:  a ◇ b = 1 − b.
+    Mirror of M6 using rightmost + right-depth.
+    → An equation holds iff BOTH sides have the same rightmost variable
+    AND right-depth(L) ≡ right-depth(R) (mod 2).
+
+═══ FALSE via spine divisibility ═══
+
+D8. A "pure left-spine" RHS looks like ((...((x ◇ a) ◇ b) ◇ c)...) —
+    every ◇ nests in the left child, with the LHS variable x at the
+    deepest left leaf. Count the ◇ nodes to get the depth n.
+    IF Eq1's RHS is a pure left-spine of depth n,
+    AND Eq2's RHS is a pure left-spine of depth m,
+    AND n does not divide m → FALSE.
+
+    Worked example (fires):
+      Eq1 = x = ((x ◇ y) ◇ z) ◇ w
+      RHS: root ◇ has left child (x◇y)◇z, which has left child x◇y,
+      which has left child x. Pure left-spine. Depth = 3.
+      Eq2 = x = (x ◇ y) ◇ z
+      Pure left-spine. Depth = 2.
+      Does 3 divide 2? No.
+      → D8 fires → FALSE.
+
+    Worked example (does NOT fire):
+      Eq1 = x = (x ◇ y) ◇ z           depth = 2
+      Eq2 = x = (((x ◇ y) ◇ z) ◇ w) ◇ u   depth = 4
+      Does 2 divide 4? Yes (4/2 = 2).
+      → D8 does NOT fire.
+
+    Worked example (not a pure left-spine — skip D8):
+      Eq1 = x = (y ◇ (x ◇ z)) ◇ w
+      The inner (x ◇ z) sits on the RIGHT of y, not the left.
+      This is NOT a pure left-spine. → D8 does not apply.
+
+═══ FALSE via LHS-shape mismatch ═══
+
+D10. Eq1's LHS is a product or deeper expression (not a single
+     variable) AND Eq2's LHS is a single variable letter → FALSE.
+
+═══ TRUE rules (heuristic, apply only if preconditions are obvious) ═══
+
+D9. Eq1's LHS is a single variable letter AND Eq1 has 4 or more
+    distinct variables total → TRUE.
+
+    Worked example:
+      Eq1 = x = ((y ◇ z) ◇ w) ◇ y
+      LHS is the single letter 'x'. ✓
+      Distinct variables in Eq1: {x, y, z, w} → 4. ✓
+      → D9 fires → TRUE.
+
+      Eq1 = x = x ◇ (y ◇ z)
+      LHS bare ✓, distinct variables {x, y, z} → only 3.
+      → D9 does NOT fire.
+
+D5. Eq1's RHS has the shape (A ◇ z) where z is a variable letter
+    that appears NOWHERE else in the whole equation, AND leftmost(A)
+    ≠ Eq1's LHS variable → TRUE.
+
+    Worked example:
+      Eq1 = x = (y ◇ x) ◇ w
+      RHS = (A ◇ w) with A = (y ◇ x). Does 'w' appear elsewhere?
+      'w' appears only on the RHS outer ◇. ✓
+      leftmost(A) = y. Eq1 LHS variable = x. y ≠ x. ✓
+      → D5 fires → TRUE.
+
+      Eq1 = x = (y ◇ z) ◇ y
+      RHS = (A ◇ y). But 'y' also appears in A. FAIL precondition.
+      → D5 does NOT fire.
+
+D5b. Mirror of D5 on the left: Eq1's RHS has the shape (z ◇ A)
+     where z appears nowhere else, AND rightmost(A) ≠ Eq1's LHS
+     variable → TRUE.
+
+     Worked example:
+       Eq1 = x = w ◇ (x ◇ y)
+       RHS = (w ◇ A) with A = (x ◇ y). 'w' appears only at outer left. ✓
+       rightmost(A) = y. Eq1 LHS variable = x. y ≠ x. ✓
+       → D5b fires → TRUE.
+
+═══ DEFAULT ═══
+If no rule above fires → TRUE.
+
+═══ Output — use EXACTLY these lines, no markdown ═══
+VERDICT: TRUE
+or
+VERDICT: FALSE
+RULE: <T1|T2|T3|L1|L2|L3|M1|M2|M3|M4|M5|M6|M7|D8|D10|D9|D5|D5b|DEFAULT>
