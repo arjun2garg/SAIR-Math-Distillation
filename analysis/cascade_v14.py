@@ -240,6 +240,29 @@ def main():
     print(f"{'TOTAL':<22} {total_fires:>12,} {'':>8} {total_correct:>12,} "
           f"{overall_acc:>10.4f}", flush=True)
 
+    # ----- Aggregate coverage / precision breakdown -----
+    # Sound = all rules except the D9old heuristic and the DEFAULT bucket.
+    SOUND = [r for r in rule_order if r not in ("D9old", "DEFAULT_FALSE")]
+    sound_f = sum(fires[r] for r in SOUND)
+    sound_c = sum(correct[r] for r in SOUND)
+    non_def_f = total_fires - fires["DEFAULT_FALSE"]
+    non_def_c = total_correct - correct["DEFAULT_FALSE"]
+    pct = lambda n, d: f"{n/d:.4%}" if d else "n/a"
+    print("\n=== Cascade v14 aggregate on full ETP ===", flush=True)
+    print(f"  Sound rules only (ex-D9old heuristic):")
+    print(f"    coverage:  {sound_f:>14,} / {total_pairs:,} = "
+          f"{pct(sound_f, total_pairs)}")
+    print(f"    precision: {sound_c:>14,} / {sound_f:,} = "
+          f"{pct(sound_c, sound_f)}")
+    print(f"  All non-DEFAULT rules (sound + D9old heuristic):")
+    print(f"    coverage:  {non_def_f:>14,} = {pct(non_def_f, total_pairs)}")
+    print(f"    precision: {pct(non_def_c, non_def_f)}")
+    print(f"  DEFAULT bucket:")
+    print(f"    coverage:  {fires['DEFAULT_FALSE']:,} = "
+          f"{pct(fires['DEFAULT_FALSE'], total_pairs)}")
+    print(f"    accuracy:  "
+          f"{pct(correct['DEFAULT_FALSE'], fires['DEFAULT_FALSE'])}")
+
     # ----- Validation set evaluation -----
     print("\n=== Cascade v14: validation set ===", flush=True)
     problems = json.load(open(ROOT / "data/validation/problems.json"))
@@ -303,6 +326,15 @@ def main():
     report = {
         "etp": {"total_pairs": total_pairs,
                  "overall_accuracy": overall_acc,
+                 "sound_coverage":     sound_f / total_pairs,
+                 "sound_precision":    (sound_c / sound_f) if sound_f else None,
+                 "non_default_coverage":  non_def_f / total_pairs,
+                 "non_default_precision": (non_def_c / non_def_f)
+                                           if non_def_f else None,
+                 "default_coverage":   fires["DEFAULT_FALSE"] / total_pairs,
+                 "default_accuracy":   (correct["DEFAULT_FALSE"]
+                                        / fires["DEFAULT_FALSE"])
+                                        if fires["DEFAULT_FALSE"] else None,
                  "rules": summary_rows},
         "validation": val_summary,
         "rule_order": rule_order,

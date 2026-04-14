@@ -30,6 +30,7 @@ analysis/*
 !analysis/cascade_v14.py
 !analysis/magma_mining.py
 !analysis/build_bank_lookup.py
+!analysis/eval_bank_lookup_v5.py
 !analysis/eval_checker_full.py
 !analysis/eval_with_counterex.py
 
