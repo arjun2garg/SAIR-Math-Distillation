@@ -8,36 +8,13 @@ build/
 .env
 .env.example
 
-# Local-only playground infrastructure
-src/
-config/
-results/
-other_cheatsheets/
+# Local parking lot — files preserved on disk but not tracked
+_local/
 
-# Local-only writeups and notes
-FINDINGS.md
-EXPERIMENT_GUIDE.md
-PROMPTING_TECHNIQUES_WRITEUP.md
-spine.md
-collapse_cheatsheet.md
+# Tooling
+.claude/
 
-# analysis/ — public set is an explicit allow-list
-analysis/*
-!analysis/__init__.py
-!analysis/parse_equation.py
-!analysis/procedural_v2_checker.py
-!analysis/magma_counterexamples.py
-!analysis/cascade_v14.py
-!analysis/magma_mining.py
-!analysis/build_bank_lookup.py
-!analysis/eval_bank_lookup_v5.py
-!analysis/eval_checker_full.py
-!analysis/eval_with_counterex.py
-
-# cheatsheets/ — only the final baseline is public
-cheatsheets/*
-!cheatsheets/bank_lookup_v5.txt
-
-# data/ — only the README is public; everything else is downloaded or regenerated
-data/*
-!data/README.md
+# Large prebuilt cache — superset of data/outcomes_bool.npy.
+# The harness uses outcomes_bool.npy if the cache is absent.
+data/full_etp_cache.pkl
+data/counterex/

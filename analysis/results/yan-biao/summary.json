@@ -1,0 +1,2494 @@
+{
+  "splits": {
+    "normal": {
+      "dataset": "normal",
+      "n": 1000,
+      "n_correct": 969,
+      "accuracy": 0.969,
+      "by_rule": {
+        "S0a": {
+          "n": 243,
+          "tp": 243,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "S0b": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "T1": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "F0": {
+          "n": 172,
+          "tp": 0,
+          "tn": 172,
+          "fp": 0,
+          "fn": 0
+        },
+        "FP1_TRUE": {
+          "n": 1,
+          "tp": 1,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "FP1_FALSE": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "FP2_TRUE": {
+          "n": 1,
+          "tp": 1,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "FP2_FALSE": {
+          "n": 1,
+          "tp": 0,
+          "tn": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "FP3_TRUE": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "FP3_FALSE": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "L": {
+          "n": 114,
+          "tp": 0,
+          "tn": 114,
+          "fp": 0,
+          "fn": 0
+        },
+        "R": {
+          "n": 97,
+          "tp": 0,
+          "tn": 97,
+          "fp": 0,
+          "fn": 0
+        },
+        "K": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "X": {
+          "n": 42,
+          "tp": 0,
+          "tn": 42,
+          "fp": 0,
+          "fn": 0
+        },
+        "D_SPINE_L": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "D_SPINE_R": {
+          "n": 1,
+          "tp": 0,
+          "tn": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "CASE_A_3VARS_TRUE": {
+          "n": 181,
+          "tp": 181,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "CASE_A_LE2VARS_FALSE": {
+          "n": 12,
+          "tp": 0,
+          "tn": 12,
+          "fp": 0,
+          "fn": 0
+        },
+        "B0": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "B1": {
+          "n": 34,
+          "tp": 34,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "B2": {
+          "n": 6,
+          "tp": 5,
+          "tn": 0,
+          "fp": 1,
+          "fn": 0
+        },
+        "B_SUB": {
+          "n": 1,
+          "tp": 1,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "B3_SAME": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "B3_CROSS": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "B3_LOOSE": {
+          "n": 2,
+          "tp": 2,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "B_RPROJ_NARROW": {
+          "n": 2,
+          "tp": 2,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "DEFAULT_FALSE": {
+          "n": 90,
+          "tp": 0,
+          "tn": 60,
+          "fp": 0,
+          "fn": 30
+        }
+      },
+      "rule_order": [
+        "S0a",
+        "S0b",
+        "T1",
+        "F0",
+        "FP1_TRUE",
+        "FP1_FALSE",
+        "FP2_TRUE",
+        "FP2_FALSE",
+        "FP3_TRUE",
+        "FP3_FALSE",
+        "L",
+        "R",
+        "K",
+        "X",
+        "D_SPINE_L",
+        "D_SPINE_R",
+        "CASE_A_3VARS_TRUE",
+        "CASE_A_LE2VARS_FALSE",
+        "B0",
+        "B1",
+        "B2",
+        "B_SUB",
+        "B3_SAME",
+        "B3_CROSS",
+        "B3_LOOSE",
+        "B_RPROJ_NARROW",
+        "DEFAULT_FALSE"
+      ],
+      "true_rules": [
+        "B0",
+        "B1",
+        "B2",
+        "B3_CROSS",
+        "B3_LOOSE",
+        "B3_SAME",
+        "B_RPROJ_NARROW",
+        "B_SUB",
+        "CASE_A_3VARS_TRUE",
+        "FP1_TRUE",
+        "FP2_TRUE",
+        "FP3_TRUE",
+        "S0a",
+        "S0b",
+        "T1"
+      ],
+      "confusion": {
+        "tp": 470,
+        "fp": 1,
+        "tn": 499,
+        "fn": 30
+      }
+    },
+    "hard": {
+      "dataset": "hard",
+      "n": 200,
+      "n_correct": 144,
+      "accuracy": 0.72,
+      "by_rule": {
+        "S0a": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "S0b": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "T1": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "F0": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "FP1_TRUE": {
+          "n": 7,
+          "tp": 7,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "FP1_FALSE": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "FP2_TRUE": {
+          "n": 3,
+          "tp": 3,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "FP2_FALSE": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "FP3_TRUE": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "FP3_FALSE": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "L": {
+          "n": 9,
+          "tp": 0,
+          "tn": 9,
+          "fp": 0,
+          "fn": 0
+        },
+        "R": {
+          "n": 3,
+          "tp": 0,
+          "tn": 3,
+          "fp": 0,
+          "fn": 0
+        },
+        "K": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "X": {
+          "n": 3,
+          "tp": 0,
+          "tn": 3,
+          "fp": 0,
+          "fn": 0
+        },
+        "D_SPINE_L": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "D_SPINE_R": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "CASE_A_3VARS_TRUE": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "CASE_A_LE2VARS_FALSE": {
+          "n": 9,
+          "tp": 0,
+          "tn": 9,
+          "fp": 0,
+          "fn": 0
+        },
+        "B0": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "B1": {
+          "n": 3,
+          "tp": 3,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "B2": {
+          "n": 4,
+          "tp": 4,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "B_SUB": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "B3_SAME": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "B3_CROSS": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "B3_LOOSE": {
+          "n": 4,
+          "tp": 0,
+          "tn": 0,
+          "fp": 4,
+          "fn": 0
+        },
+        "B_RPROJ_NARROW": {
+          "n": 5,
+          "tp": 5,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "DEFAULT_FALSE": {
+          "n": 150,
+          "tp": 0,
+          "tn": 98,
+          "fp": 0,
+          "fn": 52
+        }
+      },
+      "rule_order": [
+        "S0a",
+        "S0b",
+        "T1",
+        "F0",
+        "FP1_TRUE",
+        "FP1_FALSE",
+        "FP2_TRUE",
+        "FP2_FALSE",
+        "FP3_TRUE",
+        "FP3_FALSE",
+        "L",
+        "R",
+        "K",
+        "X",
+        "D_SPINE_L",
+        "D_SPINE_R",
+        "CASE_A_3VARS_TRUE",
+        "CASE_A_LE2VARS_FALSE",
+        "B0",
+        "B1",
+        "B2",
+        "B_SUB",
+        "B3_SAME",
+        "B3_CROSS",
+        "B3_LOOSE",
+        "B_RPROJ_NARROW",
+        "DEFAULT_FALSE"
+      ],
+      "true_rules": [
+        "B0",
+        "B1",
+        "B2",
+        "B3_CROSS",
+        "B3_LOOSE",
+        "B3_SAME",
+        "B_RPROJ_NARROW",
+        "B_SUB",
+        "CASE_A_3VARS_TRUE",
+        "FP1_TRUE",
+        "FP2_TRUE",
+        "FP3_TRUE",
+        "S0a",
+        "S0b",
+        "T1"
+      ],
+      "confusion": {
+        "tp": 22,
+        "fp": 4,
+        "tn": 122,
+        "fn": 52
+      }
+    },
+    "hard1": {
+      "dataset": "hard1",
+      "n": 69,
+      "n_correct": 50,
+      "accuracy": 0.7246376811594203,
+      "by_rule": {
+        "S0a": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "S0b": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "T1": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "F0": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "FP1_TRUE": {
+          "n": 2,
+          "tp": 2,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "FP1_FALSE": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "FP2_TRUE": {
+          "n": 1,
+          "tp": 1,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "FP2_FALSE": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "FP3_TRUE": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "FP3_FALSE": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "L": {
+          "n": 4,
+          "tp": 0,
+          "tn": 4,
+          "fp": 0,
+          "fn": 0
+        },
+        "R": {
+          "n": 1,
+          "tp": 0,
+          "tn": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "K": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "X": {
+          "n": 1,
+          "tp": 0,
+          "tn": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "D_SPINE_L": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "D_SPINE_R": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "CASE_A_3VARS_TRUE": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "CASE_A_LE2VARS_FALSE": {
+          "n": 3,
+          "tp": 0,
+          "tn": 3,
+          "fp": 0,
+          "fn": 0
+        },
+        "B0": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "B1": {
+          "n": 1,
+          "tp": 1,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "B2": {
+          "n": 1,
+          "tp": 1,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "B_SUB": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "B3_SAME": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "B3_CROSS": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "B3_LOOSE": {
+          "n": 2,
+          "tp": 0,
+          "tn": 0,
+          "fp": 2,
+          "fn": 0
+        },
+        "B_RPROJ_NARROW": {
+          "n": 2,
+          "tp": 2,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "DEFAULT_FALSE": {
+          "n": 51,
+          "tp": 0,
+          "tn": 34,
+          "fp": 0,
+          "fn": 17
+        }
+      },
+      "rule_order": [
+        "S0a",
+        "S0b",
+        "T1",
+        "F0",
+        "FP1_TRUE",
+        "FP1_FALSE",
+        "FP2_TRUE",
+        "FP2_FALSE",
+        "FP3_TRUE",
+        "FP3_FALSE",
+        "L",
+        "R",
+        "K",
+        "X",
+        "D_SPINE_L",
+        "D_SPINE_R",
+        "CASE_A_3VARS_TRUE",
+        "CASE_A_LE2VARS_FALSE",
+        "B0",
+        "B1",
+        "B2",
+        "B_SUB",
+        "B3_SAME",
+        "B3_CROSS",
+        "B3_LOOSE",
+        "B_RPROJ_NARROW",
+        "DEFAULT_FALSE"
+      ],
+      "true_rules": [
+        "B0",
+        "B1",
+        "B2",
+        "B3_CROSS",
+        "B3_LOOSE",
+        "B3_SAME",
+        "B_RPROJ_NARROW",
+        "B_SUB",
+        "CASE_A_3VARS_TRUE",
+        "FP1_TRUE",
+        "FP2_TRUE",
+        "FP3_TRUE",
+        "S0a",
+        "S0b",
+        "T1"
+      ],
+      "confusion": {
+        "tp": 7,
+        "fp": 2,
+        "tn": 43,
+        "fn": 17
+      }
+    },
+    "hard2": {
+      "dataset": "hard2",
+      "n": 200,
+      "n_correct": 166,
+      "accuracy": 0.83,
+      "by_rule": {
+        "S0a": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "S0b": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "T1": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "F0": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "FP1_TRUE": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "FP1_FALSE": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "FP2_TRUE": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "FP2_FALSE": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "FP3_TRUE": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "FP3_FALSE": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "L": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "R": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "K": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "X": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "D_SPINE_L": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "D_SPINE_R": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "CASE_A_3VARS_TRUE": {
+          "n": 61,
+          "tp": 61,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "CASE_A_LE2VARS_FALSE": {
+          "n": 20,
+          "tp": 0,
+          "tn": 20,
+          "fp": 0,
+          "fn": 0
+        },
+        "B0": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "B1": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "B2": {
+          "n": 3,
+          "tp": 3,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "B_SUB": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "B3_SAME": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "B3_CROSS": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "B3_LOOSE": {
+          "n": 5,
+          "tp": 3,
+          "tn": 0,
+          "fp": 2,
+          "fn": 0
+        },
+        "B_RPROJ_NARROW": {
+          "n": 1,
+          "tp": 1,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "DEFAULT_FALSE": {
+          "n": 110,
+          "tp": 0,
+          "tn": 78,
+          "fp": 0,
+          "fn": 32
+        }
+      },
+      "rule_order": [
+        "S0a",
+        "S0b",
+        "T1",
+        "F0",
+        "FP1_TRUE",
+        "FP1_FALSE",
+        "FP2_TRUE",
+        "FP2_FALSE",
+        "FP3_TRUE",
+        "FP3_FALSE",
+        "L",
+        "R",
+        "K",
+        "X",
+        "D_SPINE_L",
+        "D_SPINE_R",
+        "CASE_A_3VARS_TRUE",
+        "CASE_A_LE2VARS_FALSE",
+        "B0",
+        "B1",
+        "B2",
+        "B_SUB",
+        "B3_SAME",
+        "B3_CROSS",
+        "B3_LOOSE",
+        "B_RPROJ_NARROW",
+        "DEFAULT_FALSE"
+      ],
+      "true_rules": [
+        "B0",
+        "B1",
+        "B2",
+        "B3_CROSS",
+        "B3_LOOSE",
+        "B3_SAME",
+        "B_RPROJ_NARROW",
+        "B_SUB",
+        "CASE_A_3VARS_TRUE",
+        "FP1_TRUE",
+        "FP2_TRUE",
+        "FP3_TRUE",
+        "S0a",
+        "S0b",
+        "T1"
+      ],
+      "confusion": {
+        "tp": 68,
+        "fp": 2,
+        "tn": 98,
+        "fn": 32
+      }
+    },
+    "hard3": {
+      "dataset": "hard3",
+      "n": 400,
+      "n_correct": 284,
+      "accuracy": 0.71,
+      "by_rule": {
+        "S0a": {
+          "n": 1,
+          "tp": 1,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "S0b": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "T1": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "F0": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "FP1_TRUE": {
+          "n": 1,
+          "tp": 1,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "FP1_FALSE": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "FP2_TRUE": {
+          "n": 6,
+          "tp": 6,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "FP2_FALSE": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "FP3_TRUE": {
+          "n": 1,
+          "tp": 1,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "FP3_FALSE": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "L": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "R": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "K": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "X": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "D_SPINE_L": {
+          "n": 5,
+          "tp": 0,
+          "tn": 5,
+          "fp": 0,
+          "fn": 0
+        },
+        "D_SPINE_R": {
+          "n": 5,
+          "tp": 0,
+          "tn": 5,
+          "fp": 0,
+          "fn": 0
+        },
+        "CASE_A_3VARS_TRUE": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "CASE_A_LE2VARS_FALSE": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "B0": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "B1": {
+          "n": 21,
+          "tp": 21,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "B2": {
+          "n": 25,
+          "tp": 24,
+          "tn": 0,
+          "fp": 1,
+          "fn": 0
+        },
+        "B_SUB": {
+          "n": 1,
+          "tp": 1,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "B3_SAME": {
+          "n": 1,
+          "tp": 1,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "B3_CROSS": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "B3_LOOSE": {
+          "n": 27,
+          "tp": 23,
+          "tn": 0,
+          "fp": 4,
+          "fn": 0
+        },
+        "B_RPROJ_NARROW": {
+          "n": 13,
+          "tp": 9,
+          "tn": 0,
+          "fp": 4,
+          "fn": 0
+        },
+        "DEFAULT_FALSE": {
+          "n": 293,
+          "tp": 0,
+          "tn": 186,
+          "fp": 0,
+          "fn": 107
+        }
+      },
+      "rule_order": [
+        "S0a",
+        "S0b",
+        "T1",
+        "F0",
+        "FP1_TRUE",
+        "FP1_FALSE",
+        "FP2_TRUE",
+        "FP2_FALSE",
+        "FP3_TRUE",
+        "FP3_FALSE",
+        "L",
+        "R",
+        "K",
+        "X",
+        "D_SPINE_L",
+        "D_SPINE_R",
+        "CASE_A_3VARS_TRUE",
+        "CASE_A_LE2VARS_FALSE",
+        "B0",
+        "B1",
+        "B2",
+        "B_SUB",
+        "B3_SAME",
+        "B3_CROSS",
+        "B3_LOOSE",
+        "B_RPROJ_NARROW",
+        "DEFAULT_FALSE"
+      ],
+      "true_rules": [
+        "B0",
+        "B1",
+        "B2",
+        "B3_CROSS",
+        "B3_LOOSE",
+        "B3_SAME",
+        "B_RPROJ_NARROW",
+        "B_SUB",
+        "CASE_A_3VARS_TRUE",
+        "FP1_TRUE",
+        "FP2_TRUE",
+        "FP3_TRUE",
+        "S0a",
+        "S0b",
+        "T1"
+      ],
+      "confusion": {
+        "tp": 88,
+        "fp": 9,
+        "tn": 196,
+        "fn": 107
+      }
+    },
+    "evaluation_normal": {
+      "dataset": "evaluation_normal",
+      "n": 200,
+      "n_correct": 165,
+      "accuracy": 0.825,
+      "by_rule": {
+        "S0a": {
+          "n": 13,
+          "tp": 13,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "S0b": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "T1": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "F0": {
+          "n": 8,
+          "tp": 0,
+          "tn": 8,
+          "fp": 0,
+          "fn": 0
+        },
+        "FP1_TRUE": {
+          "n": 1,
+          "tp": 1,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "FP1_FALSE": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "FP2_TRUE": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "FP2_FALSE": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "FP3_TRUE": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "FP3_FALSE": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "L": {
+          "n": 17,
+          "tp": 0,
+          "tn": 17,
+          "fp": 0,
+          "fn": 0
+        },
+        "R": {
+          "n": 8,
+          "tp": 0,
+          "tn": 8,
+          "fp": 0,
+          "fn": 0
+        },
+        "K": {
+          "n": 2,
+          "tp": 0,
+          "tn": 2,
+          "fp": 0,
+          "fn": 0
+        },
+        "X": {
+          "n": 16,
+          "tp": 0,
+          "tn": 16,
+          "fp": 0,
+          "fn": 0
+        },
+        "D_SPINE_L": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "D_SPINE_R": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "CASE_A_3VARS_TRUE": {
+          "n": 43,
+          "tp": 43,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "CASE_A_LE2VARS_FALSE": {
+          "n": 3,
+          "tp": 0,
+          "tn": 1,
+          "fp": 0,
+          "fn": 2
+        },
+        "B0": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "B1": {
+          "n": 1,
+          "tp": 1,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "B2": {
+          "n": 3,
+          "tp": 2,
+          "tn": 0,
+          "fp": 1,
+          "fn": 0
+        },
+        "B_SUB": {
+          "n": 3,
+          "tp": 3,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "B3_SAME": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "B3_CROSS": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "B3_LOOSE": {
+          "n": 8,
+          "tp": 5,
+          "tn": 0,
+          "fp": 3,
+          "fn": 0
+        },
+        "B_RPROJ_NARROW": {
+          "n": 1,
+          "tp": 1,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "DEFAULT_FALSE": {
+          "n": 73,
+          "tp": 0,
+          "tn": 44,
+          "fp": 0,
+          "fn": 29
+        }
+      },
+      "rule_order": [
+        "S0a",
+        "S0b",
+        "T1",
+        "F0",
+        "FP1_TRUE",
+        "FP1_FALSE",
+        "FP2_TRUE",
+        "FP2_FALSE",
+        "FP3_TRUE",
+        "FP3_FALSE",
+        "L",
+        "R",
+        "K",
+        "X",
+        "D_SPINE_L",
+        "D_SPINE_R",
+        "CASE_A_3VARS_TRUE",
+        "CASE_A_LE2VARS_FALSE",
+        "B0",
+        "B1",
+        "B2",
+        "B_SUB",
+        "B3_SAME",
+        "B3_CROSS",
+        "B3_LOOSE",
+        "B_RPROJ_NARROW",
+        "DEFAULT_FALSE"
+      ],
+      "true_rules": [
+        "B0",
+        "B1",
+        "B2",
+        "B3_CROSS",
+        "B3_LOOSE",
+        "B3_SAME",
+        "B_RPROJ_NARROW",
+        "B_SUB",
+        "CASE_A_3VARS_TRUE",
+        "FP1_TRUE",
+        "FP2_TRUE",
+        "FP3_TRUE",
+        "S0a",
+        "S0b",
+        "T1"
+      ],
+      "confusion": {
+        "tp": 69,
+        "fp": 4,
+        "tn": 96,
+        "fn": 31
+      }
+    },
+    "evaluation_hard": {
+      "dataset": "evaluation_hard",
+      "n": 200,
+      "n_correct": 168,
+      "accuracy": 0.84,
+      "by_rule": {
+        "S0a": {
+          "n": 14,
+          "tp": 14,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "S0b": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "T1": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "F0": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "FP1_TRUE": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "FP1_FALSE": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "FP2_TRUE": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "FP2_FALSE": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "FP3_TRUE": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "FP3_FALSE": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "L": {
+          "n": 1,
+          "tp": 0,
+          "tn": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "R": {
+          "n": 7,
+          "tp": 0,
+          "tn": 7,
+          "fp": 0,
+          "fn": 0
+        },
+        "K": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "X": {
+          "n": 13,
+          "tp": 0,
+          "tn": 13,
+          "fp": 0,
+          "fn": 0
+        },
+        "D_SPINE_L": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "D_SPINE_R": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "CASE_A_3VARS_TRUE": {
+          "n": 42,
+          "tp": 42,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "CASE_A_LE2VARS_FALSE": {
+          "n": 1,
+          "tp": 0,
+          "tn": 1,
+          "fp": 0,
+          "fn": 0
+        },
+        "B0": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "B1": {
+          "n": 2,
+          "tp": 2,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "B2": {
+          "n": 6,
+          "tp": 6,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "B_SUB": {
+          "n": 1,
+          "tp": 1,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "B3_SAME": {
+          "n": 1,
+          "tp": 1,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "B3_CROSS": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "B3_LOOSE": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "B_RPROJ_NARROW": {
+          "n": 2,
+          "tp": 2,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "DEFAULT_FALSE": {
+          "n": 110,
+          "tp": 0,
+          "tn": 78,
+          "fp": 0,
+          "fn": 32
+        }
+      },
+      "rule_order": [
+        "S0a",
+        "S0b",
+        "T1",
+        "F0",
+        "FP1_TRUE",
+        "FP1_FALSE",
+        "FP2_TRUE",
+        "FP2_FALSE",
+        "FP3_TRUE",
+        "FP3_FALSE",
+        "L",
+        "R",
+        "K",
+        "X",
+        "D_SPINE_L",
+        "D_SPINE_R",
+        "CASE_A_3VARS_TRUE",
+        "CASE_A_LE2VARS_FALSE",
+        "B0",
+        "B1",
+        "B2",
+        "B_SUB",
+        "B3_SAME",
+        "B3_CROSS",
+        "B3_LOOSE",
+        "B_RPROJ_NARROW",
+        "DEFAULT_FALSE"
+      ],
+      "true_rules": [
+        "B0",
+        "B1",
+        "B2",
+        "B3_CROSS",
+        "B3_LOOSE",
+        "B3_SAME",
+        "B_RPROJ_NARROW",
+        "B_SUB",
+        "CASE_A_3VARS_TRUE",
+        "FP1_TRUE",
+        "FP2_TRUE",
+        "FP3_TRUE",
+        "S0a",
+        "S0b",
+        "T1"
+      ],
+      "confusion": {
+        "tp": 68,
+        "fp": 0,
+        "tn": 100,
+        "fn": 32
+      }
+    },
+    "evaluation_extra_hard": {
+      "dataset": "evaluation_extra_hard",
+      "n": 200,
+      "n_correct": 109,
+      "accuracy": 0.545,
+      "by_rule": {
+        "S0a": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "S0b": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "T1": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "F0": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "FP1_TRUE": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "FP1_FALSE": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "FP2_TRUE": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "FP2_FALSE": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "FP3_TRUE": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "FP3_FALSE": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "L": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "R": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "K": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "X": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "D_SPINE_L": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "D_SPINE_R": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "CASE_A_3VARS_TRUE": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "CASE_A_LE2VARS_FALSE": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "B0": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "B1": {
+          "n": 7,
+          "tp": 7,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "B2": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "B_SUB": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "B3_SAME": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "B3_CROSS": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "B3_LOOSE": {
+          "n": 2,
+          "tp": 2,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "B_RPROJ_NARROW": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "DEFAULT_FALSE": {
+          "n": 191,
+          "tp": 0,
+          "tn": 100,
+          "fp": 0,
+          "fn": 91
+        }
+      },
+      "rule_order": [
+        "S0a",
+        "S0b",
+        "T1",
+        "F0",
+        "FP1_TRUE",
+        "FP1_FALSE",
+        "FP2_TRUE",
+        "FP2_FALSE",
+        "FP3_TRUE",
+        "FP3_FALSE",
+        "L",
+        "R",
+        "K",
+        "X",
+        "D_SPINE_L",
+        "D_SPINE_R",
+        "CASE_A_3VARS_TRUE",
+        "CASE_A_LE2VARS_FALSE",
+        "B0",
+        "B1",
+        "B2",
+        "B_SUB",
+        "B3_SAME",
+        "B3_CROSS",
+        "B3_LOOSE",
+        "B_RPROJ_NARROW",
+        "DEFAULT_FALSE"
+      ],
+      "true_rules": [
+        "B0",
+        "B1",
+        "B2",
+        "B3_CROSS",
+        "B3_LOOSE",
+        "B3_SAME",
+        "B_RPROJ_NARROW",
+        "B_SUB",
+        "CASE_A_3VARS_TRUE",
+        "FP1_TRUE",
+        "FP2_TRUE",
+        "FP3_TRUE",
+        "S0a",
+        "S0b",
+        "T1"
+      ],
+      "confusion": {
+        "tp": 9,
+        "fp": 0,
+        "tn": 100,
+        "fn": 91
+      }
+    },
+    "evaluation_order5": {
+      "dataset": "evaluation_order5",
+      "n": 200,
+      "n_correct": 177,
+      "accuracy": 0.885,
+      "by_rule": {
+        "S0a": {
+          "n": 41,
+          "tp": 41,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "S0b": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "T1": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "F0": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "FP1_TRUE": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "FP1_FALSE": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "FP2_TRUE": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "FP2_FALSE": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "FP3_TRUE": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "FP3_FALSE": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "L": {
+          "n": 17,
+          "tp": 0,
+          "tn": 17,
+          "fp": 0,
+          "fn": 0
+        },
+        "R": {
+          "n": 23,
+          "tp": 0,
+          "tn": 23,
+          "fp": 0,
+          "fn": 0
+        },
+        "K": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "X": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "D_SPINE_L": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "D_SPINE_R": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "CASE_A_3VARS_TRUE": {
+          "n": 68,
+          "tp": 52,
+          "tn": 0,
+          "fp": 16,
+          "fn": 0
+        },
+        "CASE_A_LE2VARS_FALSE": {
+          "n": 9,
+          "tp": 0,
+          "tn": 9,
+          "fp": 0,
+          "fn": 0
+        },
+        "B0": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "B1": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "B2": {
+          "n": 3,
+          "tp": 2,
+          "tn": 0,
+          "fp": 1,
+          "fn": 0
+        },
+        "B_SUB": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "B3_SAME": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "B3_CROSS": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "B3_LOOSE": {
+          "n": 1,
+          "tp": 0,
+          "tn": 0,
+          "fp": 1,
+          "fn": 0
+        },
+        "B_RPROJ_NARROW": {
+          "n": 0,
+          "tp": 0,
+          "tn": 0,
+          "fp": 0,
+          "fn": 0
+        },
+        "DEFAULT_FALSE": {
+          "n": 38,
+          "tp": 0,
+          "tn": 33,
+          "fp": 0,
+          "fn": 5
+        }
+      },
+      "rule_order": [
+        "S0a",
+        "S0b",
+        "T1",
+        "F0",
+        "FP1_TRUE",
+        "FP1_FALSE",
+        "FP2_TRUE",
+        "FP2_FALSE",
+        "FP3_TRUE",
+        "FP3_FALSE",
+        "L",
+        "R",
+        "K",
+        "X",
+        "D_SPINE_L",
+        "D_SPINE_R",
+        "CASE_A_3VARS_TRUE",
+        "CASE_A_LE2VARS_FALSE",
+        "B0",
+        "B1",
+        "B2",
+        "B_SUB",
+        "B3_SAME",
+        "B3_CROSS",
+        "B3_LOOSE",
+        "B_RPROJ_NARROW",
+        "DEFAULT_FALSE"
+      ],
+      "true_rules": [
+        "B0",
+        "B1",
+        "B2",
+        "B3_CROSS",
+        "B3_LOOSE",
+        "B3_SAME",
+        "B_RPROJ_NARROW",
+        "B_SUB",
+        "CASE_A_3VARS_TRUE",
+        "FP1_TRUE",
+        "FP2_TRUE",
+        "FP3_TRUE",
+        "S0a",
+        "S0b",
+        "T1"
+      ],
+      "confusion": {
+        "tp": 95,
+        "fp": 18,
+        "tn": 82,
+        "fn": 5
+      }
+    }
+  },
+  "full_etp": {
+    "dataset": "full_etp",
+    "n": 22033636,
+    "n_correct": 21392345,
+    "accuracy": 0.9708949081304602,
+    "by_rule": {
+      "S0a": {
+        "n": 3830304,
+        "tp": 3830304,
+        "tn": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "S0b": {
+        "n": 0,
+        "tp": 0,
+        "tn": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "T1": {
+        "n": 7755,
+        "tp": 7755,
+        "tn": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "F0": {
+        "n": 4879590,
+        "tp": 0,
+        "tn": 4879590,
+        "fp": 0,
+        "fn": 0
+      },
+      "FP1_TRUE": {
+        "n": 10908,
+        "tp": 10908,
+        "tn": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "FP1_FALSE": {
+        "n": 31320,
+        "tp": 0,
+        "tn": 31320,
+        "fp": 0,
+        "fn": 0
+      },
+      "FP2_TRUE": {
+        "n": 10908,
+        "tp": 10908,
+        "tn": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "FP2_FALSE": {
+        "n": 31320,
+        "tp": 0,
+        "tn": 31320,
+        "fp": 0,
+        "fn": 0
+      },
+      "FP3_TRUE": {
+        "n": 3108,
+        "tp": 3108,
+        "tn": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "FP3_FALSE": {
+        "n": 0,
+        "tp": 0,
+        "tn": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "L": {
+        "n": 3268846,
+        "tp": 0,
+        "tn": 3268846,
+        "fp": 0,
+        "fn": 0
+      },
+      "R": {
+        "n": 2540115,
+        "tp": 0,
+        "tn": 2540115,
+        "fp": 0,
+        "fn": 0
+      },
+      "K": {
+        "n": 240,
+        "tp": 0,
+        "tn": 240,
+        "fp": 0,
+        "fn": 0
+      },
+      "X": {
+        "n": 1120440,
+        "tp": 0,
+        "tn": 1120440,
+        "fp": 0,
+        "fn": 0
+      },
+      "D_SPINE_L": {
+        "n": 20264,
+        "tp": 0,
+        "tn": 20264,
+        "fp": 0,
+        "fn": 0
+      },
+      "D_SPINE_R": {
+        "n": 20264,
+        "tp": 0,
+        "tn": 20264,
+        "fp": 0,
+        "fn": 0
+      },
+      "CASE_A_3VARS_TRUE": {
+        "n": 3068568,
+        "tp": 3068568,
+        "tn": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "CASE_A_LE2VARS_FALSE": {
+        "n": 267444,
+        "tp": 0,
+        "tn": 267293,
+        "fp": 0,
+        "fn": 151
+      },
+      "B0": {
+        "n": 0,
+        "tp": 0,
+        "tn": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "B1": {
+        "n": 569330,
+        "tp": 549824,
+        "tn": 0,
+        "fp": 19506,
+        "fn": 0
+      },
+      "B2": {
+        "n": 79992,
+        "tp": 61628,
+        "tn": 0,
+        "fp": 18364,
+        "fn": 0
+      },
+      "B_SUB": {
+        "n": 0,
+        "tp": 0,
+        "tn": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "B3_SAME": {
+        "n": 3724,
+        "tp": 3066,
+        "tn": 0,
+        "fp": 658,
+        "fn": 0
+      },
+      "B3_CROSS": {
+        "n": 0,
+        "tp": 0,
+        "tn": 0,
+        "fp": 0,
+        "fn": 0
+      },
+      "B3_LOOSE": {
+        "n": 67033,
+        "tp": 52841,
+        "tn": 0,
+        "fp": 14192,
+        "fn": 0
+      },
+      "B_RPROJ_NARROW": {
+        "n": 41706,
+        "tp": 16252,
+        "tn": 0,
+        "fp": 25454,
+        "fn": 0
+      },
+      "DEFAULT_FALSE": {
+        "n": 2160457,
+        "tp": 0,
+        "tn": 1597491,
+        "fp": 0,
+        "fn": 562966
+      }
+    },
+    "rule_order": [
+      "S0a",
+      "S0b",
+      "T1",
+      "F0",
+      "FP1_TRUE",
+      "FP1_FALSE",
+      "FP2_TRUE",
+      "FP2_FALSE",
+      "FP3_TRUE",
+      "FP3_FALSE",
+      "L",
+      "R",
+      "K",
+      "X",
+      "D_SPINE_L",
+      "D_SPINE_R",
+      "CASE_A_3VARS_TRUE",
+      "CASE_A_LE2VARS_FALSE",
+      "B0",
+      "B1",
+      "B2",
+      "B_SUB",
+      "B3_SAME",
+      "B3_CROSS",
+      "B3_LOOSE",
+      "B_RPROJ_NARROW",
+      "DEFAULT_FALSE"
+    ],
+    "true_rules": [
+      "B0",
+      "B1",
+      "B2",
+      "B3_CROSS",
+      "B3_LOOSE",
+      "B3_SAME",
+      "B_RPROJ_NARROW",
+      "B_SUB",
+      "CASE_A_3VARS_TRUE",
+      "FP1_TRUE",
+      "FP2_TRUE",
+      "FP3_TRUE",
+      "S0a",
+      "S0b",
+      "T1"
+    ],
+    "confusion": {
+      "tp": 7615162,
+      "fp": 78174,
+      "tn": 13777183,
+      "fn": 563117
+    }
+  }
+}

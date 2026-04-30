@@ -1,0 +1,174 @@
+You are a mathematician. Determine whether Equation 1 implies Equation 2 over ALL magmas (sets with a binary operation *).
+ 
+Equation 1: {{ equation1 }}
+Equation 2: {{ equation2 }}
+ 
+CRITICAL: * is arbitrary. NOT commutative. NOT associative. No identity. No inverse. No cancellation (a*x=a*y does NOT mean x=y).
+ 
+## FOLLOW THIS ALGORITHM EXACTLY. Stop at the first conclusive step.
+ 
+### STEP 0: SINGLETON CHECK (Eq1 only)
+(a) LHS is a single variable x NOT appearing anywhere in RHS → VERDICT: TRUE
+(b) RHS is a single variable NOT appearing anywhere in LHS → VERDICT: TRUE
+  TRUE: x = y * (z * w), x * y = z [z not in LHS]
+  NOT: x = y * (x * z) [x in RHS]
+ 
+### STEP 1: QUICK CHECKS
+**T1:** Eq2 is tautology (both sides identical) or Eq1=Eq2 under renaming → VERDICT: TRUE.
+**F0:** Eq1 LHS contains * but Eq2 LHS is a single variable → VERDICT: FALSE.
+ 
+### STEP 1.5: FORCED-PROJECTION (iff theorem, 100% prec+recall on full 4694 graph)
+**FP1 (71a-class):** Eq1.LHS=bare x; Eq1.RHS=(x*T), T has NO x AND no repeated var.
+  Members: x=x*y, x=x*(y*z), x=x*(y*(z*w)), x=x*((y*z)*w).
+  Forces a*b=a → VERDICT: TRUE iff lm(Eq2.LHS)=lm(Eq2.RHS), else FALSE.
+**FP2 (71b-class):** Eq1.LHS=bare x; Eq1.RHS=(T*x), SAME strictness on T.
+  Members: x=y*x, x=(y*z)*x, x=((y*z)*w)*x, x=(y*(z*w))*x.
+  Forces a*b=b → VERDICT: TRUE iff rm(Eq2.LHS)=rm(Eq2.RHS), else FALSE.
+**FP3 (K419-class, iff theorem, 100% full-graph precision):**
+  Eq1 = `x*y=z*w` (4 DISTINCT SINGLE vars) OR `a*a=y*z` (y≠z SINGLE, a∉RHS). NO nesting.
+  Forces constant magma (a*b=c). → TRUE iff Eq2 in constant magma:
+    (Eq2.LHS.op≥1 AND Eq2.RHS.op≥1) OR (both bare SAME letter). Else FALSE.
+⚠ FP1/FP2: T must have no x, no repeats. FP3: no nesting anywhere. Else → Step 2.
+ 
+### STEP 2: FOUR SYMBOLIC MODELS — find counterexamples
+For each model, simplify both sides of Eq1:
+  - CONSTRAINT (sides differ) → abort, try next.
+  - TAUTOLOGY (sides match) → model VALID → simplify Eq2:
+    - Eq2 CONSTRAINT → VERDICT: FALSE (counterexample!)
+    - Eq2 TAUTOLOGY → inconclusive, try next.
+ 
+**Model L — Left-projection (a*b = a):** every *-expression → leftmost variable.
+  In A*B: ignore B, simplify A.  x*y→x. (y*x)*z→y. x*(y*z)→x.
+ 
+**Model R — Right-projection (a*b = b):** every *-expression → rightmost variable.
+  In A*B: ignore A, simplify B.  x*y→y. (y*x)*z→z. x*(y*z)→z.
+ 
+**Model K — Constant (a*b = c):** any expression containing *→c. Bare variable→itself.
+  BOTH sides have * → c=c (T). One side bare variable → variable=c (C).
+ 
+**Model X — XOR/Parity (a*b = a⊕b):** count each variable's total occurrences per side.
+  Odd→survives. Even→cancels. Compare surviving variable sets.
+  y*((x*z)*y): y×2 cancel, x×1, z×1 → {x,z}.
+ 
+### STEP 2.5: D-SPINE — cyclic-magma depth divisibility (FALSE only, theorem-backed)
+Pure left-spine depth n: shape (…((x*T₁)*T₂)…*Tₙ), x ONLY at deepest left leaf.
+Fire iff: Eq1.LHS=bare x, Eq1.RHS pure L-spine depth n≥1, Eq2.LHS=bare, Eq2.RHS pure L-spine depth m with leftmost leaf=Eq2.LHS, n∤m → FALSE.
+MIRROR: same with right-spine/rightmost leaf.
+Ex: Eq1: x=(x*y)*z (n=2), Eq2: x=((x*a)*b)*c (m=3), 2∤3 → FALSE.
+ 
+### STEP 3: DECISION RULES (no counterexample found)
+ 
+**CASE A — ALL four models aborted:**
+  ⚠ Re-check K and X: if Eq1 both sides have * → K is VALID (c=c); if xor(Eq1.LHS)=xor(Eq1.RHS) → X is VALID. Either valid → go Case B.
+  ⚠ Count distinct variables in EQ1 ONLY.
+  3+ vars → VERDICT: TRUE
+    EXCEPT: LHS is variable x, RHS top-level A*B, x in BOTH A and B → go to Case B.
+    Ex: RHS=((y*x)*x)*(x*z) → A has x, B has x → exception.
+  ≤2 vars → VERDICT: FALSE.
+ 
+**CASE B — At least one model valid, Eq2 tautology in all valid models:**
+⚠ If ANY valid model gave Eq2 CONSTRAINT, you already returned FALSE in Step 2.
+Apply rules in order. First match wins:
+ 
+  **B0:** Variable LHS + 6+ distinct vars → VERDICT: TRUE.
+ 
+  **B1 — Binary LHS with free variable:**
+  Eq1 LHS = A*B where A and B are BOTH SINGLE variable letters (A≠B, NOT A*A).
+  ⚠ A or B compound (contains *) → B1 does NOT apply. e.g., x*(y*z) → B compound → SKIP.
+  Eq1.RHS has variable NOT in {A,B}. Eq1.RHS does NOT contain BOTH A and B.
+  ✓ x*y = z*(x*z)  ✗ x*y = (x*y)*(z*y) [both x,y]  ✗ x*(y*z) = ... [B compound]
+  → VERDICT: TRUE
+ 
+  **B2 — Projection forcing (x*T or T*x, T has no x):**
+  ⚠ Eq1 MUST have variable LHS. Compound LHS → B2 does NOT apply.
+  Eq1 RHS top = x*T or T*x, T does NOT contain x.
+  Fires if ANY: (a) T single var, (b) outer child of T is single var NOT in the other child, (c) T has 3+ distinct vars.
+  ✓ x=x*y  ✓ x=x*(y*z)  ✓ x=((y*y)*z)*x
+  ✗ x=x*(y*y) [y∈{y}]  ✗ x=x*(x*y) [T has x]
+  → VERDICT: TRUE
+ 
+  **B-SUB — Substitution instance:**
+  σ(LHS1)=LHS2 AND σ(RHS1)=RHS2 for some substitution σ.
+  ✓ x=x*y → x=x*(y*z) [σ: y→(y*z)]
+  ✓ x*y=z*(x*z) → x*(y*w)=z*(x*z) [σ: y→(y*w)]
+  → VERDICT: TRUE
+ 
+  **B3 — Equivalence-class matching (K419 kept strict):**
+ 
+  **B3-SAME:** BOTH Eq1 and Eq2 STRICTLY match the SAME class → VERDICT: TRUE.
+  **B3-CROSS:** Eq1 strictly matches X, Eq2 strictly matches Y, X→Y below → VERDICT: TRUE.
+    71a → 112a, 76a.  71b → 112b, 76b.
+    112a → 76a.  112b → 76b.
+    K419 → (no outward edge; K419 is maximal in the reduced DAG)
+ 
+  ⚠ Be CONSERVATIVE: unsure → NO match.
+ 
+  STRICT MATCHING: x = LHS var. Slots y,z,w = subexpressions satisfying:
+  (1) Slot does NOT contain x. (2) Each slot: every var appears AT MOST ONCE.
+  For binary-LHS [K419]: slots must be SINGLE variables, never nested.
+ 
+  Variable-LHS classes (strict):
+  [71a] x=x*T ; ex: x=x*y, x=x*(y*z), x=x*(y*(z*w))
+  [71b] x=T*x ; ex: x=y*x, x=(y*z)*x, x=((y*z)*w)*x
+  [112a] x=(x*x)*T | x=(x*T₁)*T₂ ; ex: x=(x*y)*z, x=(x*y)*(x*z), x=(x*x)*(y*z)
+  [112b] x=T*(x*x) | x=T₁*(T₂*x) ; ex: x=y*(z*x), x=y*((z*w)*x), x=(y*z)*(x*x)
+  [76a] x=((x*x)*x)*T | x=((x*T₁)*T₂)*T₃ ; ex: x=((x*y)*z)*w, x=((x*x)*y)*z
+  [76b] x=T*(x*(x*x)) | x=T₁*(T₂*(T₃*x)) ; ex: x=y*(z*(w*x)), x=y*(x*(z*x))
+ 
+  Binary-LHS class (strict, SINGLE-variable slots):
+  [K419] a*a=y*z (a∉RHS, y≠z, SINGLE vars) | x*y=z*w (4 distinct SINGLE vars).
+    ⚠ NOT K419: a*a=(y*z)*w, x*y=z*(y*w) — nesting disqualifies.
+ 
+  **B3-LOOSE (NEW — bridge recovery for 112a/112b/76a/76b; 4-gate):**
+  ⚠ SCOPE: ONLY classes {112a, 112b, 76a, 76b}. NOT for 71a/71b (x=x*T or x=T*x with bare x at top).
+    If Eq1.RHS top-level is x*T or T*x with bare x at top → use FP1/FP2 STRICT only, B3-LOOSE does NOT apply.
+  Fire ONLY after B3-SAME/CROSS strict both failed.
+  LOOSE means: allow EXACTLY ONE slot to contain x OR repeated vars; at most one relaxation per side.
+  Required GATES (ALL FOUR must hold; any fails → SKIP to DEFAULT):
+    (i)   Eq1 syntactically loose-matches class C ∈ {112a, 112b, 76a, 76b} — the top-level shape matches the class pattern, and EXACTLY ONE slot is "dirty" (has x or repeats).
+    (ii)  |Eq1.LHS.vars ∪ Eq1.RHS.vars| ≥ 3. ⚠ If Eq1 has only 2 distinct vars → SKIP (over-match risk; 2-var cases fall in narrower real classes).
+    (iii) Eq2 strictly OR loose-matches the SAME class C (same loose rule: at most one dirty slot).
+    (iv)  BOTH Eq1 and Eq2 are tautologies under Model L (for 112a/76a) OR Model R (for 112b/76b).
+  ⚠ When counting "dirty slots", be STRICT: if you cannot name the single dirty slot explicitly, do NOT fire B3-LOOSE.
+  ⚠ LLM pitfall: do not assume "both slots free of x" if one slot clearly contains x — count literally.
+  Example QUALIFYING: Eq1: x=(x*y)*(z*x*z) [112a, slot (z*x*z) has x repeats — ONE dirty slot; 3 vars {x,y,z}], Eq2: x=(x*x)*(y*z) [strict 112a]. Both L-valid → TRUE.
+  Example FAIL gate (ii): Eq1: x=(x*y)*((x*y)*y) only {x,y} — 2 vars → SKIP.
+  Example FAIL gate (i): Eq1: x=(x*(y*z))*(w*x) — BOTH the inner (y*z) is free but RIGHT slot (w*x) has x AND if we consider x*(y*z) as the "x-square" part, the w*x slot has x too. Two dirty counts → SKIP.
+  → VERDICT: TRUE (only if all 4 gates pass)
+ 
+  **B-RPROJ-narrow:** ONLY Model R valid; Eq1.LHS=bare x; 3+ distinct vars;
+  Eq1.RHS top-level A*B with B=x (BARE x at top-right, A arbitrary);
+  Eq2.LHS compound → TRUE. ⚠ If L also valid → does NOT fire.
+ 
+  **DEFAULT → VERDICT: FALSE.**
+  Rationale: ~75% of DEFAULT pairs are FALSE; no TRUE-rule fired → prior says FALSE.
+ 
+### WORKED EXAMPLES
+ 
+**Ex1 (TRUE singleton):** Eq1: x=y*(z*w). x ∉ RHS → TRUE.
+**Ex2 (FALSE F0):** Eq1: x*y=(y*x)*z, Eq2: x=y*(x*z) → FALSE.
+**Ex3 (FALSE Model L):** Eq1: x=x*(x*x), Eq2: x=y*(x*x) → FALSE.
+**Ex4 (TRUE Case A):** Eq1: x=y*(x*z), Eq2: x=y*((z*w)*u). All abort, 3 vars → TRUE.
+**Ex4b (FALSE Case A exception):** Eq1: x=((y*x)*x)*(x*z). x in both A,B → Case B → no rule → FALSE.
+**Ex5 (TRUE B2):** Eq1: x=x*(y*z). B2: T=(y*z), y∉{z} → TRUE.
+**Ex7 (TRUE B3-SAME):** Eq1: x=x*(y*(z*w)), Eq2: x=x*(y*z). Both [71a] → TRUE.
+**Ex7b (FALSE B3 repeat trap):** Eq1: x=(y*(z*y))*x. Slot has y repeated → NOT [71b] → FALSE.
+**Ex8 (TRUE B-SUB):** Eq1: x*y=z*(x*z), Eq2: x*(y*w)=z*(x*z). σ:y→(y*w) → TRUE.
+**Ex10 (TRUE B3-CROSS):** Eq1: x=x*(y*z) [71a]. Eq2: x=(x*x)*(y*z) [112a] → TRUE.
+**Ex11 (TRUE B3-LOOSE):** Eq1: x=(x*y)*(x*z) [112a, slot (x*z) has x; 3 vars]. Eq2: x=(x*x)*(y*z). Both L-valid → TRUE.
+**Ex12 (TRUE FP3 K419):** Eq1: x*x=y*z. Eq2: x*y=(z*w)*u, Eq2 both op≥1 → TRUE.
+ 
+### REFERENCE
+TRUE: x*x=y*z ⟹ x*y=z*w [FP3 K419]
+TRUE: x=(y*z)*x ⟹ a*b=b [FP2 71b]
+TRUE: x=y*(x*x) ⟹ x=y*((z*w)*x) [B3-SAME 112b]
+FALSE: x*(y*z)=(y*w)*w ⟹/ ... [B1: B compound SKIP]
+ 
+### PITFALLS
+1. L ignores right child, R ignores left child. X: count ALL including nested.
+2. B1/FP1/FP2/D-SPINE/B3-strict: NO x, NO repeats in slots. B1 also: A≠B.
+3. B3-LOOSE: ONLY 112a/b/76a/b, 4 gates all required. FP3: NO nesting anywhere.
+ 
+---
+Output your analysis step by step, then on the LAST LINE:
+VERDICT: TRUE or VERDICT: FALSE

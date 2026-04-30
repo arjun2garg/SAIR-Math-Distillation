@@ -1,0 +1,103 @@
+Does Eq1 ({{ equation1 }}) imply Eq2 ({{ equation2 }}) over all magmas?
+ 
+* is an arbitrary binary operation on a set. Assume no associativity, commutativity, identity, cancellation, surjectivity, bijectivity, or re-bracketing unless Eq1 forces it. Keep exact parentheses.
+ 
+Work in two layers. Layer A is the strict layer — commit only if a rule fires cleanly. Layer B is a deterministic fallback tree using variable-count features of Eq1.
+ 
+================================================================
+LAYER A — STRICT DECISION
+================================================================
+ 
+STRICT TRUE RULES — if any fires, commit TRUE.
+ 
+A1 SAME: Eq2's two sides are syntactically identical.
+A2 RENAME: Eq2 equals Eq1 under a single consistent variable renaming (possibly swapping sides).
+A3 SINGLETON: one side of Eq1 is a bare variable absent from the other side → forces a 1-element magma → any Eq2 holds.
+    Example singletons: x = y, x = y*z, x = (y*z)*(w*u). NOT singletons: x = x*y, x = y*(x*z).
+A4 LP-PIN: Eq1 is literally x = x*y or x*y = x (two distinct variables). Then * = left projection a*b = a, and every term = its leftmost leaf. TRUE iff Eq2's leftmost leaves agree on both sides.
+A5 RP-PIN: Eq1 is literally x = y*x or x*y = y (distinct variables). Then * = right projection. TRUE iff Eq2's rightmost leaves agree.
+A6 LU-PIN: Eq1 is literally x*y = x*z (distinct y, z). Then a*b = f(a), every term = f^d(leftmost leaf) where d = left-spine depth. TRUE iff Eq2's two sides share BOTH leftmost leaf AND left-spine depth.
+A7 RU-PIN: Eq1 is literally y*x = z*x (distinct y, z). Then a*b = g(b). TRUE iff Eq2's sides share rightmost leaf AND right-spine depth.
+A8 CONST: Eq1 is literally x*y = R or R = x*y with distinct x, y absent from R; also x*x = y*z up to renaming. Then all products collapse to a single constant. TRUE iff both sides of Eq2 are products.
+A9 DERIVE: Eq2 is reachable from Eq1 by renaming variables, swapping sides, and exact-subterm substitution (NEVER re-bracket).
+    A9a ITERATED TEMPLATE: if Eq1 has the form x = C[x] with an exact displayed x-subterm on the RHS, you may substitute Eq1 into that exact x-subterm up to 2 times. Write each substitution explicitly and stop after at most 2 attempts:
+        Attempt 1: [equation after 1 substitution]
+        Attempt 2: [equation after 2 substitutions]
+    If Eq2 appears exactly in this chain, commit TRUE. If Eq2 is not reached by Attempt 2, do NOT write an Attempt 3 and move on. Never re-bracket and never substitute into a different-shaped subterm.
+ 
+STRICT FALSE WITNESSES — check each witness W in order. Commit FALSE immediately if W universally satisfies Eq1 but W fails on Eq2.
+ 
+W1 LP (a*b = a): a term evaluates to its leftmost leaf. E holds iff leftmost(E.lhs) = leftmost(E.rhs).
+W2 RP (a*b = b): a term = its rightmost leaf.
+W3 LIST (a*b = concat(a,b)): a term = its left-to-right leaf list. E holds iff the two sides have the same leaf sequence.
+W4 SET (a*b = a ∪ b): a term = its variable set. E holds iff both sides use the same variable set.
+W5 AB (a*b = a + b in N^vars): a term = its exact occurrence-count vector. E holds iff each variable has equal count on both sides.
+W6 XOR (a*b = a + b mod 2): each variable's count mod 2 agrees.
+W7 MOD3 (a*b = a + b mod 3): each variable's count mod 3 agrees.
+W8 K0 (a*b = 0, single variable keeps its value): E holds iff both sides are products, OR both sides are the same variable.
+W9 LC3 (a*b = (a + 1) mod 3): a term = (leftmost leaf, left-path-count mod 3). E holds iff leftmost leaves agree AND left-path counts mod 3 agree.
+W10 RC3 (a*b = (b + 1) mod 3): mirror with rightmost and right-path.
+Left-path count of t: 0 if t is a variable; otherwise 1 + left_path_count(t.left).
+ 
+If Layer A committed, stop and output. Otherwise go to Layer B.
+ 
+================================================================
+LAYER B — FALLBACK DECISION TREE (FAST, STRUCTURAL)
+================================================================
+ 
+Compute these three integers about Eq1 only:
+ 
+M = for each variable appearing in Eq1, count its total occurrences across BOTH sides of Eq1; M = the smallest such count.
+    (If some variable appears only once, M = 1.)
+S = size of Eq1's LHS = number of * nodes on the LHS. (If LHS is a single variable, S = 0.)
+V = number of distinct variables on Eq1's LHS. (If LHS is a single variable, V = 1.)
+ 
+Now apply the tree:
+ 
+Additional bilateral feature:
+C1 = number of * nodes in Eq1 (both sides).
+C2 = number of * nodes in Eq2 (both sides).
+ 
+B0 ORDER-EXPLOSION (bilateral): If C2 > C1 + 2 AND M = 1 → FALSE.
+    Reason: Eq2 requires significantly more operations than Eq1. When Eq1 has only one variable appearing once (M=1), Eq1 is topologically too loose to force the tighter structure of Eq2 across arbitrary un-probed magmas.
+ 
+B1 If M ≥ 2 (every variable in Eq1 appears two or more times) → FALSE.
+B2 Else (M = 1, some variable appears exactly once):
+    B2a If S = 0 (Eq1's LHS is a bare variable) → TRUE.
+    B2b If S = 1 and V = 2 (Eq1's LHS is of the form x*y with distinct x, y) → TRUE.
+    B2c If S = 1 and V = 1 (Eq1's LHS is of the form v*v for some variable v) AND Eq2's LHS is also of the form u*u for some variable u → TRUE.
+    B2d Otherwise → FALSE.
+ 
+WHY THIS RULE (for calibration, not enforcement):
+- M ≥ 2 means every variable in Eq1 is "tied" across two or more positions. Eq1 is loose, and any tighter Eq2 likely fails in some magma we haven't probed.
+- M = 1 means some variable is a free parameter Eq1 must accept for every value. Combined with a simple LHS (bare or x*y), Eq1 is rigid enough that Eq2 usually follows.
+- A complex product on Eq1's LHS with a free variable generally does NOT force Eq2, because the LHS can still vary freely.
+ 
+================================================================
+OUTPUT FORMAT
+================================================================
+ 
+Keep reasoning brief. Show the relevant layer's trigger. Then output exactly:
+ 
+VERDICT: TRUE or VERDICT: FALSE
+If TRUE: BASIS: <A-rule or B-rule> short reason
+If FALSE: COUNTEREXAMPLE: <witness magma> brief or BASIS: B1/B2d fallback
+ 
+PROOF DISCIPLINE
+ 
+- s(x,y,...) is not an arbitrary element unless surjectivity is proved.
+- Never infer projection or unary behavior unless A4–A7 literally applies.
+- Replace only exact subterms. Never re-bracket.
+- Rigidity alone (no witness satisfies Eq1) is not a proof of TRUE — Layer B decides such cases by its own tree.
+ 
+MINI EXAMPLES
+ 
+Eq1 x*y = x, Eq2 x = (x*y)*(z*w): A4 LP-PIN. Both leftmost leaves = x. TRUE.
+Eq1 x*x = y*z, Eq2 x*(x*y) = (y*x)*z: A8 CONST (x*x = y*z form). Both Eq2 sides are products. TRUE.
+Eq1 x = ((x*y)*z)*w, Eq2 x*y = (x*(z*w))*w: W9 LC3 satisfies Eq1 (RHS left-path = 3, cycles to x) but fails Eq2 (counts 1 vs 2 disagree). FALSE.
+Eq1 x = y*(z*x), Eq2 x = (z*y)*x:
+  Layer A: none of A1–A9 fire. Witnesses: LP, RP, etc. — do any satisfy Eq1 and fail Eq2? Check RP: Eq1 rightmost(x) = rightmost(y*(z*x)) = x ✓, Eq2 rightmost(x) = x ✓, RP holds on both. No strict FALSE.
+  Layer B: variables in Eq1 are {x, y, z}, counts = (x:2, y:1, z:1). M = 1. LHS is x (bare), S = 0, V = 1. Rule B2a fires → TRUE.
+Eq1 x*y = y*x, Eq2 x*(y*z) = (x*y)*z:
+  Layer A: none of A1–A9 fire. Witnesses: LP holds on Eq1 (leftmost x vs y — wait, Eq1 x*y vs y*x, so LP(Eq1): leftmost(x*y)=x vs leftmost(y*x)=y, so LP fails on Eq1. So LP is not a counterexample. Try others. Eventually none give strict FALSE.
+  Layer B: Eq1 vars = (x:2, y:2), M = 2. Rule B1 fires → FALSE.

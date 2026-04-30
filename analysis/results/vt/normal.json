@@ -1,0 +1,9311 @@
+{
+  "dataset": "normal",
+  "n": 1000,
+  "n_correct": 898,
+  "accuracy": 0.898,
+  "by_rule": {
+    "X1": {
+      "n": 0,
+      "tp": 0,
+      "tn": 0,
+      "fp": 0,
+      "fn": 0
+    },
+    "X2": {
+      "n": 0,
+      "tp": 0,
+      "tn": 0,
+      "fp": 0,
+      "fn": 0
+    },
+    "X3": {
+      "n": 243,
+      "tp": 243,
+      "tn": 0,
+      "fp": 0,
+      "fn": 0
+    },
+    "LP": {
+      "n": 146,
+      "tp": 0,
+      "tn": 146,
+      "fp": 0,
+      "fn": 0
+    },
+    "RP": {
+      "n": 122,
+      "tp": 0,
+      "tn": 122,
+      "fp": 0,
+      "fn": 0
+    },
+    "XOR": {
+      "n": 59,
+      "tp": 0,
+      "tn": 59,
+      "fp": 0,
+      "fn": 0
+    },
+    "F1_TRUE": {
+      "n": 0,
+      "tp": 0,
+      "tn": 0,
+      "fp": 0,
+      "fn": 0
+    },
+    "F1_FALSE": {
+      "n": 0,
+      "tp": 0,
+      "tn": 0,
+      "fp": 0,
+      "fn": 0
+    },
+    "F2_TRUE": {
+      "n": 0,
+      "tp": 0,
+      "tn": 0,
+      "fp": 0,
+      "fn": 0
+    },
+    "F2_FALSE": {
+      "n": 0,
+      "tp": 0,
+      "tn": 0,
+      "fp": 0,
+      "fn": 0
+    },
+    "F3_TRUE": {
+      "n": 0,
+      "tp": 0,
+      "tn": 0,
+      "fp": 0,
+      "fn": 0
+    },
+    "F3_FALSE": {
+      "n": 0,
+      "tp": 0,
+      "tn": 0,
+      "fp": 0,
+      "fn": 0
+    },
+    "F4_TRUE": {
+      "n": 0,
+      "tp": 0,
+      "tn": 0,
+      "fp": 0,
+      "fn": 0
+    },
+    "F4_FALSE": {
+      "n": 0,
+      "tp": 0,
+      "tn": 0,
+      "fp": 0,
+      "fn": 0
+    },
+    "A1": {
+      "n": 4,
+      "tp": 0,
+      "tn": 4,
+      "fp": 0,
+      "fn": 0
+    },
+    "A2": {
+      "n": 5,
+      "tp": 0,
+      "tn": 5,
+      "fp": 0,
+      "fn": 0
+    },
+    "A3": {
+      "n": 5,
+      "tp": 0,
+      "tn": 5,
+      "fp": 0,
+      "fn": 0
+    },
+    "A4": {
+      "n": 1,
+      "tp": 0,
+      "tn": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    "A5": {
+      "n": 12,
+      "tp": 0,
+      "tn": 12,
+      "fp": 0,
+      "fn": 0
+    },
+    "A6": {
+      "n": 3,
+      "tp": 0,
+      "tn": 3,
+      "fp": 0,
+      "fn": 0
+    },
+    "A7": {
+      "n": 1,
+      "tp": 0,
+      "tn": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    "A8": {
+      "n": 1,
+      "tp": 0,
+      "tn": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    "A9": {
+      "n": 0,
+      "tp": 0,
+      "tn": 0,
+      "fp": 0,
+      "fn": 0
+    },
+    "A10": {
+      "n": 5,
+      "tp": 0,
+      "tn": 5,
+      "fp": 0,
+      "fn": 0
+    },
+    "C_PROBE": {
+      "n": 90,
+      "tp": 0,
+      "tn": 90,
+      "fp": 0,
+      "fn": 0
+    },
+    "H1": {
+      "n": 18,
+      "tp": 0,
+      "tn": 0,
+      "fp": 0,
+      "fn": 18
+    },
+    "H2": {
+      "n": 0,
+      "tp": 0,
+      "tn": 0,
+      "fp": 0,
+      "fn": 0
+    },
+    "H3": {
+      "n": 45,
+      "tp": 0,
+      "tn": 3,
+      "fp": 0,
+      "fn": 42
+    },
+    "H4": {
+      "n": 1,
+      "tp": 0,
+      "tn": 1,
+      "fp": 0,
+      "fn": 0
+    },
+    "H5": {
+      "n": 2,
+      "tp": 0,
+      "tn": 1,
+      "fp": 0,
+      "fn": 1
+    },
+    "H6": {
+      "n": 0,
+      "tp": 0,
+      "tn": 0,
+      "fp": 0,
+      "fn": 0
+    },
+    "HUB_Eq41": {
+      "n": 18,
+      "tp": 10,
+      "tn": 0,
+      "fp": 8,
+      "fn": 0
+    },
+    "HUB_Eq46": {
+      "n": 0,
+      "tp": 0,
+      "tn": 0,
+      "fp": 0,
+      "fn": 0
+    },
+    "HUB_Eq6": {
+      "n": 0,
+      "tp": 0,
+      "tn": 0,
+      "fp": 0,
+      "fn": 0
+    },
+    "DEFAULT_TRUE": {
+      "n": 219,
+      "tp": 186,
+      "tn": 0,
+      "fp": 33,
+      "fn": 0
+    }
+  },
+  "rule_order": [
+    "X1",
+    "X2",
+    "X3",
+    "LP",
+    "RP",
+    "XOR",
+    "F1_TRUE",
+    "F1_FALSE",
+    "F2_TRUE",
+    "F2_FALSE",
+    "F3_TRUE",
+    "F3_FALSE",
+    "F4_TRUE",
+    "F4_FALSE",
+    "A1",
+    "A2",
+    "A3",
+    "A4",
+    "A5",
+    "A6",
+    "A7",
+    "A8",
+    "A9",
+    "A10",
+    "C_PROBE",
+    "H1",
+    "H2",
+    "H3",
+    "H4",
+    "H5",
+    "H6",
+    "HUB_Eq41",
+    "HUB_Eq46",
+    "HUB_Eq6",
+    "DEFAULT_TRUE"
+  ],
+  "true_rules": [
+    "DEFAULT_TRUE",
+    "F1_TRUE",
+    "F2_TRUE",
+    "F3_TRUE",
+    "F4_TRUE",
+    "HUB_Eq41",
+    "HUB_Eq46",
+    "HUB_Eq6",
+    "X1",
+    "X2",
+    "X3"
+  ],
+  "confusion": {
+    "tp": 439,
+    "fp": 41,
+    "tn": 459,
+    "fn": 61
+  },
+  "rows": [
+    {
+      "id": "normal_0001",
+      "eq1_id": 2918,
+      "eq2_id": 1911,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0002",
+      "eq1_id": 3454,
+      "eq2_id": 4503,
+      "gold": true,
+      "rule": "HUB_Eq41",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0003",
+      "eq1_id": 649,
+      "eq2_id": 2608,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0004",
+      "eq1_id": 815,
+      "eq2_id": 2164,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0005",
+      "eq1_id": 905,
+      "eq2_id": 3050,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0006",
+      "eq1_id": 4263,
+      "eq2_id": 837,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0007",
+      "eq1_id": 1600,
+      "eq2_id": 3437,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0008",
+      "eq1_id": 2653,
+      "eq2_id": 4329,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0009",
+      "eq1_id": 1396,
+      "eq2_id": 3770,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0010",
+      "eq1_id": 3853,
+      "eq2_id": 4605,
+      "gold": true,
+      "rule": "HUB_Eq41",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0011",
+      "eq1_id": 724,
+      "eq2_id": 2130,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0012",
+      "eq1_id": 3881,
+      "eq2_id": 3418,
+      "gold": false,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": false
+    },
+    {
+      "id": "normal_0013",
+      "eq1_id": 1737,
+      "eq2_id": 2774,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0014",
+      "eq1_id": 4638,
+      "eq2_id": 403,
+      "gold": false,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": false
+    },
+    {
+      "id": "normal_0015",
+      "eq1_id": 4219,
+      "eq2_id": 530,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0016",
+      "eq1_id": 4684,
+      "eq2_id": 4439,
+      "gold": false,
+      "rule": "XOR",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0017",
+      "eq1_id": 4363,
+      "eq2_id": 2442,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0018",
+      "eq1_id": 1077,
+      "eq2_id": 747,
+      "gold": true,
+      "rule": "H3",
+      "pred": false,
+      "correct": false
+    },
+    {
+      "id": "normal_0019",
+      "eq1_id": 3451,
+      "eq2_id": 2115,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0020",
+      "eq1_id": 1835,
+      "eq2_id": 1682,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0021",
+      "eq1_id": 4271,
+      "eq2_id": 4114,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0022",
+      "eq1_id": 2738,
+      "eq2_id": 3451,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0023",
+      "eq1_id": 2311,
+      "eq2_id": 3542,
+      "gold": true,
+      "rule": "H3",
+      "pred": false,
+      "correct": false
+    },
+    {
+      "id": "normal_0024",
+      "eq1_id": 4461,
+      "eq2_id": 1349,
+      "gold": false,
+      "rule": "XOR",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0025",
+      "eq1_id": 315,
+      "eq2_id": 2051,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0026",
+      "eq1_id": 2081,
+      "eq2_id": 1225,
+      "gold": false,
+      "rule": "A2",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0027",
+      "eq1_id": 4154,
+      "eq2_id": 1435,
+      "gold": false,
+      "rule": "XOR",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0028",
+      "eq1_id": 1185,
+      "eq2_id": 796,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0029",
+      "eq1_id": 627,
+      "eq2_id": 1438,
+      "gold": false,
+      "rule": "A6",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0030",
+      "eq1_id": 649,
+      "eq2_id": 4175,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0031",
+      "eq1_id": 1194,
+      "eq2_id": 1583,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0032",
+      "eq1_id": 3368,
+      "eq2_id": 3563,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0033",
+      "eq1_id": 1857,
+      "eq2_id": 2202,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0034",
+      "eq1_id": 2996,
+      "eq2_id": 1199,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0035",
+      "eq1_id": 1775,
+      "eq2_id": 1961,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0036",
+      "eq1_id": 4074,
+      "eq2_id": 3272,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0037",
+      "eq1_id": 2020,
+      "eq2_id": 3021,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0038",
+      "eq1_id": 1545,
+      "eq2_id": 419,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0039",
+      "eq1_id": 1347,
+      "eq2_id": 1925,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0040",
+      "eq1_id": 720,
+      "eq2_id": 3177,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0041",
+      "eq1_id": 4584,
+      "eq2_id": 2319,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0042",
+      "eq1_id": 1971,
+      "eq2_id": 3301,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0043",
+      "eq1_id": 1027,
+      "eq2_id": 3955,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0044",
+      "eq1_id": 4406,
+      "eq2_id": 638,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0045",
+      "eq1_id": 322,
+      "eq2_id": 375,
+      "gold": false,
+      "rule": "A2",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0046",
+      "eq1_id": 1908,
+      "eq2_id": 1734,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0047",
+      "eq1_id": 316,
+      "eq2_id": 1650,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0048",
+      "eq1_id": 1609,
+      "eq2_id": 1230,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0049",
+      "eq1_id": 697,
+      "eq2_id": 2873,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0050",
+      "eq1_id": 1495,
+      "eq2_id": 2220,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0051",
+      "eq1_id": 138,
+      "eq2_id": 1896,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0052",
+      "eq1_id": 3429,
+      "eq2_id": 3146,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0053",
+      "eq1_id": 1484,
+      "eq2_id": 3242,
+      "gold": false,
+      "rule": "A1",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0054",
+      "eq1_id": 32,
+      "eq2_id": 3761,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0055",
+      "eq1_id": 2489,
+      "eq2_id": 580,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0056",
+      "eq1_id": 2971,
+      "eq2_id": 859,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0057",
+      "eq1_id": 3020,
+      "eq2_id": 1361,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0058",
+      "eq1_id": 3198,
+      "eq2_id": 4126,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0059",
+      "eq1_id": 659,
+      "eq2_id": 3041,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0060",
+      "eq1_id": 1367,
+      "eq2_id": 341,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0061",
+      "eq1_id": 3320,
+      "eq2_id": 94,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0062",
+      "eq1_id": 2713,
+      "eq2_id": 2803,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0063",
+      "eq1_id": 2914,
+      "eq2_id": 2171,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0064",
+      "eq1_id": 850,
+      "eq2_id": 96,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0065",
+      "eq1_id": 2213,
+      "eq2_id": 3360,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0066",
+      "eq1_id": 3831,
+      "eq2_id": 3869,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0067",
+      "eq1_id": 1373,
+      "eq2_id": 3116,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0068",
+      "eq1_id": 3846,
+      "eq2_id": 3413,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0069",
+      "eq1_id": 3010,
+      "eq2_id": 4677,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0070",
+      "eq1_id": 389,
+      "eq2_id": 4507,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0071",
+      "eq1_id": 4255,
+      "eq2_id": 2946,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0072",
+      "eq1_id": 3002,
+      "eq2_id": 2281,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0073",
+      "eq1_id": 4401,
+      "eq2_id": 1601,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0074",
+      "eq1_id": 4041,
+      "eq2_id": 579,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0075",
+      "eq1_id": 1142,
+      "eq2_id": 3560,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0076",
+      "eq1_id": 2786,
+      "eq2_id": 13,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0077",
+      "eq1_id": 3767,
+      "eq2_id": 4245,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0078",
+      "eq1_id": 579,
+      "eq2_id": 699,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0079",
+      "eq1_id": 1290,
+      "eq2_id": 4513,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0080",
+      "eq1_id": 3461,
+      "eq2_id": 1607,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0081",
+      "eq1_id": 1732,
+      "eq2_id": 3729,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0082",
+      "eq1_id": 2493,
+      "eq2_id": 2228,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0083",
+      "eq1_id": 2514,
+      "eq2_id": 1762,
+      "gold": true,
+      "rule": "H3",
+      "pred": false,
+      "correct": false
+    },
+    {
+      "id": "normal_0084",
+      "eq1_id": 2026,
+      "eq2_id": 4652,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0085",
+      "eq1_id": 1841,
+      "eq2_id": 314,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0086",
+      "eq1_id": 1545,
+      "eq2_id": 3078,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0087",
+      "eq1_id": 886,
+      "eq2_id": 4057,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0088",
+      "eq1_id": 1642,
+      "eq2_id": 581,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0089",
+      "eq1_id": 2028,
+      "eq2_id": 2926,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0090",
+      "eq1_id": 2398,
+      "eq2_id": 2456,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0091",
+      "eq1_id": 2539,
+      "eq2_id": 3599,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0092",
+      "eq1_id": 2581,
+      "eq2_id": 444,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0093",
+      "eq1_id": 986,
+      "eq2_id": 2808,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0094",
+      "eq1_id": 4301,
+      "eq2_id": 409,
+      "gold": false,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": false
+    },
+    {
+      "id": "normal_0095",
+      "eq1_id": 2054,
+      "eq2_id": 2952,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0096",
+      "eq1_id": 3087,
+      "eq2_id": 2965,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0097",
+      "eq1_id": 1845,
+      "eq2_id": 3828,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0098",
+      "eq1_id": 18,
+      "eq2_id": 1481,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0099",
+      "eq1_id": 878,
+      "eq2_id": 3784,
+      "gold": true,
+      "rule": "H3",
+      "pred": false,
+      "correct": false
+    },
+    {
+      "id": "normal_0100",
+      "eq1_id": 1150,
+      "eq2_id": 2718,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0101",
+      "eq1_id": 4215,
+      "eq2_id": 386,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0102",
+      "eq1_id": 4585,
+      "eq2_id": 798,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0103",
+      "eq1_id": 248,
+      "eq2_id": 702,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0104",
+      "eq1_id": 1615,
+      "eq2_id": 1206,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0105",
+      "eq1_id": 131,
+      "eq2_id": 1282,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0106",
+      "eq1_id": 2472,
+      "eq2_id": 3705,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0107",
+      "eq1_id": 4404,
+      "eq2_id": 2901,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0108",
+      "eq1_id": 4693,
+      "eq2_id": 3936,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0109",
+      "eq1_id": 3841,
+      "eq2_id": 21,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0110",
+      "eq1_id": 2926,
+      "eq2_id": 1317,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0111",
+      "eq1_id": 2286,
+      "eq2_id": 4624,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0112",
+      "eq1_id": 150,
+      "eq2_id": 1240,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0113",
+      "eq1_id": 2758,
+      "eq2_id": 857,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0114",
+      "eq1_id": 4679,
+      "eq2_id": 1831,
+      "gold": false,
+      "rule": "XOR",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0115",
+      "eq1_id": 1362,
+      "eq2_id": 3324,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0116",
+      "eq1_id": 1784,
+      "eq2_id": 2573,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0117",
+      "eq1_id": 2714,
+      "eq2_id": 2099,
+      "gold": false,
+      "rule": "XOR",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0118",
+      "eq1_id": 2630,
+      "eq2_id": 423,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0119",
+      "eq1_id": 2014,
+      "eq2_id": 1273,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0120",
+      "eq1_id": 1017,
+      "eq2_id": 2245,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0121",
+      "eq1_id": 3580,
+      "eq2_id": 4304,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0122",
+      "eq1_id": 74,
+      "eq2_id": 2583,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0123",
+      "eq1_id": 1787,
+      "eq2_id": 4215,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0124",
+      "eq1_id": 1725,
+      "eq2_id": 2635,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0125",
+      "eq1_id": 3444,
+      "eq2_id": 3910,
+      "gold": true,
+      "rule": "HUB_Eq41",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0126",
+      "eq1_id": 3110,
+      "eq2_id": 4441,
+      "gold": true,
+      "rule": "H3",
+      "pred": false,
+      "correct": false
+    },
+    {
+      "id": "normal_0127",
+      "eq1_id": 4382,
+      "eq2_id": 1073,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0128",
+      "eq1_id": 3670,
+      "eq2_id": 4643,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0129",
+      "eq1_id": 1395,
+      "eq2_id": 1606,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0130",
+      "eq1_id": 2314,
+      "eq2_id": 1131,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0131",
+      "eq1_id": 2880,
+      "eq2_id": 3240,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0132",
+      "eq1_id": 1156,
+      "eq2_id": 1947,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0133",
+      "eq1_id": 1184,
+      "eq2_id": 3944,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0134",
+      "eq1_id": 116,
+      "eq2_id": 1938,
+      "gold": true,
+      "rule": "H3",
+      "pred": false,
+      "correct": false
+    },
+    {
+      "id": "normal_0135",
+      "eq1_id": 2999,
+      "eq2_id": 154,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0136",
+      "eq1_id": 1624,
+      "eq2_id": 2594,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0137",
+      "eq1_id": 3027,
+      "eq2_id": 55,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0138",
+      "eq1_id": 116,
+      "eq2_id": 4576,
+      "gold": true,
+      "rule": "H3",
+      "pred": false,
+      "correct": false
+    },
+    {
+      "id": "normal_0139",
+      "eq1_id": 869,
+      "eq2_id": 183,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0140",
+      "eq1_id": 2399,
+      "eq2_id": 1832,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0141",
+      "eq1_id": 2801,
+      "eq2_id": 311,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0142",
+      "eq1_id": 1691,
+      "eq2_id": 3508,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0143",
+      "eq1_id": 3662,
+      "eq2_id": 4519,
+      "gold": false,
+      "rule": "XOR",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0144",
+      "eq1_id": 1900,
+      "eq2_id": 1966,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0145",
+      "eq1_id": 2819,
+      "eq2_id": 1533,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0146",
+      "eq1_id": 1019,
+      "eq2_id": 2363,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0147",
+      "eq1_id": 1436,
+      "eq2_id": 1503,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0148",
+      "eq1_id": 3042,
+      "eq2_id": 3650,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0149",
+      "eq1_id": 3598,
+      "eq2_id": 2033,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0150",
+      "eq1_id": 1617,
+      "eq2_id": 156,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0151",
+      "eq1_id": 4291,
+      "eq2_id": 1393,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0152",
+      "eq1_id": 685,
+      "eq2_id": 1809,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0153",
+      "eq1_id": 2585,
+      "eq2_id": 223,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0154",
+      "eq1_id": 2957,
+      "eq2_id": 200,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0155",
+      "eq1_id": 1017,
+      "eq2_id": 2755,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0156",
+      "eq1_id": 3666,
+      "eq2_id": 863,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0157",
+      "eq1_id": 887,
+      "eq2_id": 2462,
+      "gold": false,
+      "rule": "XOR",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0158",
+      "eq1_id": 1250,
+      "eq2_id": 4607,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0159",
+      "eq1_id": 4115,
+      "eq2_id": 2027,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0160",
+      "eq1_id": 600,
+      "eq2_id": 250,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0161",
+      "eq1_id": 711,
+      "eq2_id": 3567,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0162",
+      "eq1_id": 3011,
+      "eq2_id": 1456,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0163",
+      "eq1_id": 3735,
+      "eq2_id": 2469,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0164",
+      "eq1_id": 4516,
+      "eq2_id": 2341,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0165",
+      "eq1_id": 368,
+      "eq2_id": 1856,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0166",
+      "eq1_id": 1359,
+      "eq2_id": 210,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0167",
+      "eq1_id": 3264,
+      "eq2_id": 3146,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0168",
+      "eq1_id": 647,
+      "eq2_id": 407,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0169",
+      "eq1_id": 2781,
+      "eq2_id": 2758,
+      "gold": true,
+      "rule": "H1",
+      "pred": false,
+      "correct": false
+    },
+    {
+      "id": "normal_0170",
+      "eq1_id": 1947,
+      "eq2_id": 1306,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0171",
+      "eq1_id": 3399,
+      "eq2_id": 3714,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0172",
+      "eq1_id": 2433,
+      "eq2_id": 3105,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0173",
+      "eq1_id": 1595,
+      "eq2_id": 3924,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0174",
+      "eq1_id": 2481,
+      "eq2_id": 2649,
+      "gold": false,
+      "rule": "A6",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0175",
+      "eq1_id": 4062,
+      "eq2_id": 426,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0176",
+      "eq1_id": 2091,
+      "eq2_id": 4643,
+      "gold": false,
+      "rule": "A10",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0177",
+      "eq1_id": 3640,
+      "eq2_id": 3323,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0178",
+      "eq1_id": 820,
+      "eq2_id": 2372,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0179",
+      "eq1_id": 3434,
+      "eq2_id": 579,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0180",
+      "eq1_id": 2953,
+      "eq2_id": 2938,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0181",
+      "eq1_id": 1348,
+      "eq2_id": 229,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0182",
+      "eq1_id": 3365,
+      "eq2_id": 3023,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0183",
+      "eq1_id": 3029,
+      "eq2_id": 4156,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0184",
+      "eq1_id": 2189,
+      "eq2_id": 3561,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0185",
+      "eq1_id": 2631,
+      "eq2_id": 3936,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0186",
+      "eq1_id": 1596,
+      "eq2_id": 1658,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0187",
+      "eq1_id": 1268,
+      "eq2_id": 1426,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0188",
+      "eq1_id": 3767,
+      "eq2_id": 4431,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0189",
+      "eq1_id": 3199,
+      "eq2_id": 1470,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0190",
+      "eq1_id": 1637,
+      "eq2_id": 3533,
+      "gold": false,
+      "rule": "XOR",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0191",
+      "eq1_id": 2420,
+      "eq2_id": 590,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0192",
+      "eq1_id": 89,
+      "eq2_id": 1060,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0193",
+      "eq1_id": 3480,
+      "eq2_id": 532,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0194",
+      "eq1_id": 2022,
+      "eq2_id": 1233,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0195",
+      "eq1_id": 1010,
+      "eq2_id": 1698,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0196",
+      "eq1_id": 3906,
+      "eq2_id": 2834,
+      "gold": false,
+      "rule": "XOR",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0197",
+      "eq1_id": 1320,
+      "eq2_id": 976,
+      "gold": false,
+      "rule": "XOR",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0198",
+      "eq1_id": 1630,
+      "eq2_id": 2701,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0199",
+      "eq1_id": 4085,
+      "eq2_id": 1806,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0200",
+      "eq1_id": 2195,
+      "eq2_id": 2882,
+      "gold": false,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": false
+    },
+    {
+      "id": "normal_0201",
+      "eq1_id": 3156,
+      "eq2_id": 3621,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0202",
+      "eq1_id": 2386,
+      "eq2_id": 3226,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0203",
+      "eq1_id": 982,
+      "eq2_id": 545,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0204",
+      "eq1_id": 2331,
+      "eq2_id": 3756,
+      "gold": false,
+      "rule": "A5",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0205",
+      "eq1_id": 1382,
+      "eq2_id": 1891,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0206",
+      "eq1_id": 3632,
+      "eq2_id": 4475,
+      "gold": true,
+      "rule": "HUB_Eq41",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0207",
+      "eq1_id": 3273,
+      "eq2_id": 4013,
+      "gold": false,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": false
+    },
+    {
+      "id": "normal_0208",
+      "eq1_id": 3774,
+      "eq2_id": 1494,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0209",
+      "eq1_id": 4623,
+      "eq2_id": 4014,
+      "gold": false,
+      "rule": "HUB_Eq41",
+      "pred": true,
+      "correct": false
+    },
+    {
+      "id": "normal_0210",
+      "eq1_id": 2421,
+      "eq2_id": 3205,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0211",
+      "eq1_id": 1390,
+      "eq2_id": 1130,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0212",
+      "eq1_id": 3391,
+      "eq2_id": 4539,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0213",
+      "eq1_id": 2237,
+      "eq2_id": 4599,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0214",
+      "eq1_id": 2568,
+      "eq2_id": 2754,
+      "gold": true,
+      "rule": "H3",
+      "pred": false,
+      "correct": false
+    },
+    {
+      "id": "normal_0215",
+      "eq1_id": 3241,
+      "eq2_id": 334,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0216",
+      "eq1_id": 3687,
+      "eq2_id": 1492,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0217",
+      "eq1_id": 1931,
+      "eq2_id": 1952,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0218",
+      "eq1_id": 3779,
+      "eq2_id": 99,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0219",
+      "eq1_id": 475,
+      "eq2_id": 3275,
+      "gold": true,
+      "rule": "H3",
+      "pred": false,
+      "correct": false
+    },
+    {
+      "id": "normal_0220",
+      "eq1_id": 3800,
+      "eq2_id": 730,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0221",
+      "eq1_id": 435,
+      "eq2_id": 1651,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0222",
+      "eq1_id": 1107,
+      "eq2_id": 2016,
+      "gold": true,
+      "rule": "H1",
+      "pred": false,
+      "correct": false
+    },
+    {
+      "id": "normal_0223",
+      "eq1_id": 2910,
+      "eq2_id": 3046,
+      "gold": false,
+      "rule": "H3",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0224",
+      "eq1_id": 3170,
+      "eq2_id": 1459,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0225",
+      "eq1_id": 3444,
+      "eq2_id": 4001,
+      "gold": true,
+      "rule": "HUB_Eq41",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0226",
+      "eq1_id": 4041,
+      "eq2_id": 1153,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0227",
+      "eq1_id": 2377,
+      "eq2_id": 1139,
+      "gold": true,
+      "rule": "H1",
+      "pred": false,
+      "correct": false
+    },
+    {
+      "id": "normal_0228",
+      "eq1_id": 4324,
+      "eq2_id": 1520,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0229",
+      "eq1_id": 1000,
+      "eq2_id": 1618,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0230",
+      "eq1_id": 1194,
+      "eq2_id": 3339,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0231",
+      "eq1_id": 1574,
+      "eq2_id": 136,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0232",
+      "eq1_id": 2518,
+      "eq2_id": 1907,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0233",
+      "eq1_id": 3394,
+      "eq2_id": 931,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0234",
+      "eq1_id": 2358,
+      "eq2_id": 3704,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0235",
+      "eq1_id": 1554,
+      "eq2_id": 413,
+      "gold": true,
+      "rule": "H3",
+      "pred": false,
+      "correct": false
+    },
+    {
+      "id": "normal_0236",
+      "eq1_id": 1229,
+      "eq2_id": 4615,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0237",
+      "eq1_id": 1050,
+      "eq2_id": 231,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0238",
+      "eq1_id": 1970,
+      "eq2_id": 4396,
+      "gold": false,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": false
+    },
+    {
+      "id": "normal_0239",
+      "eq1_id": 2340,
+      "eq2_id": 1969,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0240",
+      "eq1_id": 2664,
+      "eq2_id": 1708,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0241",
+      "eq1_id": 2611,
+      "eq2_id": 1718,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0242",
+      "eq1_id": 423,
+      "eq2_id": 2966,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0243",
+      "eq1_id": 2171,
+      "eq2_id": 4005,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0244",
+      "eq1_id": 834,
+      "eq2_id": 1054,
+      "gold": false,
+      "rule": "H4",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0245",
+      "eq1_id": 3926,
+      "eq2_id": 1858,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0246",
+      "eq1_id": 3638,
+      "eq2_id": 662,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0247",
+      "eq1_id": 916,
+      "eq2_id": 4654,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0248",
+      "eq1_id": 3371,
+      "eq2_id": 2418,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0249",
+      "eq1_id": 4246,
+      "eq2_id": 804,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0250",
+      "eq1_id": 2529,
+      "eq2_id": 1292,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0251",
+      "eq1_id": 2700,
+      "eq2_id": 38,
+      "gold": false,
+      "rule": "A5",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0252",
+      "eq1_id": 763,
+      "eq2_id": 3389,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0253",
+      "eq1_id": 2780,
+      "eq2_id": 4363,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0254",
+      "eq1_id": 3783,
+      "eq2_id": 1838,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0255",
+      "eq1_id": 1793,
+      "eq2_id": 2483,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0256",
+      "eq1_id": 521,
+      "eq2_id": 1515,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0257",
+      "eq1_id": 573,
+      "eq2_id": 719,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0258",
+      "eq1_id": 4597,
+      "eq2_id": 3487,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0259",
+      "eq1_id": 921,
+      "eq2_id": 1605,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0260",
+      "eq1_id": 1808,
+      "eq2_id": 3695,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0261",
+      "eq1_id": 2264,
+      "eq2_id": 874,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0262",
+      "eq1_id": 2621,
+      "eq2_id": 4442,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0263",
+      "eq1_id": 502,
+      "eq2_id": 273,
+      "gold": true,
+      "rule": "H3",
+      "pred": false,
+      "correct": false
+    },
+    {
+      "id": "normal_0264",
+      "eq1_id": 1954,
+      "eq2_id": 1000,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0265",
+      "eq1_id": 2451,
+      "eq2_id": 57,
+      "gold": false,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": false
+    },
+    {
+      "id": "normal_0266",
+      "eq1_id": 105,
+      "eq2_id": 4089,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0267",
+      "eq1_id": 3319,
+      "eq2_id": 2655,
+      "gold": false,
+      "rule": "XOR",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0268",
+      "eq1_id": 220,
+      "eq2_id": 1169,
+      "gold": true,
+      "rule": "H3",
+      "pred": false,
+      "correct": false
+    },
+    {
+      "id": "normal_0269",
+      "eq1_id": 541,
+      "eq2_id": 3408,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0270",
+      "eq1_id": 3026,
+      "eq2_id": 32,
+      "gold": true,
+      "rule": "H1",
+      "pred": false,
+      "correct": false
+    },
+    {
+      "id": "normal_0271",
+      "eq1_id": 209,
+      "eq2_id": 3222,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0272",
+      "eq1_id": 2497,
+      "eq2_id": 4674,
+      "gold": false,
+      "rule": "H3",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0273",
+      "eq1_id": 3225,
+      "eq2_id": 2954,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0274",
+      "eq1_id": 3317,
+      "eq2_id": 2409,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0275",
+      "eq1_id": 1609,
+      "eq2_id": 168,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0276",
+      "eq1_id": 2836,
+      "eq2_id": 583,
+      "gold": false,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": false
+    },
+    {
+      "id": "normal_0277",
+      "eq1_id": 3049,
+      "eq2_id": 82,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0278",
+      "eq1_id": 3125,
+      "eq2_id": 583,
+      "gold": true,
+      "rule": "H3",
+      "pred": false,
+      "correct": false
+    },
+    {
+      "id": "normal_0279",
+      "eq1_id": 1506,
+      "eq2_id": 4618,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0280",
+      "eq1_id": 4347,
+      "eq2_id": 732,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0281",
+      "eq1_id": 1782,
+      "eq2_id": 2350,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0282",
+      "eq1_id": 1269,
+      "eq2_id": 3875,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0283",
+      "eq1_id": 3253,
+      "eq2_id": 1052,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0284",
+      "eq1_id": 785,
+      "eq2_id": 4516,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0285",
+      "eq1_id": 1909,
+      "eq2_id": 4003,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0286",
+      "eq1_id": 3758,
+      "eq2_id": 1167,
+      "gold": false,
+      "rule": "A5",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0287",
+      "eq1_id": 2775,
+      "eq2_id": 3943,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0288",
+      "eq1_id": 732,
+      "eq2_id": 1969,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0289",
+      "eq1_id": 1715,
+      "eq2_id": 374,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0290",
+      "eq1_id": 3499,
+      "eq2_id": 1978,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0291",
+      "eq1_id": 2482,
+      "eq2_id": 981,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0292",
+      "eq1_id": 3576,
+      "eq2_id": 3958,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0293",
+      "eq1_id": 1795,
+      "eq2_id": 4237,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0294",
+      "eq1_id": 4374,
+      "eq2_id": 3844,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0295",
+      "eq1_id": 4679,
+      "eq2_id": 3068,
+      "gold": false,
+      "rule": "A3",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0296",
+      "eq1_id": 1595,
+      "eq2_id": 142,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0297",
+      "eq1_id": 2345,
+      "eq2_id": 4152,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0298",
+      "eq1_id": 2254,
+      "eq2_id": 1903,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0299",
+      "eq1_id": 3459,
+      "eq2_id": 4069,
+      "gold": false,
+      "rule": "XOR",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0300",
+      "eq1_id": 2579,
+      "eq2_id": 2212,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0301",
+      "eq1_id": 4661,
+      "eq2_id": 4544,
+      "gold": false,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": false
+    },
+    {
+      "id": "normal_0302",
+      "eq1_id": 2540,
+      "eq2_id": 3394,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0303",
+      "eq1_id": 240,
+      "eq2_id": 1350,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0304",
+      "eq1_id": 4675,
+      "eq2_id": 2674,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0305",
+      "eq1_id": 1726,
+      "eq2_id": 452,
+      "gold": false,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": false
+    },
+    {
+      "id": "normal_0306",
+      "eq1_id": 4444,
+      "eq2_id": 656,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0307",
+      "eq1_id": 1888,
+      "eq2_id": 4667,
+      "gold": false,
+      "rule": "A5",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0308",
+      "eq1_id": 737,
+      "eq2_id": 3891,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0309",
+      "eq1_id": 2966,
+      "eq2_id": 3376,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0310",
+      "eq1_id": 1875,
+      "eq2_id": 1782,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0311",
+      "eq1_id": 4099,
+      "eq2_id": 2448,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0312",
+      "eq1_id": 4208,
+      "eq2_id": 2987,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0313",
+      "eq1_id": 2378,
+      "eq2_id": 2727,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0314",
+      "eq1_id": 1716,
+      "eq2_id": 4500,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0315",
+      "eq1_id": 1271,
+      "eq2_id": 251,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0316",
+      "eq1_id": 604,
+      "eq2_id": 157,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0317",
+      "eq1_id": 2715,
+      "eq2_id": 1630,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0318",
+      "eq1_id": 349,
+      "eq2_id": 2255,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0319",
+      "eq1_id": 2955,
+      "eq2_id": 2432,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0320",
+      "eq1_id": 18,
+      "eq2_id": 4648,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0321",
+      "eq1_id": 3171,
+      "eq2_id": 1979,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0322",
+      "eq1_id": 745,
+      "eq2_id": 1284,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0323",
+      "eq1_id": 2434,
+      "eq2_id": 2002,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0324",
+      "eq1_id": 4082,
+      "eq2_id": 4108,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0325",
+      "eq1_id": 3618,
+      "eq2_id": 312,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0326",
+      "eq1_id": 646,
+      "eq2_id": 2855,
+      "gold": false,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": false
+    },
+    {
+      "id": "normal_0327",
+      "eq1_id": 2324,
+      "eq2_id": 3482,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0328",
+      "eq1_id": 2986,
+      "eq2_id": 1229,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0329",
+      "eq1_id": 1605,
+      "eq2_id": 2627,
+      "gold": true,
+      "rule": "H1",
+      "pred": false,
+      "correct": false
+    },
+    {
+      "id": "normal_0330",
+      "eq1_id": 3114,
+      "eq2_id": 1804,
+      "gold": true,
+      "rule": "H3",
+      "pred": false,
+      "correct": false
+    },
+    {
+      "id": "normal_0331",
+      "eq1_id": 2524,
+      "eq2_id": 1988,
+      "gold": true,
+      "rule": "H1",
+      "pred": false,
+      "correct": false
+    },
+    {
+      "id": "normal_0332",
+      "eq1_id": 4077,
+      "eq2_id": 942,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0333",
+      "eq1_id": 1603,
+      "eq2_id": 1431,
+      "gold": true,
+      "rule": "H5",
+      "pred": false,
+      "correct": false
+    },
+    {
+      "id": "normal_0334",
+      "eq1_id": 1802,
+      "eq2_id": 1373,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0335",
+      "eq1_id": 63,
+      "eq2_id": 2272,
+      "gold": false,
+      "rule": "A10",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0336",
+      "eq1_id": 2825,
+      "eq2_id": 3995,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0337",
+      "eq1_id": 2851,
+      "eq2_id": 2559,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0338",
+      "eq1_id": 2038,
+      "eq2_id": 1549,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0339",
+      "eq1_id": 3286,
+      "eq2_id": 866,
+      "gold": false,
+      "rule": "XOR",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0340",
+      "eq1_id": 73,
+      "eq2_id": 2708,
+      "gold": false,
+      "rule": "A3",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0341",
+      "eq1_id": 604,
+      "eq2_id": 1810,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0342",
+      "eq1_id": 1321,
+      "eq2_id": 2805,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0343",
+      "eq1_id": 1895,
+      "eq2_id": 530,
+      "gold": false,
+      "rule": "A4",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0344",
+      "eq1_id": 2132,
+      "eq2_id": 2796,
+      "gold": false,
+      "rule": "XOR",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0345",
+      "eq1_id": 1203,
+      "eq2_id": 4081,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0346",
+      "eq1_id": 3109,
+      "eq2_id": 450,
+      "gold": true,
+      "rule": "H3",
+      "pred": false,
+      "correct": false
+    },
+    {
+      "id": "normal_0347",
+      "eq1_id": 2709,
+      "eq2_id": 363,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0348",
+      "eq1_id": 2694,
+      "eq2_id": 804,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0349",
+      "eq1_id": 786,
+      "eq2_id": 1585,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0350",
+      "eq1_id": 1654,
+      "eq2_id": 1345,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0351",
+      "eq1_id": 95,
+      "eq2_id": 354,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0352",
+      "eq1_id": 2738,
+      "eq2_id": 159,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0353",
+      "eq1_id": 3862,
+      "eq2_id": 3979,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0354",
+      "eq1_id": 3718,
+      "eq2_id": 4116,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0355",
+      "eq1_id": 899,
+      "eq2_id": 4591,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0356",
+      "eq1_id": 4085,
+      "eq2_id": 3973,
+      "gold": false,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": false
+    },
+    {
+      "id": "normal_0357",
+      "eq1_id": 3761,
+      "eq2_id": 1927,
+      "gold": false,
+      "rule": "XOR",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0358",
+      "eq1_id": 4147,
+      "eq2_id": 4198,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0359",
+      "eq1_id": 584,
+      "eq2_id": 3851,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0360",
+      "eq1_id": 2925,
+      "eq2_id": 3930,
+      "gold": false,
+      "rule": "XOR",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0361",
+      "eq1_id": 2428,
+      "eq2_id": 67,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0362",
+      "eq1_id": 409,
+      "eq2_id": 4659,
+      "gold": true,
+      "rule": "HUB_Eq41",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0363",
+      "eq1_id": 2214,
+      "eq2_id": 667,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0364",
+      "eq1_id": 2087,
+      "eq2_id": 1340,
+      "gold": false,
+      "rule": "A8",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0365",
+      "eq1_id": 1351,
+      "eq2_id": 2461,
+      "gold": true,
+      "rule": "H3",
+      "pred": false,
+      "correct": false
+    },
+    {
+      "id": "normal_0366",
+      "eq1_id": 1919,
+      "eq2_id": 4233,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0367",
+      "eq1_id": 2280,
+      "eq2_id": 4506,
+      "gold": false,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": false
+    },
+    {
+      "id": "normal_0368",
+      "eq1_id": 583,
+      "eq2_id": 3201,
+      "gold": false,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": false
+    },
+    {
+      "id": "normal_0369",
+      "eq1_id": 250,
+      "eq2_id": 2454,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0370",
+      "eq1_id": 1937,
+      "eq2_id": 393,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0371",
+      "eq1_id": 4685,
+      "eq2_id": 1344,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0372",
+      "eq1_id": 569,
+      "eq2_id": 3963,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0373",
+      "eq1_id": 1269,
+      "eq2_id": 4110,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0374",
+      "eq1_id": 441,
+      "eq2_id": 489,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0375",
+      "eq1_id": 4007,
+      "eq2_id": 1272,
+      "gold": false,
+      "rule": "XOR",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0376",
+      "eq1_id": 1126,
+      "eq2_id": 3061,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0377",
+      "eq1_id": 2093,
+      "eq2_id": 1848,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0378",
+      "eq1_id": 1129,
+      "eq2_id": 1039,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0379",
+      "eq1_id": 4368,
+      "eq2_id": 4356,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0380",
+      "eq1_id": 1877,
+      "eq2_id": 4309,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0381",
+      "eq1_id": 2530,
+      "eq2_id": 2588,
+      "gold": false,
+      "rule": "XOR",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0382",
+      "eq1_id": 1605,
+      "eq2_id": 1896,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0383",
+      "eq1_id": 284,
+      "eq2_id": 2568,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0384",
+      "eq1_id": 498,
+      "eq2_id": 2497,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0385",
+      "eq1_id": 1509,
+      "eq2_id": 983,
+      "gold": true,
+      "rule": "H1",
+      "pred": false,
+      "correct": false
+    },
+    {
+      "id": "normal_0386",
+      "eq1_id": 632,
+      "eq2_id": 1215,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0387",
+      "eq1_id": 1798,
+      "eq2_id": 1107,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0388",
+      "eq1_id": 50,
+      "eq2_id": 3177,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0389",
+      "eq1_id": 4079,
+      "eq2_id": 3021,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0390",
+      "eq1_id": 700,
+      "eq2_id": 273,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0391",
+      "eq1_id": 595,
+      "eq2_id": 264,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0392",
+      "eq1_id": 1182,
+      "eq2_id": 4431,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0393",
+      "eq1_id": 4126,
+      "eq2_id": 4545,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0394",
+      "eq1_id": 494,
+      "eq2_id": 4055,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0395",
+      "eq1_id": 1581,
+      "eq2_id": 2832,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0396",
+      "eq1_id": 1123,
+      "eq2_id": 4479,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0397",
+      "eq1_id": 2642,
+      "eq2_id": 695,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0398",
+      "eq1_id": 1819,
+      "eq2_id": 644,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0399",
+      "eq1_id": 3486,
+      "eq2_id": 1148,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0400",
+      "eq1_id": 591,
+      "eq2_id": 4398,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0401",
+      "eq1_id": 2516,
+      "eq2_id": 3360,
+      "gold": true,
+      "rule": "H3",
+      "pred": false,
+      "correct": false
+    },
+    {
+      "id": "normal_0402",
+      "eq1_id": 1988,
+      "eq2_id": 2572,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0403",
+      "eq1_id": 833,
+      "eq2_id": 2994,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0404",
+      "eq1_id": 1499,
+      "eq2_id": 3250,
+      "gold": true,
+      "rule": "H3",
+      "pred": false,
+      "correct": false
+    },
+    {
+      "id": "normal_0405",
+      "eq1_id": 2517,
+      "eq2_id": 4341,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0406",
+      "eq1_id": 89,
+      "eq2_id": 2931,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0407",
+      "eq1_id": 2817,
+      "eq2_id": 376,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0408",
+      "eq1_id": 3150,
+      "eq2_id": 2030,
+      "gold": false,
+      "rule": "XOR",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0409",
+      "eq1_id": 2470,
+      "eq2_id": 1783,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0410",
+      "eq1_id": 2335,
+      "eq2_id": 3307,
+      "gold": false,
+      "rule": "XOR",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0411",
+      "eq1_id": 2090,
+      "eq2_id": 1452,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0412",
+      "eq1_id": 4160,
+      "eq2_id": 3595,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0413",
+      "eq1_id": 2397,
+      "eq2_id": 1212,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0414",
+      "eq1_id": 1433,
+      "eq2_id": 1859,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0415",
+      "eq1_id": 124,
+      "eq2_id": 4658,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0416",
+      "eq1_id": 1988,
+      "eq2_id": 46,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0417",
+      "eq1_id": 3819,
+      "eq2_id": 3033,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0418",
+      "eq1_id": 306,
+      "eq2_id": 3989,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0419",
+      "eq1_id": 150,
+      "eq2_id": 3945,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0420",
+      "eq1_id": 2156,
+      "eq2_id": 3797,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0421",
+      "eq1_id": 2229,
+      "eq2_id": 1098,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0422",
+      "eq1_id": 2170,
+      "eq2_id": 4640,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0423",
+      "eq1_id": 667,
+      "eq2_id": 675,
+      "gold": false,
+      "rule": "XOR",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0424",
+      "eq1_id": 4396,
+      "eq2_id": 1441,
+      "gold": false,
+      "rule": "XOR",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0425",
+      "eq1_id": 4527,
+      "eq2_id": 2590,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0426",
+      "eq1_id": 1372,
+      "eq2_id": 4543,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0427",
+      "eq1_id": 3922,
+      "eq2_id": 816,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0428",
+      "eq1_id": 721,
+      "eq2_id": 796,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0429",
+      "eq1_id": 4359,
+      "eq2_id": 1125,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0430",
+      "eq1_id": 1511,
+      "eq2_id": 270,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0431",
+      "eq1_id": 3122,
+      "eq2_id": 2580,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0432",
+      "eq1_id": 2669,
+      "eq2_id": 2113,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0433",
+      "eq1_id": 4219,
+      "eq2_id": 3771,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0434",
+      "eq1_id": 1731,
+      "eq2_id": 4245,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0435",
+      "eq1_id": 1966,
+      "eq2_id": 440,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0436",
+      "eq1_id": 2221,
+      "eq2_id": 883,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0437",
+      "eq1_id": 4402,
+      "eq2_id": 2523,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0438",
+      "eq1_id": 202,
+      "eq2_id": 2058,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0439",
+      "eq1_id": 3751,
+      "eq2_id": 1515,
+      "gold": false,
+      "rule": "A5",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0440",
+      "eq1_id": 321,
+      "eq2_id": 3903,
+      "gold": false,
+      "rule": "HUB_Eq41",
+      "pred": true,
+      "correct": false
+    },
+    {
+      "id": "normal_0441",
+      "eq1_id": 2389,
+      "eq2_id": 2004,
+      "gold": false,
+      "rule": "XOR",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0442",
+      "eq1_id": 4220,
+      "eq2_id": 922,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0443",
+      "eq1_id": 4123,
+      "eq2_id": 1771,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0444",
+      "eq1_id": 1461,
+      "eq2_id": 4504,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0445",
+      "eq1_id": 2587,
+      "eq2_id": 1135,
+      "gold": true,
+      "rule": "H1",
+      "pred": false,
+      "correct": false
+    },
+    {
+      "id": "normal_0446",
+      "eq1_id": 127,
+      "eq2_id": 2724,
+      "gold": false,
+      "rule": "A3",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0447",
+      "eq1_id": 181,
+      "eq2_id": 886,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0448",
+      "eq1_id": 184,
+      "eq2_id": 4197,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0449",
+      "eq1_id": 900,
+      "eq2_id": 2962,
+      "gold": true,
+      "rule": "H1",
+      "pred": false,
+      "correct": false
+    },
+    {
+      "id": "normal_0450",
+      "eq1_id": 4386,
+      "eq2_id": 2355,
+      "gold": false,
+      "rule": "A5",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0451",
+      "eq1_id": 975,
+      "eq2_id": 407,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0452",
+      "eq1_id": 1804,
+      "eq2_id": 2268,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0453",
+      "eq1_id": 2124,
+      "eq2_id": 4675,
+      "gold": false,
+      "rule": "XOR",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0454",
+      "eq1_id": 3950,
+      "eq2_id": 855,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0455",
+      "eq1_id": 804,
+      "eq2_id": 2653,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0456",
+      "eq1_id": 1233,
+      "eq2_id": 552,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0457",
+      "eq1_id": 3205,
+      "eq2_id": 571,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0458",
+      "eq1_id": 2779,
+      "eq2_id": 4046,
+      "gold": false,
+      "rule": "XOR",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0459",
+      "eq1_id": 3568,
+      "eq2_id": 1391,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0460",
+      "eq1_id": 3126,
+      "eq2_id": 3962,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0461",
+      "eq1_id": 2569,
+      "eq2_id": 866,
+      "gold": true,
+      "rule": "H3",
+      "pred": false,
+      "correct": false
+    },
+    {
+      "id": "normal_0462",
+      "eq1_id": 4429,
+      "eq2_id": 3367,
+      "gold": false,
+      "rule": "HUB_Eq41",
+      "pred": true,
+      "correct": false
+    },
+    {
+      "id": "normal_0463",
+      "eq1_id": 2988,
+      "eq2_id": 1416,
+      "gold": true,
+      "rule": "H1",
+      "pred": false,
+      "correct": false
+    },
+    {
+      "id": "normal_0464",
+      "eq1_id": 3037,
+      "eq2_id": 4275,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0465",
+      "eq1_id": 794,
+      "eq2_id": 1626,
+      "gold": true,
+      "rule": "H1",
+      "pred": false,
+      "correct": false
+    },
+    {
+      "id": "normal_0466",
+      "eq1_id": 6,
+      "eq2_id": 3708,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0467",
+      "eq1_id": 373,
+      "eq2_id": 3823,
+      "gold": false,
+      "rule": "HUB_Eq41",
+      "pred": true,
+      "correct": false
+    },
+    {
+      "id": "normal_0468",
+      "eq1_id": 4181,
+      "eq2_id": 457,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0469",
+      "eq1_id": 695,
+      "eq2_id": 4314,
+      "gold": false,
+      "rule": "XOR",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0470",
+      "eq1_id": 2016,
+      "eq2_id": 210,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0471",
+      "eq1_id": 2215,
+      "eq2_id": 443,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0472",
+      "eq1_id": 3090,
+      "eq2_id": 1980,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0473",
+      "eq1_id": 4334,
+      "eq2_id": 494,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0474",
+      "eq1_id": 291,
+      "eq2_id": 1480,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0475",
+      "eq1_id": 1511,
+      "eq2_id": 433,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0476",
+      "eq1_id": 1739,
+      "eq2_id": 3888,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0477",
+      "eq1_id": 1347,
+      "eq2_id": 965,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0478",
+      "eq1_id": 1049,
+      "eq2_id": 2163,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0479",
+      "eq1_id": 3968,
+      "eq2_id": 2726,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0480",
+      "eq1_id": 884,
+      "eq2_id": 3695,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0481",
+      "eq1_id": 3417,
+      "eq2_id": 2327,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0482",
+      "eq1_id": 3458,
+      "eq2_id": 4573,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0483",
+      "eq1_id": 1527,
+      "eq2_id": 356,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0484",
+      "eq1_id": 2788,
+      "eq2_id": 3030,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0485",
+      "eq1_id": 20,
+      "eq2_id": 3322,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0486",
+      "eq1_id": 2762,
+      "eq2_id": 4044,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0487",
+      "eq1_id": 4549,
+      "eq2_id": 1533,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0488",
+      "eq1_id": 3217,
+      "eq2_id": 2462,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0489",
+      "eq1_id": 2815,
+      "eq2_id": 2093,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0490",
+      "eq1_id": 3341,
+      "eq2_id": 9,
+      "gold": false,
+      "rule": "A2",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0491",
+      "eq1_id": 1688,
+      "eq2_id": 3100,
+      "gold": true,
+      "rule": "H3",
+      "pred": false,
+      "correct": false
+    },
+    {
+      "id": "normal_0492",
+      "eq1_id": 691,
+      "eq2_id": 2038,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0493",
+      "eq1_id": 955,
+      "eq2_id": 476,
+      "gold": false,
+      "rule": "A1",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0494",
+      "eq1_id": 2423,
+      "eq2_id": 3407,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0495",
+      "eq1_id": 587,
+      "eq2_id": 1676,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0496",
+      "eq1_id": 3248,
+      "eq2_id": 4003,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0497",
+      "eq1_id": 3499,
+      "eq2_id": 4224,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0498",
+      "eq1_id": 3091,
+      "eq2_id": 663,
+      "gold": false,
+      "rule": "XOR",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0499",
+      "eq1_id": 3089,
+      "eq2_id": 2207,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0500",
+      "eq1_id": 2215,
+      "eq2_id": 3622,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0501",
+      "eq1_id": 2368,
+      "eq2_id": 745,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0502",
+      "eq1_id": 249,
+      "eq2_id": 2801,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0503",
+      "eq1_id": 2517,
+      "eq2_id": 2861,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0504",
+      "eq1_id": 3834,
+      "eq2_id": 3864,
+      "gold": true,
+      "rule": "HUB_Eq41",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0505",
+      "eq1_id": 520,
+      "eq2_id": 88,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0506",
+      "eq1_id": 972,
+      "eq2_id": 2551,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0507",
+      "eq1_id": 4211,
+      "eq2_id": 4242,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0508",
+      "eq1_id": 3204,
+      "eq2_id": 3132,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0509",
+      "eq1_id": 3182,
+      "eq2_id": 4278,
+      "gold": false,
+      "rule": "XOR",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0510",
+      "eq1_id": 1936,
+      "eq2_id": 2218,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0511",
+      "eq1_id": 3251,
+      "eq2_id": 2230,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0512",
+      "eq1_id": 4419,
+      "eq2_id": 4647,
+      "gold": false,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": false
+    },
+    {
+      "id": "normal_0513",
+      "eq1_id": 653,
+      "eq2_id": 113,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0514",
+      "eq1_id": 3134,
+      "eq2_id": 3951,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0515",
+      "eq1_id": 4613,
+      "eq2_id": 3005,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0516",
+      "eq1_id": 3175,
+      "eq2_id": 4518,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0517",
+      "eq1_id": 1875,
+      "eq2_id": 4522,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0518",
+      "eq1_id": 1833,
+      "eq2_id": 3562,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0519",
+      "eq1_id": 3720,
+      "eq2_id": 2085,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0520",
+      "eq1_id": 2888,
+      "eq2_id": 4070,
+      "gold": false,
+      "rule": "XOR",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0521",
+      "eq1_id": 1007,
+      "eq2_id": 3294,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0522",
+      "eq1_id": 1531,
+      "eq2_id": 388,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0523",
+      "eq1_id": 1163,
+      "eq2_id": 2659,
+      "gold": false,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": false
+    },
+    {
+      "id": "normal_0524",
+      "eq1_id": 4450,
+      "eq2_id": 3089,
+      "gold": false,
+      "rule": "XOR",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0525",
+      "eq1_id": 1731,
+      "eq2_id": 2525,
+      "gold": false,
+      "rule": "XOR",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0526",
+      "eq1_id": 2151,
+      "eq2_id": 1389,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0527",
+      "eq1_id": 2563,
+      "eq2_id": 1718,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0528",
+      "eq1_id": 4380,
+      "eq2_id": 1692,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0529",
+      "eq1_id": 541,
+      "eq2_id": 1575,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0530",
+      "eq1_id": 3970,
+      "eq2_id": 3084,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0531",
+      "eq1_id": 4042,
+      "eq2_id": 1508,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0532",
+      "eq1_id": 2831,
+      "eq2_id": 746,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0533",
+      "eq1_id": 4327,
+      "eq2_id": 3532,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0534",
+      "eq1_id": 397,
+      "eq2_id": 219,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0535",
+      "eq1_id": 4168,
+      "eq2_id": 270,
+      "gold": false,
+      "rule": "A1",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0536",
+      "eq1_id": 3555,
+      "eq2_id": 3644,
+      "gold": false,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": false
+    },
+    {
+      "id": "normal_0537",
+      "eq1_id": 459,
+      "eq2_id": 4097,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0538",
+      "eq1_id": 2833,
+      "eq2_id": 1461,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0539",
+      "eq1_id": 646,
+      "eq2_id": 3835,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0540",
+      "eq1_id": 3907,
+      "eq2_id": 3863,
+      "gold": true,
+      "rule": "HUB_Eq41",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0541",
+      "eq1_id": 4208,
+      "eq2_id": 1319,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0542",
+      "eq1_id": 3666,
+      "eq2_id": 3675,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0543",
+      "eq1_id": 4463,
+      "eq2_id": 3766,
+      "gold": false,
+      "rule": "HUB_Eq41",
+      "pred": true,
+      "correct": false
+    },
+    {
+      "id": "normal_0544",
+      "eq1_id": 611,
+      "eq2_id": 3875,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0545",
+      "eq1_id": 3467,
+      "eq2_id": 3674,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0546",
+      "eq1_id": 387,
+      "eq2_id": 630,
+      "gold": false,
+      "rule": "A10",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0547",
+      "eq1_id": 3790,
+      "eq2_id": 93,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0548",
+      "eq1_id": 2198,
+      "eq2_id": 882,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0549",
+      "eq1_id": 2521,
+      "eq2_id": 3232,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0550",
+      "eq1_id": 371,
+      "eq2_id": 1417,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0551",
+      "eq1_id": 15,
+      "eq2_id": 1527,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0552",
+      "eq1_id": 2443,
+      "eq2_id": 3295,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0553",
+      "eq1_id": 2636,
+      "eq2_id": 1261,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0554",
+      "eq1_id": 1184,
+      "eq2_id": 509,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0555",
+      "eq1_id": 2840,
+      "eq2_id": 2549,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0556",
+      "eq1_id": 1457,
+      "eq2_id": 1954,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0557",
+      "eq1_id": 2557,
+      "eq2_id": 4158,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0558",
+      "eq1_id": 2363,
+      "eq2_id": 1931,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0559",
+      "eq1_id": 3013,
+      "eq2_id": 1094,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0560",
+      "eq1_id": 775,
+      "eq2_id": 1399,
+      "gold": false,
+      "rule": "XOR",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0561",
+      "eq1_id": 1147,
+      "eq2_id": 641,
+      "gold": true,
+      "rule": "H3",
+      "pred": false,
+      "correct": false
+    },
+    {
+      "id": "normal_0562",
+      "eq1_id": 4060,
+      "eq2_id": 2884,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0563",
+      "eq1_id": 3415,
+      "eq2_id": 1455,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0564",
+      "eq1_id": 3277,
+      "eq2_id": 3057,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0565",
+      "eq1_id": 1888,
+      "eq2_id": 1521,
+      "gold": false,
+      "rule": "A5",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0566",
+      "eq1_id": 3450,
+      "eq2_id": 3403,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0567",
+      "eq1_id": 756,
+      "eq2_id": 213,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0568",
+      "eq1_id": 3446,
+      "eq2_id": 2581,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0569",
+      "eq1_id": 3868,
+      "eq2_id": 2373,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0570",
+      "eq1_id": 1069,
+      "eq2_id": 3681,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0571",
+      "eq1_id": 2106,
+      "eq2_id": 4532,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0572",
+      "eq1_id": 4307,
+      "eq2_id": 698,
+      "gold": false,
+      "rule": "XOR",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0573",
+      "eq1_id": 77,
+      "eq2_id": 4238,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0574",
+      "eq1_id": 1434,
+      "eq2_id": 2152,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0575",
+      "eq1_id": 420,
+      "eq2_id": 2897,
+      "gold": false,
+      "rule": "A6",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0576",
+      "eq1_id": 3133,
+      "eq2_id": 2744,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0577",
+      "eq1_id": 1646,
+      "eq2_id": 1084,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0578",
+      "eq1_id": 3395,
+      "eq2_id": 3745,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0579",
+      "eq1_id": 1722,
+      "eq2_id": 3577,
+      "gold": false,
+      "rule": "XOR",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0580",
+      "eq1_id": 4026,
+      "eq2_id": 1005,
+      "gold": false,
+      "rule": "XOR",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0581",
+      "eq1_id": 408,
+      "eq2_id": 2954,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0582",
+      "eq1_id": 1923,
+      "eq2_id": 3309,
+      "gold": true,
+      "rule": "H3",
+      "pred": false,
+      "correct": false
+    },
+    {
+      "id": "normal_0583",
+      "eq1_id": 2911,
+      "eq2_id": 4117,
+      "gold": true,
+      "rule": "H3",
+      "pred": false,
+      "correct": false
+    },
+    {
+      "id": "normal_0584",
+      "eq1_id": 2216,
+      "eq2_id": 1289,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0585",
+      "eq1_id": 1409,
+      "eq2_id": 4205,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0586",
+      "eq1_id": 3911,
+      "eq2_id": 3957,
+      "gold": false,
+      "rule": "HUB_Eq41",
+      "pred": true,
+      "correct": false
+    },
+    {
+      "id": "normal_0587",
+      "eq1_id": 4035,
+      "eq2_id": 2555,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0588",
+      "eq1_id": 3359,
+      "eq2_id": 3443,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0589",
+      "eq1_id": 158,
+      "eq2_id": 3309,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0590",
+      "eq1_id": 1926,
+      "eq2_id": 4499,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0591",
+      "eq1_id": 235,
+      "eq2_id": 1405,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0592",
+      "eq1_id": 1726,
+      "eq2_id": 1455,
+      "gold": false,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": false
+    },
+    {
+      "id": "normal_0593",
+      "eq1_id": 3924,
+      "eq2_id": 4350,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0594",
+      "eq1_id": 179,
+      "eq2_id": 4567,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0595",
+      "eq1_id": 3732,
+      "eq2_id": 3903,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0596",
+      "eq1_id": 164,
+      "eq2_id": 750,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0597",
+      "eq1_id": 2431,
+      "eq2_id": 2705,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0598",
+      "eq1_id": 985,
+      "eq2_id": 3256,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0599",
+      "eq1_id": 4119,
+      "eq2_id": 3532,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0600",
+      "eq1_id": 1542,
+      "eq2_id": 2362,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0601",
+      "eq1_id": 1192,
+      "eq2_id": 3952,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0602",
+      "eq1_id": 3238,
+      "eq2_id": 3287,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0603",
+      "eq1_id": 2149,
+      "eq2_id": 4213,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0604",
+      "eq1_id": 1119,
+      "eq2_id": 1310,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0605",
+      "eq1_id": 251,
+      "eq2_id": 3496,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0606",
+      "eq1_id": 2438,
+      "eq2_id": 3839,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0607",
+      "eq1_id": 1179,
+      "eq2_id": 838,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0608",
+      "eq1_id": 2056,
+      "eq2_id": 4434,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0609",
+      "eq1_id": 1830,
+      "eq2_id": 426,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0610",
+      "eq1_id": 279,
+      "eq2_id": 3405,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0611",
+      "eq1_id": 3429,
+      "eq2_id": 3836,
+      "gold": true,
+      "rule": "HUB_Eq41",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0612",
+      "eq1_id": 4534,
+      "eq2_id": 1435,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0613",
+      "eq1_id": 799,
+      "eq2_id": 2568,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0614",
+      "eq1_id": 2463,
+      "eq2_id": 3979,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0615",
+      "eq1_id": 1190,
+      "eq2_id": 880,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0616",
+      "eq1_id": 3536,
+      "eq2_id": 1516,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0617",
+      "eq1_id": 3268,
+      "eq2_id": 2843,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0618",
+      "eq1_id": 528,
+      "eq2_id": 162,
+      "gold": false,
+      "rule": "XOR",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0619",
+      "eq1_id": 4200,
+      "eq2_id": 4269,
+      "gold": false,
+      "rule": "XOR",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0620",
+      "eq1_id": 2009,
+      "eq2_id": 4146,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0621",
+      "eq1_id": 939,
+      "eq2_id": 1238,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0622",
+      "eq1_id": 3298,
+      "eq2_id": 3667,
+      "gold": false,
+      "rule": "HUB_Eq41",
+      "pred": true,
+      "correct": false
+    },
+    {
+      "id": "normal_0623",
+      "eq1_id": 3391,
+      "eq2_id": 4649,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0624",
+      "eq1_id": 727,
+      "eq2_id": 3250,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0625",
+      "eq1_id": 2833,
+      "eq2_id": 235,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0626",
+      "eq1_id": 1417,
+      "eq2_id": 2572,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0627",
+      "eq1_id": 2693,
+      "eq2_id": 2505,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0628",
+      "eq1_id": 2734,
+      "eq2_id": 781,
+      "gold": false,
+      "rule": "A5",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0629",
+      "eq1_id": 1612,
+      "eq2_id": 3875,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0630",
+      "eq1_id": 628,
+      "eq2_id": 2746,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0631",
+      "eq1_id": 2724,
+      "eq2_id": 2268,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0632",
+      "eq1_id": 3573,
+      "eq2_id": 3877,
+      "gold": false,
+      "rule": "XOR",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0633",
+      "eq1_id": 780,
+      "eq2_id": 309,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0634",
+      "eq1_id": 3077,
+      "eq2_id": 101,
+      "gold": false,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": false
+    },
+    {
+      "id": "normal_0635",
+      "eq1_id": 3838,
+      "eq2_id": 4408,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0636",
+      "eq1_id": 4248,
+      "eq2_id": 1536,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0637",
+      "eq1_id": 3838,
+      "eq2_id": 2193,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0638",
+      "eq1_id": 1162,
+      "eq2_id": 3992,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0639",
+      "eq1_id": 415,
+      "eq2_id": 2368,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0640",
+      "eq1_id": 2160,
+      "eq2_id": 4293,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0641",
+      "eq1_id": 2719,
+      "eq2_id": 684,
+      "gold": true,
+      "rule": "H3",
+      "pred": false,
+      "correct": false
+    },
+    {
+      "id": "normal_0642",
+      "eq1_id": 2471,
+      "eq2_id": 3670,
+      "gold": false,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": false
+    },
+    {
+      "id": "normal_0643",
+      "eq1_id": 3558,
+      "eq2_id": 2056,
+      "gold": false,
+      "rule": "XOR",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0644",
+      "eq1_id": 2891,
+      "eq2_id": 1409,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0645",
+      "eq1_id": 1205,
+      "eq2_id": 450,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0646",
+      "eq1_id": 2034,
+      "eq2_id": 2417,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0647",
+      "eq1_id": 3077,
+      "eq2_id": 932,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0648",
+      "eq1_id": 569,
+      "eq2_id": 2354,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0649",
+      "eq1_id": 1121,
+      "eq2_id": 4680,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0650",
+      "eq1_id": 456,
+      "eq2_id": 1229,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0651",
+      "eq1_id": 3490,
+      "eq2_id": 151,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0652",
+      "eq1_id": 776,
+      "eq2_id": 629,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0653",
+      "eq1_id": 3948,
+      "eq2_id": 3760,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0654",
+      "eq1_id": 3836,
+      "eq2_id": 3534,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0655",
+      "eq1_id": 3120,
+      "eq2_id": 671,
+      "gold": false,
+      "rule": "XOR",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0656",
+      "eq1_id": 4033,
+      "eq2_id": 3686,
+      "gold": true,
+      "rule": "HUB_Eq41",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0657",
+      "eq1_id": 2800,
+      "eq2_id": 866,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0658",
+      "eq1_id": 2386,
+      "eq2_id": 120,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0659",
+      "eq1_id": 1944,
+      "eq2_id": 1007,
+      "gold": true,
+      "rule": "H1",
+      "pred": false,
+      "correct": false
+    },
+    {
+      "id": "normal_0660",
+      "eq1_id": 1406,
+      "eq2_id": 1021,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0661",
+      "eq1_id": 2300,
+      "eq2_id": 1007,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0662",
+      "eq1_id": 1670,
+      "eq2_id": 2997,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0663",
+      "eq1_id": 1144,
+      "eq2_id": 1212,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0664",
+      "eq1_id": 1879,
+      "eq2_id": 1572,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0665",
+      "eq1_id": 1170,
+      "eq2_id": 275,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0666",
+      "eq1_id": 529,
+      "eq2_id": 1127,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0667",
+      "eq1_id": 2389,
+      "eq2_id": 2988,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0668",
+      "eq1_id": 1297,
+      "eq2_id": 430,
+      "gold": true,
+      "rule": "H3",
+      "pred": false,
+      "correct": false
+    },
+    {
+      "id": "normal_0669",
+      "eq1_id": 2142,
+      "eq2_id": 3646,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0670",
+      "eq1_id": 2670,
+      "eq2_id": 4331,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0671",
+      "eq1_id": 4243,
+      "eq2_id": 2728,
+      "gold": false,
+      "rule": "A1",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0672",
+      "eq1_id": 2392,
+      "eq2_id": 3536,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0673",
+      "eq1_id": 1397,
+      "eq2_id": 4066,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0674",
+      "eq1_id": 1723,
+      "eq2_id": 53,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0675",
+      "eq1_id": 4380,
+      "eq2_id": 842,
+      "gold": false,
+      "rule": "A3",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0676",
+      "eq1_id": 1340,
+      "eq2_id": 1452,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0677",
+      "eq1_id": 2827,
+      "eq2_id": 971,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0678",
+      "eq1_id": 4271,
+      "eq2_id": 915,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0679",
+      "eq1_id": 600,
+      "eq2_id": 357,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0680",
+      "eq1_id": 3548,
+      "eq2_id": 1948,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0681",
+      "eq1_id": 2366,
+      "eq2_id": 2498,
+      "gold": true,
+      "rule": "H3",
+      "pred": false,
+      "correct": false
+    },
+    {
+      "id": "normal_0682",
+      "eq1_id": 1161,
+      "eq2_id": 3598,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0683",
+      "eq1_id": 4557,
+      "eq2_id": 1964,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0684",
+      "eq1_id": 846,
+      "eq2_id": 380,
+      "gold": false,
+      "rule": "XOR",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0685",
+      "eq1_id": 3973,
+      "eq2_id": 4631,
+      "gold": false,
+      "rule": "XOR",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0686",
+      "eq1_id": 3413,
+      "eq2_id": 3812,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0687",
+      "eq1_id": 3544,
+      "eq2_id": 1927,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0688",
+      "eq1_id": 788,
+      "eq2_id": 394,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0689",
+      "eq1_id": 3985,
+      "eq2_id": 1532,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0690",
+      "eq1_id": 3913,
+      "eq2_id": 2904,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0691",
+      "eq1_id": 754,
+      "eq2_id": 2134,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0692",
+      "eq1_id": 2993,
+      "eq2_id": 1941,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0693",
+      "eq1_id": 4334,
+      "eq2_id": 2298,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0694",
+      "eq1_id": 4138,
+      "eq2_id": 3463,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0695",
+      "eq1_id": 355,
+      "eq2_id": 2637,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0696",
+      "eq1_id": 3661,
+      "eq2_id": 559,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0697",
+      "eq1_id": 1056,
+      "eq2_id": 3997,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0698",
+      "eq1_id": 1906,
+      "eq2_id": 4016,
+      "gold": true,
+      "rule": "H3",
+      "pred": false,
+      "correct": false
+    },
+    {
+      "id": "normal_0699",
+      "eq1_id": 723,
+      "eq2_id": 4379,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0700",
+      "eq1_id": 2511,
+      "eq2_id": 4477,
+      "gold": false,
+      "rule": "A10",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0701",
+      "eq1_id": 288,
+      "eq2_id": 796,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0702",
+      "eq1_id": 1285,
+      "eq2_id": 2266,
+      "gold": false,
+      "rule": "XOR",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0703",
+      "eq1_id": 4540,
+      "eq2_id": 3651,
+      "gold": false,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": false
+    },
+    {
+      "id": "normal_0704",
+      "eq1_id": 2212,
+      "eq2_id": 1356,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0705",
+      "eq1_id": 4069,
+      "eq2_id": 1860,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0706",
+      "eq1_id": 1589,
+      "eq2_id": 1532,
+      "gold": true,
+      "rule": "H1",
+      "pred": false,
+      "correct": false
+    },
+    {
+      "id": "normal_0707",
+      "eq1_id": 4561,
+      "eq2_id": 2151,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0708",
+      "eq1_id": 3328,
+      "eq2_id": 19,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0709",
+      "eq1_id": 3171,
+      "eq2_id": 4072,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0710",
+      "eq1_id": 2897,
+      "eq2_id": 1328,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0711",
+      "eq1_id": 1046,
+      "eq2_id": 2192,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0712",
+      "eq1_id": 2791,
+      "eq2_id": 4188,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0713",
+      "eq1_id": 4336,
+      "eq2_id": 746,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0714",
+      "eq1_id": 2845,
+      "eq2_id": 1403,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0715",
+      "eq1_id": 3111,
+      "eq2_id": 927,
+      "gold": true,
+      "rule": "H3",
+      "pred": false,
+      "correct": false
+    },
+    {
+      "id": "normal_0716",
+      "eq1_id": 137,
+      "eq2_id": 3954,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0717",
+      "eq1_id": 3277,
+      "eq2_id": 3973,
+      "gold": false,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": false
+    },
+    {
+      "id": "normal_0718",
+      "eq1_id": 1111,
+      "eq2_id": 3057,
+      "gold": true,
+      "rule": "H3",
+      "pred": false,
+      "correct": false
+    },
+    {
+      "id": "normal_0719",
+      "eq1_id": 50,
+      "eq2_id": 44,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0720",
+      "eq1_id": 891,
+      "eq2_id": 3688,
+      "gold": true,
+      "rule": "H3",
+      "pred": false,
+      "correct": false
+    },
+    {
+      "id": "normal_0721",
+      "eq1_id": 72,
+      "eq2_id": 2486,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0722",
+      "eq1_id": 1067,
+      "eq2_id": 1630,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0723",
+      "eq1_id": 3123,
+      "eq2_id": 1631,
+      "gold": true,
+      "rule": "H3",
+      "pred": false,
+      "correct": false
+    },
+    {
+      "id": "normal_0724",
+      "eq1_id": 1968,
+      "eq2_id": 3722,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0725",
+      "eq1_id": 1852,
+      "eq2_id": 425,
+      "gold": false,
+      "rule": "A7",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0726",
+      "eq1_id": 364,
+      "eq2_id": 1149,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0727",
+      "eq1_id": 2051,
+      "eq2_id": 2361,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0728",
+      "eq1_id": 302,
+      "eq2_id": 1488,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0729",
+      "eq1_id": 2348,
+      "eq2_id": 2530,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0730",
+      "eq1_id": 70,
+      "eq2_id": 3052,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0731",
+      "eq1_id": 3206,
+      "eq2_id": 3055,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0732",
+      "eq1_id": 3941,
+      "eq2_id": 4193,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0733",
+      "eq1_id": 717,
+      "eq2_id": 2450,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0734",
+      "eq1_id": 1799,
+      "eq2_id": 479,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0735",
+      "eq1_id": 1595,
+      "eq2_id": 798,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0736",
+      "eq1_id": 3883,
+      "eq2_id": 332,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0737",
+      "eq1_id": 1690,
+      "eq2_id": 142,
+      "gold": true,
+      "rule": "H3",
+      "pred": false,
+      "correct": false
+    },
+    {
+      "id": "normal_0738",
+      "eq1_id": 609,
+      "eq2_id": 2563,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0739",
+      "eq1_id": 1548,
+      "eq2_id": 4004,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0740",
+      "eq1_id": 2653,
+      "eq2_id": 2119,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0741",
+      "eq1_id": 1843,
+      "eq2_id": 3083,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0742",
+      "eq1_id": 3250,
+      "eq2_id": 2371,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0743",
+      "eq1_id": 1351,
+      "eq2_id": 3861,
+      "gold": true,
+      "rule": "H3",
+      "pred": false,
+      "correct": false
+    },
+    {
+      "id": "normal_0744",
+      "eq1_id": 1696,
+      "eq2_id": 1387,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0745",
+      "eq1_id": 4641,
+      "eq2_id": 3306,
+      "gold": false,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": false
+    },
+    {
+      "id": "normal_0746",
+      "eq1_id": 4008,
+      "eq2_id": 912,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0747",
+      "eq1_id": 30,
+      "eq2_id": 3152,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0748",
+      "eq1_id": 980,
+      "eq2_id": 4050,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0749",
+      "eq1_id": 701,
+      "eq2_id": 2035,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0750",
+      "eq1_id": 2320,
+      "eq2_id": 118,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0751",
+      "eq1_id": 2563,
+      "eq2_id": 1096,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0752",
+      "eq1_id": 1374,
+      "eq2_id": 2541,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0753",
+      "eq1_id": 560,
+      "eq2_id": 1276,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0754",
+      "eq1_id": 2005,
+      "eq2_id": 1886,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0755",
+      "eq1_id": 3757,
+      "eq2_id": 3667,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0756",
+      "eq1_id": 1280,
+      "eq2_id": 1034,
+      "gold": true,
+      "rule": "H3",
+      "pred": false,
+      "correct": false
+    },
+    {
+      "id": "normal_0757",
+      "eq1_id": 697,
+      "eq2_id": 1898,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0758",
+      "eq1_id": 2316,
+      "eq2_id": 1432,
+      "gold": false,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": false
+    },
+    {
+      "id": "normal_0759",
+      "eq1_id": 4614,
+      "eq2_id": 1334,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0760",
+      "eq1_id": 2536,
+      "eq2_id": 660,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0761",
+      "eq1_id": 792,
+      "eq2_id": 3671,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0762",
+      "eq1_id": 908,
+      "eq2_id": 1688,
+      "gold": true,
+      "rule": "H3",
+      "pred": false,
+      "correct": false
+    },
+    {
+      "id": "normal_0763",
+      "eq1_id": 2770,
+      "eq2_id": 1710,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0764",
+      "eq1_id": 2494,
+      "eq2_id": 1190,
+      "gold": false,
+      "rule": "XOR",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0765",
+      "eq1_id": 1708,
+      "eq2_id": 3230,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0766",
+      "eq1_id": 2647,
+      "eq2_id": 2719,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0767",
+      "eq1_id": 800,
+      "eq2_id": 1408,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0768",
+      "eq1_id": 2732,
+      "eq2_id": 3404,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0769",
+      "eq1_id": 1449,
+      "eq2_id": 2017,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0770",
+      "eq1_id": 866,
+      "eq2_id": 1088,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0771",
+      "eq1_id": 3620,
+      "eq2_id": 152,
+      "gold": false,
+      "rule": "XOR",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0772",
+      "eq1_id": 2358,
+      "eq2_id": 177,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0773",
+      "eq1_id": 2603,
+      "eq2_id": 1845,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0774",
+      "eq1_id": 585,
+      "eq2_id": 497,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0775",
+      "eq1_id": 3622,
+      "eq2_id": 1809,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0776",
+      "eq1_id": 2554,
+      "eq2_id": 3228,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0777",
+      "eq1_id": 2097,
+      "eq2_id": 1004,
+      "gold": false,
+      "rule": "XOR",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0778",
+      "eq1_id": 3445,
+      "eq2_id": 1697,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0779",
+      "eq1_id": 2760,
+      "eq2_id": 1770,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0780",
+      "eq1_id": 323,
+      "eq2_id": 1641,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0781",
+      "eq1_id": 811,
+      "eq2_id": 4642,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0782",
+      "eq1_id": 2544,
+      "eq2_id": 3642,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0783",
+      "eq1_id": 4331,
+      "eq2_id": 1763,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0784",
+      "eq1_id": 3129,
+      "eq2_id": 4082,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0785",
+      "eq1_id": 4505,
+      "eq2_id": 609,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0786",
+      "eq1_id": 1547,
+      "eq2_id": 498,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0787",
+      "eq1_id": 2310,
+      "eq2_id": 580,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0788",
+      "eq1_id": 1202,
+      "eq2_id": 1176,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0789",
+      "eq1_id": 3925,
+      "eq2_id": 1099,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0790",
+      "eq1_id": 4402,
+      "eq2_id": 2039,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0791",
+      "eq1_id": 139,
+      "eq2_id": 1775,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0792",
+      "eq1_id": 4617,
+      "eq2_id": 3098,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0793",
+      "eq1_id": 1118,
+      "eq2_id": 3486,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0794",
+      "eq1_id": 1059,
+      "eq2_id": 338,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0795",
+      "eq1_id": 2494,
+      "eq2_id": 781,
+      "gold": false,
+      "rule": "XOR",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0796",
+      "eq1_id": 4544,
+      "eq2_id": 438,
+      "gold": false,
+      "rule": "XOR",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0797",
+      "eq1_id": 1037,
+      "eq2_id": 1727,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0798",
+      "eq1_id": 1105,
+      "eq2_id": 940,
+      "gold": true,
+      "rule": "H1",
+      "pred": false,
+      "correct": false
+    },
+    {
+      "id": "normal_0799",
+      "eq1_id": 3305,
+      "eq2_id": 3247,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0800",
+      "eq1_id": 3819,
+      "eq2_id": 3957,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0801",
+      "eq1_id": 2746,
+      "eq2_id": 2899,
+      "gold": false,
+      "rule": "XOR",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0802",
+      "eq1_id": 3171,
+      "eq2_id": 2909,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0803",
+      "eq1_id": 3807,
+      "eq2_id": 3994,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0804",
+      "eq1_id": 4641,
+      "eq2_id": 2606,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0805",
+      "eq1_id": 1948,
+      "eq2_id": 900,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0806",
+      "eq1_id": 3518,
+      "eq2_id": 1942,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0807",
+      "eq1_id": 2499,
+      "eq2_id": 3956,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0808",
+      "eq1_id": 2897,
+      "eq2_id": 2934,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0809",
+      "eq1_id": 1565,
+      "eq2_id": 4192,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0810",
+      "eq1_id": 1461,
+      "eq2_id": 2319,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0811",
+      "eq1_id": 905,
+      "eq2_id": 2570,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0812",
+      "eq1_id": 3596,
+      "eq2_id": 1769,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0813",
+      "eq1_id": 1928,
+      "eq2_id": 3236,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0814",
+      "eq1_id": 3091,
+      "eq2_id": 3525,
+      "gold": false,
+      "rule": "XOR",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0815",
+      "eq1_id": 1047,
+      "eq2_id": 2823,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0816",
+      "eq1_id": 2495,
+      "eq2_id": 4606,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0817",
+      "eq1_id": 2789,
+      "eq2_id": 3908,
+      "gold": false,
+      "rule": "XOR",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0818",
+      "eq1_id": 2376,
+      "eq2_id": 307,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0819",
+      "eq1_id": 680,
+      "eq2_id": 395,
+      "gold": false,
+      "rule": "XOR",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0820",
+      "eq1_id": 678,
+      "eq2_id": 2513,
+      "gold": true,
+      "rule": "H3",
+      "pred": false,
+      "correct": false
+    },
+    {
+      "id": "normal_0821",
+      "eq1_id": 3033,
+      "eq2_id": 4517,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0822",
+      "eq1_id": 3940,
+      "eq2_id": 941,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0823",
+      "eq1_id": 2380,
+      "eq2_id": 4422,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0824",
+      "eq1_id": 2644,
+      "eq2_id": 2669,
+      "gold": false,
+      "rule": "A5",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0825",
+      "eq1_id": 239,
+      "eq2_id": 1262,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0826",
+      "eq1_id": 797,
+      "eq2_id": 142,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0827",
+      "eq1_id": 1214,
+      "eq2_id": 3212,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0828",
+      "eq1_id": 3333,
+      "eq2_id": 4594,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0829",
+      "eq1_id": 3540,
+      "eq2_id": 2617,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0830",
+      "eq1_id": 1276,
+      "eq2_id": 1710,
+      "gold": false,
+      "rule": "A5",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0831",
+      "eq1_id": 4527,
+      "eq2_id": 3789,
+      "gold": false,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": false
+    },
+    {
+      "id": "normal_0832",
+      "eq1_id": 2045,
+      "eq2_id": 4067,
+      "gold": false,
+      "rule": "A2",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0833",
+      "eq1_id": 320,
+      "eq2_id": 494,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0834",
+      "eq1_id": 3363,
+      "eq2_id": 960,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0835",
+      "eq1_id": 3633,
+      "eq2_id": 1509,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0836",
+      "eq1_id": 1287,
+      "eq2_id": 1445,
+      "gold": true,
+      "rule": "H3",
+      "pred": false,
+      "correct": false
+    },
+    {
+      "id": "normal_0837",
+      "eq1_id": 2903,
+      "eq2_id": 3622,
+      "gold": false,
+      "rule": "H3",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0838",
+      "eq1_id": 2496,
+      "eq2_id": 2241,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0839",
+      "eq1_id": 229,
+      "eq2_id": 4332,
+      "gold": false,
+      "rule": "A3",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0840",
+      "eq1_id": 2100,
+      "eq2_id": 2750,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0841",
+      "eq1_id": 2239,
+      "eq2_id": 3626,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0842",
+      "eq1_id": 2386,
+      "eq2_id": 2512,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0843",
+      "eq1_id": 1823,
+      "eq2_id": 1712,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0844",
+      "eq1_id": 1973,
+      "eq2_id": 2445,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0845",
+      "eq1_id": 1436,
+      "eq2_id": 3558,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0846",
+      "eq1_id": 2861,
+      "eq2_id": 2537,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0847",
+      "eq1_id": 4395,
+      "eq2_id": 3454,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0848",
+      "eq1_id": 1495,
+      "eq2_id": 2212,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0849",
+      "eq1_id": 148,
+      "eq2_id": 1874,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0850",
+      "eq1_id": 3945,
+      "eq2_id": 2026,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0851",
+      "eq1_id": 2495,
+      "eq2_id": 3854,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0852",
+      "eq1_id": 503,
+      "eq2_id": 1158,
+      "gold": false,
+      "rule": "H5",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0853",
+      "eq1_id": 3391,
+      "eq2_id": 2107,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0854",
+      "eq1_id": 1421,
+      "eq2_id": 3633,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0855",
+      "eq1_id": 280,
+      "eq2_id": 2394,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0856",
+      "eq1_id": 2814,
+      "eq2_id": 2062,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0857",
+      "eq1_id": 2156,
+      "eq2_id": 846,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0858",
+      "eq1_id": 1078,
+      "eq2_id": 891,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0859",
+      "eq1_id": 3739,
+      "eq2_id": 409,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0860",
+      "eq1_id": 3857,
+      "eq2_id": 1150,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0861",
+      "eq1_id": 2604,
+      "eq2_id": 2863,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0862",
+      "eq1_id": 517,
+      "eq2_id": 3301,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0863",
+      "eq1_id": 1798,
+      "eq2_id": 249,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0864",
+      "eq1_id": 3027,
+      "eq2_id": 2311,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0865",
+      "eq1_id": 4439,
+      "eq2_id": 886,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0866",
+      "eq1_id": 4048,
+      "eq2_id": 3520,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0867",
+      "eq1_id": 2197,
+      "eq2_id": 3304,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0868",
+      "eq1_id": 1193,
+      "eq2_id": 3952,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0869",
+      "eq1_id": 1011,
+      "eq2_id": 2472,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0870",
+      "eq1_id": 3222,
+      "eq2_id": 1128,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0871",
+      "eq1_id": 1165,
+      "eq2_id": 251,
+      "gold": false,
+      "rule": "XOR",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0872",
+      "eq1_id": 3275,
+      "eq2_id": 1186,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0873",
+      "eq1_id": 3153,
+      "eq2_id": 4539,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0874",
+      "eq1_id": 1787,
+      "eq2_id": 25,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0875",
+      "eq1_id": 3081,
+      "eq2_id": 2614,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0876",
+      "eq1_id": 688,
+      "eq2_id": 3470,
+      "gold": true,
+      "rule": "H3",
+      "pred": false,
+      "correct": false
+    },
+    {
+      "id": "normal_0877",
+      "eq1_id": 4053,
+      "eq2_id": 2833,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0878",
+      "eq1_id": 906,
+      "eq2_id": 2036,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0879",
+      "eq1_id": 2202,
+      "eq2_id": 134,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0880",
+      "eq1_id": 68,
+      "eq2_id": 2860,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0881",
+      "eq1_id": 2017,
+      "eq2_id": 2729,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0882",
+      "eq1_id": 3902,
+      "eq2_id": 4085,
+      "gold": false,
+      "rule": "HUB_Eq41",
+      "pred": true,
+      "correct": false
+    },
+    {
+      "id": "normal_0883",
+      "eq1_id": 2826,
+      "eq2_id": 4511,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0884",
+      "eq1_id": 3672,
+      "eq2_id": 3866,
+      "gold": false,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": false
+    },
+    {
+      "id": "normal_0885",
+      "eq1_id": 3388,
+      "eq2_id": 2506,
+      "gold": false,
+      "rule": "XOR",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0886",
+      "eq1_id": 4206,
+      "eq2_id": 4100,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0887",
+      "eq1_id": 3332,
+      "eq2_id": 3416,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0888",
+      "eq1_id": 1520,
+      "eq2_id": 1244,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0889",
+      "eq1_id": 516,
+      "eq2_id": 104,
+      "gold": false,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": false
+    },
+    {
+      "id": "normal_0890",
+      "eq1_id": 136,
+      "eq2_id": 3964,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0891",
+      "eq1_id": 2177,
+      "eq2_id": 3418,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0892",
+      "eq1_id": 3767,
+      "eq2_id": 2226,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0893",
+      "eq1_id": 3299,
+      "eq2_id": 2889,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0894",
+      "eq1_id": 259,
+      "eq2_id": 2792,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0895",
+      "eq1_id": 2607,
+      "eq2_id": 4557,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0896",
+      "eq1_id": 544,
+      "eq2_id": 2279,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0897",
+      "eq1_id": 2578,
+      "eq2_id": 2931,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0898",
+      "eq1_id": 2546,
+      "eq2_id": 170,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0899",
+      "eq1_id": 550,
+      "eq2_id": 2965,
+      "gold": true,
+      "rule": "H1",
+      "pred": false,
+      "correct": false
+    },
+    {
+      "id": "normal_0900",
+      "eq1_id": 4309,
+      "eq2_id": 1382,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0901",
+      "eq1_id": 974,
+      "eq2_id": 3963,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0902",
+      "eq1_id": 2353,
+      "eq2_id": 3938,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0903",
+      "eq1_id": 3342,
+      "eq2_id": 4216,
+      "gold": false,
+      "rule": "A10",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0904",
+      "eq1_id": 3987,
+      "eq2_id": 547,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0905",
+      "eq1_id": 3979,
+      "eq2_id": 1195,
+      "gold": false,
+      "rule": "XOR",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0906",
+      "eq1_id": 2698,
+      "eq2_id": 944,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0907",
+      "eq1_id": 2864,
+      "eq2_id": 2280,
+      "gold": false,
+      "rule": "A2",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0908",
+      "eq1_id": 2405,
+      "eq2_id": 4681,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0909",
+      "eq1_id": 2119,
+      "eq2_id": 1327,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0910",
+      "eq1_id": 2569,
+      "eq2_id": 442,
+      "gold": true,
+      "rule": "H3",
+      "pred": false,
+      "correct": false
+    },
+    {
+      "id": "normal_0911",
+      "eq1_id": 1138,
+      "eq2_id": 245,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0912",
+      "eq1_id": 1537,
+      "eq2_id": 2899,
+      "gold": false,
+      "rule": "XOR",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0913",
+      "eq1_id": 2976,
+      "eq2_id": 4646,
+      "gold": true,
+      "rule": "H3",
+      "pred": false,
+      "correct": false
+    },
+    {
+      "id": "normal_0914",
+      "eq1_id": 4197,
+      "eq2_id": 2041,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0915",
+      "eq1_id": 1434,
+      "eq2_id": 2496,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0916",
+      "eq1_id": 3624,
+      "eq2_id": 2514,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0917",
+      "eq1_id": 1164,
+      "eq2_id": 4660,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0918",
+      "eq1_id": 1379,
+      "eq2_id": 2847,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0919",
+      "eq1_id": 1294,
+      "eq2_id": 4664,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0920",
+      "eq1_id": 967,
+      "eq2_id": 1276,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0921",
+      "eq1_id": 2076,
+      "eq2_id": 4052,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0922",
+      "eq1_id": 1907,
+      "eq2_id": 1680,
+      "gold": true,
+      "rule": "H3",
+      "pred": false,
+      "correct": false
+    },
+    {
+      "id": "normal_0923",
+      "eq1_id": 13,
+      "eq2_id": 2392,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0924",
+      "eq1_id": 1353,
+      "eq2_id": 4568,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0925",
+      "eq1_id": 1771,
+      "eq2_id": 178,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0926",
+      "eq1_id": 1911,
+      "eq2_id": 1557,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0927",
+      "eq1_id": 1683,
+      "eq2_id": 3531,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0928",
+      "eq1_id": 1124,
+      "eq2_id": 3630,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0929",
+      "eq1_id": 1576,
+      "eq2_id": 1298,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0930",
+      "eq1_id": 3173,
+      "eq2_id": 443,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0931",
+      "eq1_id": 949,
+      "eq2_id": 4378,
+      "gold": false,
+      "rule": "XOR",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0932",
+      "eq1_id": 116,
+      "eq2_id": 3189,
+      "gold": true,
+      "rule": "H3",
+      "pred": false,
+      "correct": false
+    },
+    {
+      "id": "normal_0933",
+      "eq1_id": 4212,
+      "eq2_id": 1310,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0934",
+      "eq1_id": 3382,
+      "eq2_id": 3482,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0935",
+      "eq1_id": 4114,
+      "eq2_id": 2214,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0936",
+      "eq1_id": 387,
+      "eq2_id": 4422,
+      "gold": false,
+      "rule": "A5",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0937",
+      "eq1_id": 3062,
+      "eq2_id": 323,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0938",
+      "eq1_id": 1356,
+      "eq2_id": 76,
+      "gold": true,
+      "rule": "H1",
+      "pred": false,
+      "correct": false
+    },
+    {
+      "id": "normal_0939",
+      "eq1_id": 4641,
+      "eq2_id": 710,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0940",
+      "eq1_id": 553,
+      "eq2_id": 3702,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0941",
+      "eq1_id": 1766,
+      "eq2_id": 317,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0942",
+      "eq1_id": 2607,
+      "eq2_id": 1067,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0943",
+      "eq1_id": 2139,
+      "eq2_id": 3660,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0944",
+      "eq1_id": 1222,
+      "eq2_id": 3831,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0945",
+      "eq1_id": 2768,
+      "eq2_id": 2308,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0946",
+      "eq1_id": 1419,
+      "eq2_id": 523,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0947",
+      "eq1_id": 2999,
+      "eq2_id": 3530,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0948",
+      "eq1_id": 728,
+      "eq2_id": 3265,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0949",
+      "eq1_id": 892,
+      "eq2_id": 1818,
+      "gold": true,
+      "rule": "H1",
+      "pred": false,
+      "correct": false
+    },
+    {
+      "id": "normal_0950",
+      "eq1_id": 3715,
+      "eq2_id": 309,
+      "gold": false,
+      "rule": "A5",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0951",
+      "eq1_id": 1614,
+      "eq2_id": 2995,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0952",
+      "eq1_id": 2306,
+      "eq2_id": 4421,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0953",
+      "eq1_id": 2810,
+      "eq2_id": 2299,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0954",
+      "eq1_id": 3985,
+      "eq2_id": 3277,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0955",
+      "eq1_id": 529,
+      "eq2_id": 1728,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0956",
+      "eq1_id": 1682,
+      "eq2_id": 825,
+      "gold": false,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": false
+    },
+    {
+      "id": "normal_0957",
+      "eq1_id": 4615,
+      "eq2_id": 2843,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0958",
+      "eq1_id": 3626,
+      "eq2_id": 1177,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0959",
+      "eq1_id": 1360,
+      "eq2_id": 3574,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0960",
+      "eq1_id": 1875,
+      "eq2_id": 2374,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0961",
+      "eq1_id": 2152,
+      "eq2_id": 2502,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0962",
+      "eq1_id": 1600,
+      "eq2_id": 250,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0963",
+      "eq1_id": 623,
+      "eq2_id": 888,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0964",
+      "eq1_id": 916,
+      "eq2_id": 1679,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0965",
+      "eq1_id": 2363,
+      "eq2_id": 3842,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0966",
+      "eq1_id": 1127,
+      "eq2_id": 4183,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0967",
+      "eq1_id": 812,
+      "eq2_id": 930,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0968",
+      "eq1_id": 2350,
+      "eq2_id": 1375,
+      "gold": true,
+      "rule": "H1",
+      "pred": false,
+      "correct": false
+    },
+    {
+      "id": "normal_0969",
+      "eq1_id": 407,
+      "eq2_id": 597,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0970",
+      "eq1_id": 429,
+      "eq2_id": 1177,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0971",
+      "eq1_id": 1904,
+      "eq2_id": 3349,
+      "gold": false,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": false
+    },
+    {
+      "id": "normal_0972",
+      "eq1_id": 613,
+      "eq2_id": 3285,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0973",
+      "eq1_id": 665,
+      "eq2_id": 4600,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0974",
+      "eq1_id": 955,
+      "eq2_id": 3066,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0975",
+      "eq1_id": 3906,
+      "eq2_id": 3517,
+      "gold": false,
+      "rule": "XOR",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0976",
+      "eq1_id": 231,
+      "eq2_id": 953,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0977",
+      "eq1_id": 3131,
+      "eq2_id": 4660,
+      "gold": false,
+      "rule": "XOR",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0978",
+      "eq1_id": 2237,
+      "eq2_id": 905,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0979",
+      "eq1_id": 1633,
+      "eq2_id": 3648,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0980",
+      "eq1_id": 958,
+      "eq2_id": 2254,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0981",
+      "eq1_id": 1733,
+      "eq2_id": 1030,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0982",
+      "eq1_id": 3735,
+      "eq2_id": 1376,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0983",
+      "eq1_id": 193,
+      "eq2_id": 558,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0984",
+      "eq1_id": 1505,
+      "eq2_id": 2294,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0985",
+      "eq1_id": 3760,
+      "eq2_id": 2688,
+      "gold": false,
+      "rule": "C_PROBE",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0986",
+      "eq1_id": 3165,
+      "eq2_id": 3942,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0987",
+      "eq1_id": 4570,
+      "eq2_id": 3647,
+      "gold": false,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": false
+    },
+    {
+      "id": "normal_0988",
+      "eq1_id": 1822,
+      "eq2_id": 1124,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0989",
+      "eq1_id": 1266,
+      "eq2_id": 4275,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0990",
+      "eq1_id": 4489,
+      "eq2_id": 4079,
+      "gold": false,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": false
+    },
+    {
+      "id": "normal_0991",
+      "eq1_id": 1945,
+      "eq2_id": 3298,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0992",
+      "eq1_id": 1714,
+      "eq2_id": 3401,
+      "gold": true,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0993",
+      "eq1_id": 415,
+      "eq2_id": 964,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0994",
+      "eq1_id": 3060,
+      "eq2_id": 1049,
+      "gold": false,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": false
+    },
+    {
+      "id": "normal_0995",
+      "eq1_id": 2720,
+      "eq2_id": 1352,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0996",
+      "eq1_id": 3335,
+      "eq2_id": 2122,
+      "gold": false,
+      "rule": "LP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_0997",
+      "eq1_id": 1560,
+      "eq2_id": 3890,
+      "gold": false,
+      "rule": "DEFAULT_TRUE",
+      "pred": true,
+      "correct": false
+    },
+    {
+      "id": "normal_0998",
+      "eq1_id": 2627,
+      "eq2_id": 3417,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    },
+    {
+      "id": "normal_0999",
+      "eq1_id": 2303,
+      "eq2_id": 3682,
+      "gold": false,
+      "rule": "RP",
+      "pred": false,
+      "correct": true
+    },
+    {
+      "id": "normal_1000",
+      "eq1_id": 525,
+      "eq2_id": 2885,
+      "gold": true,
+      "rule": "X3",
+      "pred": true,
+      "correct": true
+    }
+  ]
+}

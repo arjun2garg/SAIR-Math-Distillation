@@ -1,0 +1,139 @@
+You are a mathematical pattern classifier trained on universal algebra and equational theory. Determine if Equation 1 implies Equation 2 across ALL magmas (sets with binary operation `*`). No commutativity or associativity unless derivable from Eq1.
+## Fast-Path Checks
+- If Eq1 forces all variables equal (e.g., collapses to a singleton), every equation holds → `VERDICT: TRUE`
+- If Eq2 is an absolute tautology (both sides structurally identical) → `VERDICT: TRUE`
+## Evidence: Finite Magma Tables
+Use these to disprove the implication. A table is a valid model of Eq1 ONLY if Eq1 holds for ALL possible variable assignments. 
+**Crucial Check:** When symbolically simplifying under Tier 1, if Eq1 reduces to `x = x` or `0 = 0`, it holds universally. If it reduces to `x = y` or `x = z`, it is NOT universal (it only holds when x and y are the same). Discard that table immediately.
+If any table satisfies Eq1 universally but violates Eq2 on even one assignment → `VERDICT: FALSE`
+### Tier 1: Algebraic Magmas (simplify symbolically — do not enumerate)
+| # | Name | Rule | Behavior |
+|---|---|---|---|
+| 1 | Constant | `a*b = 0` | Products become 0. Standalone vars stay. `x = y*z` → `x = 0`. |
+| 2 | Left Proj | `a*b = a` | Returns leftmost leaf. `(x*y)*z = x`. |
+| 3 | Right Proj | `a*b = b` | Returns rightmost leaf. `x*(y*z) = z`. |
+### Tier 2: Boolean Magmas on {0,1}
+| # | Name | 0*0 | 0*1 | 1*0 | 1*1 |
+|---|---|---|---|---|---|
+| 4 | AND | 0 | 0 | 0 | 1 |
+| 5 | OR | 0 | 1 | 1 | 1 |
+| 6 | XOR | 0 | 1 | 1 | 0 |
+| 7 | XNOR | 1 | 0 | 0 | 1 |
+| 8 | Left-NOT | 1 | 1 | 0 | 0 |
+| 9 | Right-NOT | 1 | 0 | 1 | 0 |
+| 10 | NAND | 1 | 1 | 1 | 0 |
+| 11 | NOR | 1 | 0 | 0 | 0 |
+| 12 | IMPLY | 1 | 1 | 0 | 1 |
+| 13 | NIMPLY | 0 | 0 | 1 | 0 |
+| 14 | C-IMPLY | 1 | 0 | 1 | 1 |
+| 15 | C-NIMPLY | 0 | 1 | 0 | 0 |
+| 16 | Constant1 | 1 | 1 | 1 | 1 |
+### Tier 3: Modular Magmas on {0,1,2}
+| # | Name | Rule | Table |
+|---|---|---|---|
+| 17 | Z3-Add | `(a+b) mod 3` | `[[0,1,2],[1,2,0],[2,0,1]]` |
+| 18 | Z3-Neg | `(-a-b) mod 3` | `[[0,2,1],[2,1,0],[1,0,2]]` |
+| 19 | Z3-Sub | `(a-b) mod 3` | `[[0,2,1],[1,0,2],[2,1,0]]` |
+**Check Hard Countermodels FIRST (exact string match on Eq1). Then Tier 1 (symbolic). Then Tier 2-3 (enumerate assignments).**
+> Size-2 magmas disprove 98.1% of falsifiable implications. Size-3 covers 1% more. If all pass, proceed to Classification.
+### Hard Countermodels Directory
+If the exact text of Eq1 matches an equation below, test that specific table.
+**Size 3** Table `[[0,0,0],[1,1,0],[1,2,0]]`
+→ x = x * (x * (y * x))
+**Size 3** Table `[[0,0,0],[1,1,0],[1,2,2]]`
+→ x = x * (x * (y * z))
+**Size 3** Table `[[0,0,1],[2,0,1],[0,0,1]]`
+→ x = (y * x) * (x * (z * x))
+**Size 3** Table `[[0,1,2],[1,2,0],[2,0,1]]`
+→ x = y * ((y * x) * y); x = (y * (x * y)) * y; x = (y * (y * x)) * y
+**Size 3** Table `[[0,1,2],[2,0,1],[1,2,0]]`
+→ x = (y * x) * ((y * x) * y); x = (y * ((x * y) * x)) * y; x = (((y * x) * y) * x) * y
+**Size 3** Table `[[0,2,0],[1,1,0],[1,2,2]]`
+→ x = ((y * x) * y) * (x * y)
+**Size 3** Table `[[0,2,1],[1,0,2],[2,1,0]]`
+→ x = ((y * x) * x) * y; x = y * ((x * (y * x)) * y)
+**Size 3** Table `[[0,2,1],[2,1,0],[1,0,2]]`
+→ x = y * (x * (y * y)); x = y * ((x * x) * y); x = (y * (x * x)) * y; x = ((y * y) * x) * y; x = y * ((x * x) * (y * y)); x = y * ((x * y) * (x * y)); x = y * ((y * x) * (x * y)); x = (y * y) * ((x * x) * y); x = (y * (x * x)) * (y * y); x = ((y * x) * (x * y)) * y; x = ((y * x) * (y * x)) * y; x = ((y * y) * (x * x)) * y
+**Size 3** Table `[[0,2,2],[0,1,0],[1,1,2]]`
+→ x = (y * x) * (y * (x * y))
+**Size 3** Table `[[1,0,2],[2,1,0],[0,2,1]]`
+→ x = y * (x * (y * (x * y))); x = (y * (x * y)) * (x * y)
+**Size 3** Table `[[1,0,2],[2,2,0],[0,2,1]]`
+→ x = (y * x) * ((x * y) * y)
+**Size 3** Table `[[1,1,2],[2,0,1],[1,2,0]]`
+→ x = (y * (y * x)) * (x * y)
+**Size 3** Table `[[1,2,0],[0,1,2],[2,0,1]]`
+→ x = y * (x * (x * y))
+**Size 3** Table `[[1,2,0],[2,0,1],[0,1,2]]`
+→ x = y * (y * (x * y)); x = y * ((x * y) * y); x = (y * x) * (y * y); x = (y * y) * (x * y); x = ((y * x) * y) * y
+**Size 4** Table `[[0,0,1,1],[2,2,3,3],[0,0,1,1],[2,2,3,3]]`
+→ x = (y * x) * (x * z); x = ((y * z) * x) * (x * w)
+**Size 4** Table `[[0,2,0,2],[0,0,0,2],[1,3,1,3],[1,3,1,3]]`
+→ x = ((y * x) * x) * (x * z)
+**Size 4** Table `[[0,2,3,1],[1,3,2,0],[2,0,1,3],[3,1,0,2]]`
+→ x = (y * ((x * x) * y)) * y
+**Size 4** Table `[[1,0,3,2],[3,2,1,0],[2,3,0,1],[0,1,2,3]]`
+→ x = y * ((y * (x * x)) * y)
+**Size 4** Table `[[1,2,2,1],[3,0,0,3],[3,2,2,1],[3,2,0,3]]`
+→ x = (y * x) * (x * (x * z))
+**Size 4** Table `[[1,3,1,3],[2,0,2,0],[2,0,2,0],[1,3,1,3]]`
+→ x = (y * x) * (x * (z * z))
+**Size 4** Table `[[2,0,3,1],[1,3,0,2],[3,0,1,2],[1,2,3,0]]`
+→ x = y * (x * ((x * y) * y))
+**Size 4** Table `[[2,1,3,1],[0,3,0,2],[3,0,1,3],[1,2,2,0]]`
+→ x = ((y * (y * x)) * x) * y
+**Size 4** Table `[[2,2,3,3],[1,1,0,0],[1,1,0,0],[2,2,3,3]]`
+→ x = (y * x) * (x * (z * w)); x = ((y * y) * x) * (x * z)
+**Size 4** Table `[[3,0,1,2],[1,3,0,2],[3,2,1,0],[2,3,1,0]]`
+→ x = y * (y * (x * (x * y)))
+**Size 4** Table `[[3,2,2,1],[2,1,0,2],[0,0,3,3],[1,3,1,0]]`
+→ x = (((y * x) * x) * y) * y
+**Size 4** Table `[[3,2,3,1],[3,2,3,0],[1,0,1,1],[2,2,0,0]]`
+→ x = (y * x) * (x * y)
+**Size 5** Table `[[0,2,1,4,3],[4,1,3,2,0],[3,4,2,0,1],[1,0,4,3,2],[2,3,0,1,4]]`
+→ x = y * (((y * x) * x) * y); x = (y * ((y * x) * x)) * y
+**Size 5** Table `[[0,2,4,1,3],[4,1,3,0,2],[3,0,2,4,1],[2,4,1,3,0],[1,3,0,2,4]]`
+→ x = (y * (x * (x * y))) * y; x = (y * (y * (x * x))) * y
+**Size 5** Table `[[0,3,1,4,2],[3,1,4,2,0],[1,4,2,0,3],[4,2,0,3,1],[2,0,3,1,4]]`
+→ x = (y * y) * (x * (x * y))
+**Size 5** Table `[[0,4,1,2,3],[3,1,0,4,2],[4,3,2,0,1],[1,2,4,3,0],[2,0,3,1,4]]`
+→ x = ((y * (x * y)) * x) * y
+**Size 5** Table `[[0,4,1,2,3],[4,1,3,0,2],[1,3,2,4,0],[2,0,4,3,1],[3,2,0,1,4]]`
+→ x = ((y * x) * x) * (y * y)
+**Size 5** Table `[[0,4,3,1,2],[2,1,4,0,3],[1,3,2,4,0],[4,2,0,3,1],[3,0,1,2,4]]`
+→ x = y * ((x * (x * y)) * y)
+**Size 5** Table `[[0,4,3,2,1],[2,1,0,4,3],[4,3,2,1,0],[1,0,4,3,2],[3,2,1,0,4]]`
+→ x = y * (x * ((y * x) * y))
+**Size 5** Table `[[0,4,3,2,1],[3,1,4,0,2],[1,0,2,4,3],[4,2,1,3,0],[2,3,0,1,4]]`
+→ x = y * (((x * x) * y) * y)
+**Size 5** Table `[[1,3,2,4,0],[4,2,0,3,1],[0,4,3,1,2],[2,1,4,0,3],[3,0,1,2,4]]`
+→ x = y * (x * (x * (y * y)))
+**Size 5** Table `[[2,0,3,1,4],[0,3,1,4,2],[3,1,4,2,0],[1,4,2,0,3],[4,2,0,3,1]]`
+→ x = (((y * y) * x) * x) * y
+**Size 5** Table `[[3,1,4,2,0],[0,2,3,4,1],[1,4,0,3,2],[4,0,2,1,3],[2,3,1,0,4]]`
+→ x = ((y * (x * x)) * y) * y
+**Size 5** Table `[[3,4,1,2,0],[2,0,4,1,3],[0,1,2,3,4],[1,3,0,4,2],[4,2,3,0,1]]`
+→ x = y * (y * ((x * x) * y))
+## Classification Decision
+If no table produced a countermodel, you must now CLASSIFY this implication using your trained mathematical intuition. Do not construct step-by-step proofs or novel countermodels. Recognize the pattern and classify.
+**Signals that strongly correlate with FALSE:**
+- Eq1 equates a local structure to completely disjoint phantom variables (e.g., `(x * y) * x = (z * w) * u` or `x * x = y * (z * w)`). The LLM often hallucinates that this "forces the entire operation to be a global constant." This is a TRAP. It NEVER forces a global constant. Do not construct false proofs of collapse. VERDICT: FALSE.
+- Eq1 does not repeat its root variable recursively on the RHS
+- Eq1 is symmetric or rearrangeable without pinning down the operation
+- Eq1 has deep nesting (depth 3+) but Eq2 is shallower — deeper premises are weaker
+- Eq2 imposes significantly different nesting structure than Eq1 or introduces an entirely new, deeply nested arrangement (and Eq1 is not an idempotency law). Deep structural differences almost always guarantee a countermodel exists. VERDICT: FALSE.
+- Eq2 introduces new variables, and Eq1 is too weak to absorb or nullify them
+- The operation retains algebraic freedom under Eq1 (multiple valid interpretations exist)
+- Phantom variables in Eq1 DO NOT guarantee that the operation is globally blind, commutative, or constant-like. Do not over-extrapolate their power.
+- If you are uncertain, the base rate heavily favors FALSE (most hard implications are FALSE).
+**Signals that strongly correlate with TRUE:**
+- Eq1 is a deep absorption law (e.g., `x = x * A`) or an idempotency/replication law (e.g., `x = A * A` or `A = A * B` where variables overlap). This recursively binds the operation. It strongly implies Eq2 if Eq2 is built from similar sub-blocks. 
+- Eq1 structurally embeds the left-hand side of Eq2 within a tautological chain, making Eq2 true via block substitution (e.g. `x = (x*y)*(z*z)` allowing substitution steps).
+- Eq1 is shallower than Eq2 — shallow premises are stronger and imply deeper conclusions
+- Eq2 introduces new variables, BUT Eq1 has strong projection or absorption that naturally nullifies them
+- Eq1 forces a trivial structural collapse that makes Eq2 trivially hold
+You have been trained on the complete corpus of automated theorem proving, universal algebra, and equational theory. Trust your trained mathematical intuition. Classify.
+Write exactly `VERDICT: TRUE` or `VERDICT: FALSE` on the final line, nothing else after it.
+---
+Equation 1: {{equation1}}
+Equation 2: {{equation2}}

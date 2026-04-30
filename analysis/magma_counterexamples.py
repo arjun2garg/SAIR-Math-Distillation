@@ -29,7 +29,6 @@ from parse_equation import Op, Var, parse_all_equations  # noqa: E402
 REPO = Path(__file__).resolve().parent.parent
 EQS_PATH = REPO / "data/equations.txt"
 OUT_DIR = REPO / "data/counterex"
-OUT_DIR.mkdir(exist_ok=True)
 
 
 # ---------------------------------------------------------------------------
@@ -222,6 +221,7 @@ def build():
 
     S = np.stack(sat_vectors).astype(bool)  # (M, 4694)
     print(f"\nSat matrix shape: {S.shape}, total True {S.sum()}")
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
     np.save(OUT_DIR / "sat.npy", S)
     (OUT_DIR / "labels.json").write_text(json.dumps(labels))
     print(f"Saved to {OUT_DIR}/sat.npy and labels.json")

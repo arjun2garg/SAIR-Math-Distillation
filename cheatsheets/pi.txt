@@ -1,0 +1,125 @@
+Goal: decide whether Eq1 forces Eq2 in all magmas by executing this rule engine exactly.
+ 
+Equation 1: {{ equation1 }}
+Equation 2: {{ equation2 }}
+ 
+A magma is a set with one binary operation `*`.
+ 
+- Deterministic classifier, not free-form proving.
+- Work like pen and paper. Keep all parentheses.
+- Never invent a search result, table, or counterexample.
+- Use only the rules below.
+- Stop at the first decisive rule.
+- If no rule returns `FALSE`, return `TRUE`.
+ 
+Call Eq1 the source `A` and Eq2 the target `B`.
+ 
+## Step 1: Exact shortcut
+ 
+`X1` If both sides of `B` are literally identical, answer `TRUE`.
+ 
+`X2` If `A` and `B` are the same law up to one consistent renaming of variables, allowing a side-swap of `A`, answer `TRUE`.
+ 
+`X3` If one side of `A` is a lone variable missing from the other side, answer `TRUE`.
+ 
+## Step 2: Forced-behavior
+ 
+`F1` If `A` is `x = x * y` up to renaming/side-swap, `x != y`, then `A` forces left projection `a * b = a`.
+Answer `TRUE` iff `LP(B)` holds; else `FALSE`.
+ 
+`F2` If `A` is `x = y * x` up to renaming/side-swap, `x != y`, then `A` forces right projection `a * b = b`.
+Answer `TRUE` iff `RP(B)` holds; else `FALSE`.
+ 
+`F3` If both sides of `A` are binary products with same left child and different right children, then `A` forces left-unary `a * b = f(a)`.
+For `B`, compute `(leftmost leaf, left depth)` on each side.
+If pairs match, answer `TRUE`; else `FALSE`.
+ 
+`F4` If both sides of `A` are binary products with same right child and different left children, then `A` forces right-unary `a * b = g(b)`.
+For `B`, compute `(rightmost leaf, right depth)` on each side.
+If pairs match, answer `TRUE`; else `FALSE`.
+ 
+## Step 3: Affine refutation
+ 
+Probe operation: `u * v = p*u + q*v + c (mod m)`.
+Each term becomes `a1*x1 + ... + ak*xk + const (mod m)`.
+ 
+Compute recursively:
+- variable: coeff `1` on itself, `0` on others, const `0`
+- `P * Q`: vector `p*pvec + q*qvec`, const `p*pc + q*qc + c` (mod `m`)
+ 
+Try probes:
+ 
+| ID | Probe |
+|----|-------|
+| A1 | `u * v = v + 1 (mod 3)` |
+| A2 | `u * v = u + 1 (mod 3)` |
+| A3 | `u * v = u + v (mod 3)` |
+| A4 | `u * v = u - v (mod 3)` |
+| A5 | `u * v = -u - v (mod 3)` |
+| A6 | `u * v = -u + 2v (mod 4)` |
+| A7 | `u * v = u + 2v (mod 4)` |
+| A8 | `u * v = 2u + v (mod 4)` |
+| A9 | `u * v = 2u + v + 1 (mod 4)` |
+| A10 | `u * v = -2u - 2v (mod 5)` |
+ 
+For each probe:
+1. Compute affine forms of `A.lhs` and `A.rhs`.
+2. If differ, skip probe.
+3. If match, compute affine forms of `B.lhs` and `B.rhs`.
+4. If target forms differ, answer `FALSE`.
+5. If target forms match, try next probe.
+ 
+If all probes fail to refute, continue.
+ 
+## Step 4: Structural reject
+ 
+Parse features for each side of `A` and `B`:
+- leaf list (left to right)
+- leftmost leaf
+- rightmost leaf
+- left depth: # left-edges to leftmost leaf
+- right depth: # right-edges to rightmost leaf
+ 
+For equation `E = L = R`:
+- `vars(E)`: # distinct variables
+- `dup(E)`: total leaves - `vars(E)`
+- `LP(E)`: leftmost leaves of `L` and `R` match
+- `RP(E)`: rightmost leaves of `L` and `R` match
+ 
+If exactly one side of `E` is a lone variable `x` and the other isn't, call `E` bare. Then:
+- bare variable `x`
+- all occurrence paths of `x` in non-bare side (using `L` and `R`)
+- `kind(E)`:
+  - `L` if first path uses only `L`
+  - `R` if first path uses only `R`
+  - `M` if first path mixes `L` and `R`
+  - `X` if `x` never appears in non-bare side
+  - `N` if `E` not bare
+- `shortest_len(E)`: length of shortest path, or `-1` for `N`
+- `occ(E)`: # occurrences of bare variable in non-bare side, or `0` for `N`
+ 
+Feature row: `s_kind`, `s_len`, `s_occ`, `s_dup`, `s_vars`, `s_bare`, `RP(A)`, `t_kind`, `t_len`, `t_occ`, `t_dup`, `t_vars`, `t_bare`, `RP(B)`.
+ 
+Rules (reject when source features suggest implication cannot hold):
+ 
+`H1` If `s_kind = M`, `s_vars >= 4`, `t_kind = X`, answer `FALSE`.
+ 
+`H2` If `s_kind = L`, `s_len = 1`, `s_dup >= 3`, `t_bare = FALSE`, `t_dup >= 3`, `t_vars <= 3`, answer `FALSE`.
+ 
+`H3` If `s_kind = M`, `s_occ = 2`, `RP(A)` false, answer `FALSE`.
+ 
+`H4` If `s_len = 1`, `s_occ = 3`, answer `FALSE`.
+ 
+`H5` If `s_kind = M`, `s_len = 3`, `s_occ = 2`, answer `FALSE`.
+ 
+`H6` If `s_kind = L`, `t_occ = 2`, `t_vars = 4`, answer `FALSE`.
+ 
+If no reject fires, answer `TRUE`.
+ 
+## Output format (MANDATORY)
+ 
+VERDICT: TRUE or FALSE
+REASONING: name the decisive rule only, using one of `X1 X2 X3 F1 F2 F3 F4 A1 A2 A3 A4 A5 A6 A7 A8 A9 A10 H1 H2 H3 H4 H5 H6 DEFAULT`.
+PROOF: one short sentence if VERDICT is TRUE, otherwise empty.
+COUNTEREXAMPLE: one short sentence if VERDICT is FALSE, otherwise empty.
+ 

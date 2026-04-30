@@ -1,18 +1,13 @@
-# `data/` — local setup
+# `data/` — inputs and ground truth
 
-Nothing in this directory is committed. The baselines read from files you
-populate locally. The required inputs are:
+| file | size | source | required for |
+|---|---:|---|---|
+| `equations.txt` | 159 KB | [Equational Theories Project](https://github.com/leanprover-community/equational_theories) | every checker |
+| `outcomes_bool.npy` | 22 MB | derived from ETP `outcomes.json` | full-ETP run |
+| `sair_eval/<split>.jsonl` | <1 MB each | [SAIRfoundation/equational-theories-selected-problems](https://huggingface.co/datasets/SAIRfoundation/equational-theories-selected-problems) | per-split runs |
+| `full_etp_cache.pkl` *(optional)* | 163 MB | locally generated, gitignored | speeds up full-ETP run, not required |
 
-## 1. ETP implication data
-
-From the [Equational Theories Project](https://github.com/leanprover-community/equational_theories):
-
-- `data/equations.txt` — 4694 base equations, one per line (1-indexed).
-- `data/outcomes.json` — full 4694 × 4694 implication matrix with ground
-  truth, published as `outcomes.json` in the ETP project.
-
-After downloading `outcomes.json`, convert it to the packed boolean form
-every script expects:
+## Regenerating `outcomes_bool.npy` from ETP
 
 ```python
 import json, numpy as np
@@ -20,56 +15,23 @@ d = json.load(open("data/outcomes.json"))
 np.save("data/outcomes_bool.npy", np.array(d["outcomes"], dtype=bool))
 ```
 
-You can then delete `outcomes.json` — the kept scripts only read
-`outcomes_bool.npy` (except `eval_checker_full.py`, which reads
-`outcomes.json` directly; keep it around if you plan to run that script).
+Where `outcomes.json` is the 4694×4694 implication matrix published by the
+ETP project.
 
-## 2. SAIR competition splits
+## Downloading the SAIR splits
 
-From the [SAIR competition page](https://competition.sair.foundation/competitions/mathematics-distillation-challenge-equational-theories-stage1/overview):
-
+```bash
+mkdir -p data/sair_eval
+for split in normal hard hard1 hard2 hard3 \
+             evaluation_normal evaluation_hard evaluation_extra_hard evaluation_order5; do
+  curl -sL "https://huggingface.co/datasets/SAIRfoundation/equational-theories-selected-problems/resolve/main/data/${split}.jsonl" \
+       -o "data/sair_eval/${split}.jsonl"
+done
 ```
-data/training/problems.json
-data/validation/problems.json
-data/validation/answers.json
-data/community_bench.json
-```
 
-`training/problems.json` is consumed by `build_bank_lookup.py`.
-`validation/{problems,answers}.json` and `community_bench.json` are
-consumed by the evaluation scripts.
+## Notes on `full_etp_cache.pkl`
 
-## 3. Generated artifacts
-
-Running `python analysis/magma_mining.py` populates `data/magma_mining/`
-with:
-
-- `bank_*.json` — per-library magma specifications
-- `sigs_*.npy`, `sat_*.npy`, `refuted_*.npy` — per-library equation
-  signatures
-- `sat_merged_v2.npy`, `refuted_merged_v2.npy` — merged bank across
-  libraries (this is what `cascade_v14.py` reads)
-- `results_*.json` — coverage / precision per library
-
-Running `python analysis/cascade_v14.py` additionally writes
-`data/magma_mining/cascade_v14_report.json`.
-
-## Expected final layout
-
-```
-data/
-├── equations.txt
-├── outcomes_bool.npy            # packed from outcomes.json
-├── outcomes.json                # only if running eval_checker_full.py
-├── community_bench.json
-├── training/
-│   └── problems.json
-├── validation/
-│   ├── problems.json
-│   └── answers.json
-└── magma_mining/                # produced by analysis/magma_mining.py
-    ├── bank_*.json
-    ├── sat_merged_v2.npy
-    ├── refuted_merged_v2.npy
-    └── ...
-```
+Some sub-pipelines (not in this repo) cache the gold matrix together with
+witness-magma satisfaction tables in a single pickle. If `full_etp_cache.pkl`
+is present, `analysis/_common.py` reads the gold matrix from it; otherwise it
+falls back to `outcomes_bool.npy`. The two paths produce identical results.

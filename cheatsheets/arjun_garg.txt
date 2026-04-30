@@ -1,0 +1,151 @@
+Decide whether Eq1 implies Eq2 over all magmas (set + binary op *).
+Do NOT assume associativity, commutativity, or any algebraic law.
+
+Eq1: {{ equation1 }}
+Eq2: {{ equation2 }}
+
+═══ STEP 1 — PARSE BOTH EQUATIONS (write this out as your FIRST action) ═══
+
+For EACH of the four sides — Eq1.LHS, Eq1.RHS, Eq2.LHS, Eq2.RHS — write a
+single PARSE line in EXACTLY this format. Do not skip this step. Do not
+shortcut. The rule layer below depends on these values being on the page.
+
+  PARSE <side>: shape=<expr>  vars={...}  op=<n>  bare=<Y/N>
+                lm=<v>  rm=<v>  ldepth=<n>  rdepth=<n>
+                left_spine=<Y/N>  right_spine=<Y/N>
+
+Field definitions (compute each by walking the expression as a tree
+where every * is a binary node):
+  shape       = the side, fully parenthesized exactly as written
+  vars        = the SET of distinct variable letters appearing on the side
+  op          = the count of * symbols on the side
+  bare        = Y iff the side is a single variable letter; else N
+  lm          = leftmost variable letter (read L→R, take first letter)
+  rm          = rightmost variable letter (read L→R, take last letter)
+  ldepth      = walk root→left child→left child→… until you hit a leaf;
+                count how many * nodes you traversed
+  rdepth      = same on the right-child path
+  left_spine  = Y iff every * on the L-spine has the same leaf at the
+                deepest left position AND no * appears off the L-spine.
+                Concretely: ((((v * a) * b) * c)…) shape with v at the
+                deepest left leaf and a, b, c, … each NOT containing *.
+  right_spine = mirror of left_spine on the right (((…(c * (b * (a * v))))).
+
+If a side is bare (single variable v), use: shape=v vars={v} op=0 bare=Y
+lm=v rm=v ldepth=0 rdepth=0 left_spine=N right_spine=N.
+
+Worked parse example for the side  x*(y*x):
+  shape=(x*(y*x))  vars={x,y}  op=2  bare=N  lm=x  rm=x
+  ldepth=1  rdepth=2  left_spine=N  right_spine=N
+  (root is *; left child x is a leaf so ldepth=1; right child y*x is *
+   whose right child x is a leaf so rdepth=2; off-spine * exists so
+   neither pure spine.)
+
+═══ STEP 2 — APPLY RULES IN ORDER. Use ONLY parsed values from Step 1. ═══
+First match wins. If no rule fires → go to STEP 3 (structural default).
+
+Definitions (already in your PARSE):
+  parity(s,v) = (occurrence count of v in s) mod 2.
+
+═══ FALSE via 2-element witness magmas ═══
+
+L1. LEFT PROJECTION (a*b = a). Every term evaluates to its leftmost
+    variable.
+    lm(Eq1.LHS) = lm(Eq1.RHS)  AND  lm(Eq2.LHS) ≠ lm(Eq2.RHS) → FALSE.
+
+L2. RIGHT PROJECTION (a*b = b). Mirror of L1 using rm.
+    rm(Eq1.LHS) = rm(Eq1.RHS)  AND  rm(Eq2.LHS) ≠ rm(Eq2.RHS) → FALSE.
+
+L3. CONSTANT ZERO (a*b = 0). Products → 0; bare vars → themselves.
+    Let cf(eq) = "both sides have op≥1, OR both sides are the SAME single
+    variable letter".  cf(Eq1) AND NOT cf(Eq2) → FALSE.
+
+═══ FALSE via semantic evaluation in small concrete magmas ═══
+
+For each magma below: first check that Eq1 HOLDS in it (the rule's "Eq1
+holds iff" line). If yes, then check whether Eq2 FAILS under some
+assignment. If both, answer FALSE. Do NOT force FALSE without a concrete
+counterexample.
+
+M1. XOR on {0,1}: a*b = (a+b) mod 2.
+    Term value = parity-sum (mod 2) of its variables.
+    Eq1 holds iff for EVERY variable v, parity(Eq1.LHS,v) = parity(Eq1.RHS,v).
+
+M2. LEFT-CYCLE on {0,1,2}: a*b = (a+1) mod 3.
+    Eq1 holds iff lm(Eq1.LHS) = lm(Eq1.RHS) AND ldepth(Eq1.LHS) ≡ ldepth(Eq1.RHS) (mod 3).
+    Then test Eq2 the same way; if either condition fails on Eq2 → FALSE.
+
+M3. RIGHT-CYCLE on {0,1,2}: a*b = (b+1) mod 3.
+    Eq1 holds iff rm(Eq1.LHS) = rm(Eq1.RHS) AND rdepth(Eq1.LHS) ≡ rdepth(Eq1.RHS) (mod 3).
+    Then test Eq2 the same way; if either condition fails on Eq2 → FALSE.
+
+M4. SPIKE-ZERO on {0,1,2}: 0*1 = 2, every other product = 0.
+    Eq1 holds iff BOTH sides have op≥1 AND the outer * on each side has a
+    NON-bare left operand (i.e. on each side, walk to root left child;
+    that subterm is itself a product, not a bare variable).
+    If not, SKIP M4. Otherwise look for an assignment under which one
+    side of Eq2 evaluates to a nonzero (i.e. exposes shape (x*y) where
+    x, y both bare with x=0, y=1).
+
+M6. LEFT NEGATION on {0,1}: a*b = 1 − a. Term value = lm XOR (ldepth mod 2).
+    Eq1 holds iff lm(Eq1.LHS) = lm(Eq1.RHS) AND ldepth(Eq1.LHS) ≡ ldepth(Eq1.RHS) (mod 2).
+    Then test Eq2 the same way; if either condition fails on Eq2 → FALSE.
+
+M7. RIGHT NEGATION on {0,1}: a*b = 1 − b. Mirror of M6.
+    Eq1 holds iff rm(Eq1.LHS) = rm(Eq1.RHS) AND rdepth(Eq1.LHS) ≡ rdepth(Eq1.RHS) (mod 2).
+    Then test Eq2 the same way; if either condition fails on Eq2 → FALSE.
+
+═══ FALSE via spine divisibility ═══
+
+D8. Use ONLY when Eq1.RHS.left_spine = Y AND Eq2.RHS.left_spine = Y AND
+    Eq1.LHS.bare = Y AND Eq2.LHS.bare = Y AND lm(Eq1.LHS)=lm(Eq1.RHS) AND
+    lm(Eq2.LHS)=lm(Eq2.RHS).
+    Let n = Eq1.RHS.op (depth of Eq1's left spine),
+        m = Eq2.RHS.op (depth of Eq2's left spine).
+    If n does NOT divide m → FALSE.
+
+═══ TRUE via sound algebraic patterns ═══
+
+These are CERTAIN when conditions are met.
+
+T1. EQ2 IS x = x. Eq2.LHS.bare = Y AND Eq2.RHS.bare = Y AND lm(Eq2.LHS) = lm(Eq2.RHS) → TRUE.
+
+T3. EQ1 IS x = y. Eq1.LHS.bare = Y AND Eq1.RHS.bare = Y AND lm(Eq1.LHS) ≠ lm(Eq1.RHS) → TRUE.
+
+T4. COLLAPSING EQ1. Eq1.LHS.bare = Y AND lm(Eq1.LHS) is NOT in Eq1.RHS.vars → TRUE. CERTAIN.
+    Use PARSE.vars to check: e.g. if Eq1.LHS = x and Eq1.RHS.vars = {y,z,w}, fires.
+    Do NOT fire if x ∈ Eq1.RHS.vars (even deeply nested).
+
+═══ FALSE via Eq1 narrowness ═══
+
+F1. NARROW EQ1. After all earlier rules declined, if |Eq1.LHS.vars ∪ Eq1.RHS.vars| ≤ 2 → FALSE.
+
+═══ STEP 3 — STRUCTURAL DEFAULT (only if no rule above fired) ═══
+
+Compute three integers about Eq1 only. These three numbers determine the
+default answer. Write them on the page before deciding.
+
+  M = for each variable that appears in Eq1 (either side), count its
+      TOTAL occurrences across BOTH sides. M = the smallest such count.
+      (Hint: if any variable appears exactly once in all of Eq1, M = 1.
+      If every variable appears twice or more, M ≥ 2.)
+  S = Eq1.LHS.op (number of * on Eq1's LHS; 0 if LHS is bare).
+  V = |Eq1.LHS.vars| (number of distinct variables on Eq1's LHS).
+
+Decide:
+
+  B1. If M ≥ 2 → FALSE.
+      (Every variable in Eq1 is tied across ≥2 positions. Eq1 is a loose
+       balance constraint; a tighter Eq2 typically fails in some magma.)
+
+  B2. Else M = 1. Then:
+      B2a. If S = 0 (Eq1.LHS.bare = Y) → TRUE.
+      B2b. If S = 1 AND V = 2 (Eq1.LHS has shape x*y with distinct x,y) → TRUE.
+      B2c. Otherwise → FALSE.
+
+═══ Output — use EXACTLY these lines, no markdown ═══
+(After PARSE block + rule trace, end with:)
+VERDICT: TRUE
+or
+VERDICT: FALSE
+RULE: <L1|L2|L3|M1|M2|M3|M4|M6|M7|D8|T1|T3|T4|F1|B1|B2a|B2b|B2c>

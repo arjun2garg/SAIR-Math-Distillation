@@ -1,116 +1,167 @@
-# eq-playground
+# Cheatsheet generalization study — programmatic ceiling on SAIR ETP
 
-The challenge asks, for pairs of universally-quantified equations `(E1, E2)`
-over a single binary operation: does `E1 ⇒ E2` hold in every magma? Ground
-truth is the 4694 × 4694 implication matrix from the [Equational Theories
-Project](https://leanprover-community.github.io/equational_theories/).
+Companion code for an upcoming writeup on **how SAIR cheatsheets generalize**.
+A "cheatsheet" here is a structured rulebook an LLM follows to decide, for a
+pair of universally-quantified equations `(E1, E2)` over a single binary
+operation `*`: does `E1 ⇒ E2` hold in every magma?
 
-This repo is the deterministic backbone behind cheatsheet `EQT010003`
-(`cheatsheets/bank_lookup_v5.txt`). Two things you can regenerate:
+For each cheatsheet, we transcribe its rules into a deterministic Python
+cascade and run that cascade — with **zero LLM error** — across every
+HuggingFace SAIR split plus the full **22,033,636-pair ETP cross-product**.
+The number you get out is the cheatsheet's **ceiling**: real LLM accuracy will
+be at or below this, since model error in rule execution can only subtract.
 
-### (A) Best programmatic coverage on the full ETP matrix
-
-```bash
-python analysis/cascade_v14.py
-```
-
-Reference output on the full 22,028,942-pair matrix:
-
-| metric | value |
-| --- | --- |
-| Overall accuracy | **93.57%** |
-| Sound rules coverage | **91.83%** at **100.00%** precision |
-| Non-DEFAULT coverage (sound + D9 heuristic) | **92.92%** at **99.93%** precision |
-| Hard3 validation accuracy | **66.75%** |
-
-`cascade_v14` combines 18 sound syntactic rules (D1–D10 family, spine-based
-predicates) with a precomputed counterexample bank over ~5,000 small magmas.
-Per-rule firings and precision are written to
-`data/magma_mining/cascade_v14_report.json`.
-
-### (B) Coverage restricted to rules inside `bank_lookup_v5.txt`
-
-```bash
-python analysis/eval_bank_lookup_v5.py
-```
-
-This runs only the rules that the LLM is actually instructed to execute
-from `cheatsheets/bank_lookup_v5.txt` — T1/T2/T3, L1/L2/L3, M1–M7 (with the
-specific 2- and 3-element magmas defined in the cheatsheet), D8, D10, D9,
-D5, D5b, plus DEFAULT=TRUE — and reports how much the cheatsheet's
-deterministic core would catch if the LLM executed it perfectly.
-
-Reference output on the full ETP matrix:
-
-| metric | value |
-| --- | --- |
-| Sound rules coverage | **88.16%** at **100.00%** precision |
-| Sound + D9 heuristic | **89.40%** at **99.76%** precision |
-| Overall accuracy (with DEFAULT=TRUE) | **95.55%** |
-| Hard3 sound coverage | **24.25%** at **100%** precision |
-| Hard3 overall | **72.75%** |
-
-Per-rule firings are written to
-`data/magma_mining/eval_bank_lookup_v5_report.json`.
+Ground truth is the 4694×4694 implication matrix from the
+[Equational Theories Project](https://leanprover-community.github.io/equational_theories/).
+SAIR splits live at the
+[SAIRfoundation HuggingFace dataset](https://huggingface.co/datasets/SAIRfoundation/equational-theories-selected-problems).
 
 ## Repo layout
 
 ```
 analysis/
-  parse_equation.py          # term parser, shared
-  procedural_v2_checker.py   # feature extraction + 18-rule cascade (v13)
-  magma_counterexamples.py   # per-equation satisfaction evaluator
-  cascade_v14.py             # ★ best programmatic baseline
-  magma_mining.py            # regenerates the counterexample bank
-  build_bank_lookup.py       # regenerates the bank_lookup cheatsheet from training
-  eval_bank_lookup_v5.py     # ★ runs only the bank_lookup_v5.txt rules on the ETP matrix
-  eval_checker_full.py       # evaluate v13 cascade vs ETP / validation / community bench
-  eval_with_counterex.py     # evaluate cascade overlayed with the counterexample bank
-cheatsheets/
-  bank_lookup_v5.txt         # ★ final LLM cheatsheet
-data/                        # populate locally, see data/README.md
+  parse_equation.py          # term parser (shared)
+  magma_counterexamples.py   # per-equation satisfaction evaluator (shared)
+  _common.py                 # ETP context, magma library, vectorized full-ETP runner
+  aj_checker.py              # ── one cascade per cheatsheet ──
+  dufius_checker.py
+  eucalyptus_checker.py
+  pi_checker.py
+  reza_jamei_checker.py
+  arjun_garg_checker.py
+  vt_checker.py
+  yan-biao_checker.py
+  aggregate.py               # combine per-cheatsheet outputs
+  RESULTS.md                 # curated comparison report (per-split + full ETP)
+  results/<cheatsheet>/      # per-cheatsheet outputs (per-split JSON, full_etp.json, SUMMARY.md)
+cheatsheets/                 # the 8 cheatsheets evaluated
+  aj.txt
+  arjun_garg.txt
+  dufius.txt
+  eucalyptus.txt
+  pi.txt
+  reza_jamei.txt
+  vt.txt
+  yan-biao.txt
+data/
+  equations.txt              # 4694 ETP equations
+  sair_eval/<split>.jsonl    # the 9 SAIR HF splits
+  README.md
+old_results/                 # archive of the earlier single-cheatsheet eval
 ```
 
-## Running locally
+## How a programmatic checker works
+
+Every cheatsheet boils down to a **cascade of rules** of three flavours:
+
+1. **Sound finite-magma witnesses.** Pick a Cayley table `M`. Compute
+   `sat[i] = (Eq_{i+1} holds in M for every assignment)`. The pair `(i, j)` is
+   provably FALSE if `sat[i] ∧ ¬sat[j]`. 100% precision by construction.
+2. **Per-equation invariants** (e.g. "leftmost-leaf agrees", "variable parity
+   matches"). Same outer-product trick: `holds[i] ∧ ¬holds[j]` is the
+   refutation mask.
+3. **Structural / heuristic predicates** on parse-tree features (M, S, V,
+   bare-LHS, kind, occ, …). These are NOT sound — they're priors. They get
+   used as defaults when no sound rule fires.
+
+The shared module `analysis/_common.py` provides:
+
+- A pre-loaded `ETPContext` with parsed equations, the gold matrix, and a
+  cache of magma satisfaction vectors.
+- A library of named witness magmas (`MAGMA_LIB`) covering everything the 8
+  cheatsheets reference (left/right projection, XOR, NAND, BCK, RPS, Knuth
+  central groupoid order 4, rectangular band, affine `ax+by mod n`, …).
+- A vectorized **`run_full_etp(ctx, fires_for_rule, rule_order, true_rules)`**
+  that walks the cascade as `(4694, 4694)` boolean masks. The 22M-pair run
+  takes a few seconds per cheatsheet.
+
+A per-cheatsheet checker just declares `RULE_ORDER` and `TRUE_RULES`, plus a
+`fires_for_rule(name) -> bool[4694, 4694]` callback. See any of the
+`analysis/<cs>_checker.py` files for the full pattern.
+
+## Running it
 
 ### 1. Install
 
 ```bash
-pip install -e .
+pip install -e .            # installs numpy
 ```
-
-Only `numpy` is required.
 
 ### 2. Populate `data/`
 
-See [`data/README.md`](data/README.md). You need `equations.txt`,
-`outcomes_bool.npy`, and the SAIR validation split under `data/validation/`.
+You need:
 
-### 3. Build the magma counterexample bank
+- `data/equations.txt` — the 4694 ETP equations (in repo).
+- `data/outcomes_bool.npy` — the 4694×4694 ETP gold matrix (in repo, 22 MB).
+  Generated from the ETP project's `outcomes.json`; see `data/README.md` for
+  the conversion snippet if you ever need to regenerate it.
+- `data/sair_eval/<split>.jsonl` — the 9 SAIR HF splits. To download:
+
+  ```bash
+  mkdir -p data/sair_eval
+  for split in normal hard hard1 hard2 hard3 \
+               evaluation_normal evaluation_hard evaluation_extra_hard evaluation_order5; do
+    curl -sL "https://huggingface.co/datasets/SAIRfoundation/equational-theories-selected-problems/resolve/main/data/${split}.jsonl" \
+         -o "data/sair_eval/${split}.jsonl"
+  done
+  ```
+
+- `data/full_etp_cache.pkl` *(optional, 163 MB, gitignored)* — combined
+  pickle with gold + magma satisfaction matrices, faster to load than the
+  raw `.npy`. The harness reads it if present and falls back to
+  `outcomes_bool.npy` otherwise.
+
+### 3. Run any cheatsheet
 
 ```bash
-python analysis/magma_mining.py
+python analysis/arjun_garg_checker.py
+python analysis/aj_checker.py
+python analysis/reza_jamei_checker.py
+# … etc
 ```
 
-Produces `data/magma_mining/{sat_merged_v2,refuted_merged_v2}.npy` — both
-eval scripts depend on these.
+Each script writes `analysis/results/<cheatsheet>/`:
+- `<split>.json` for each HF split (full per-problem rows + per-rule
+  breakdown + confusion matrix)
+- `full_etp.json` (rows omitted; per-rule breakdown across 22M pairs)
+- `summary.json` (everything in one place)
+- `SUMMARY.md` (human-readable report)
 
-### 4. Reproduce the two baselines
+### 4. Aggregate
 
 ```bash
-python analysis/cascade_v14.py           # (A) best programmatic coverage
-python analysis/eval_bank_lookup_v5.py   # (B) cheatsheet-only rules
+python analysis/aggregate.py
 ```
 
-Both print a per-rule breakdown + aggregate coverage/precision to stdout
-and write a JSON report under `data/magma_mining/`.
+Writes `analysis/results/COMPARISON.json` and `analysis/RESULTS_AUTO.md`
+(auto-generated index). The curated narrative report stays in
+`analysis/RESULTS.md`.
 
-### 5. (Optional) Regenerate the cheatsheet
+## Adding a new cheatsheet
 
-```bash
-python analysis/build_bank_lookup.py
-```
+1. Drop the cheatsheet text under `cheatsheets/<your-name>.txt`.
+2. Copy any existing `analysis/<cs>_checker.py` as a template.
+3. Define your `RULE_ORDER` and `TRUE_RULES`. Implement each rule as a
+   per-equation invariant (→ outer-product mask) or pull a magma table out of
+   `MAGMA_LIB`. Add new magmas to `MAGMA_LIB` if needed.
+4. Write a `fires_for_rule(name)` that returns a `(4694, 4694)` bool mask per
+   rule. The last rule in `RULE_ORDER` must have a default `True`-everywhere
+   mask so every pair is covered.
+5. Run the script. Outputs land under `analysis/results/<your-name>/`.
 
-Regenerates a bank-lookup cheatsheet from `data/training/problems.json`.
-The shipped `bank_lookup_v5.txt` is the polished final version.
+## Findings
 
+This repo is the methodology / how-to. Insights about cheatsheet generalization
+— which rules generalize from a single split to the full 22M ETP, where
+heuristic priors invert on adversarial splits, and which cheatsheets win on
+`evaluation_extra_hard` for the right vs wrong reasons — are written up in a
+separate post. The raw numbers backing those findings are in
+[`analysis/RESULTS.md`](analysis/RESULTS.md), and the per-rule detail is in
+`analysis/results/<cheatsheet>/SUMMARY.md`.
+
+## Older work
+
+The previous iteration of this repo focused on a single cheatsheet
+(`bank_lookup_v5.txt`, then `arjun_garg`) and is preserved under
+[`old_results/`](old_results/) (including the prior README and the
+single-cheatsheet HF findings doc).
