@@ -1,6 +1,5 @@
 # Cheatsheet generalization study — programmatic ceiling on SAIR ETP
 
-Companion code for an upcoming writeup on **how SAIR cheatsheets generalize**.
 A "cheatsheet" here is a structured rulebook an LLM follows to decide, for a
 pair of universally-quantified equations `(E1, E2)` over a single binary
 operation `*`: does `E1 ⇒ E2` hold in every magma?
